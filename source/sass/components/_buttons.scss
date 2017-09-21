@@ -1,0 +1,19 @@
+//
+// Components :: Buttons
+// --------------------------------------------------
+
+//
+// Alternate buttons
+//
+
+@each $color, $value in $theme-colors-material {
+  .btn-#{$color} {
+    @include button-variant($value, $value);
+  }
+}
+
+@each $color, $value in $theme-colors-material {
+  .btn-outline-#{$color} {
+    @include button-outline-variant($value, $white);
+  }
+}

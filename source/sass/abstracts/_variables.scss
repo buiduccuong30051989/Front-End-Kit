@@ -1,0 +1,37 @@
+// Abstracts :: Variables
+// --------------------------------------------------
+
+/// Paths
+/// -------------------------------------------------
+
+
+/// Colors
+/// -------------------------------------------------
+
+$material-primary:    #4285F4; 
+$material-default:    #2BBBAD; 
+$material-secondary:  #A6C;
+$material-success:    #00C851; 
+$material-info:       #33B5E5;
+$material-warning:    #F80;
+$material-danger:     #FF3547;
+
+$theme-colors-material: (
+  material-primary:   #4285F4, 
+  material-default:   #2BBBAD, 
+  material-secondary: #A6C, 
+  material-success:   #00C851, 
+  material-info:      #33B5E5, 
+  material-warning:   #F80, 
+  material-danger:    #FF3547
+) !default;
+
+/// Typography
+/// -------------------------------------------------
+
+/// Transitions
+/// -------------------------------------------------
+
+/// Space
+/// -------------------------------------------------
+$sidebar-width: 300px!default;

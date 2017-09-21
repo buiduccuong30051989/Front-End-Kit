@@ -1,0 +1,4 @@
+node_modules/
+dest/
+tmp/
+bower_components/
