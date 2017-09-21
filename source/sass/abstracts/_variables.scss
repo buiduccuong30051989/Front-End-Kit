@@ -1,0 +1,27 @@
+// Abstracts :: Variables
+// --------------------------------------------------
+
+/// Paths
+/// -------------------------------------------------
+
+
+/// Colors
+/// -------------------------------------------------
+
+$material-secondary: #a6c; 
+$material-brown: #896052;
+
+$theme-colors-material: (
+  material-secondary: $material-secondary,
+  material-brown: $material-brown
+) !default;
+
+/// Typography
+/// -------------------------------------------------
+
+/// Transitions
+/// -------------------------------------------------
+
+/// Space
+/// -------------------------------------------------
+$sidebar-width: 300px!default;

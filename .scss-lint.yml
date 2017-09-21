@@ -1,0 +1,25 @@
+linters:
+  PseudoElement:
+    enabled: false
+
+  PropertySortOrder:
+    enabled: false
+    ignore_unspecified: false
+    min_properties: 2
+    separate_groups: false
+
+  QualifyingElement:
+    enabled: true
+    allow_element_with_attribute: true
+    allow_element_with_class: false
+    allow_element_with_id: false
+
+  NestingDepth:
+    enabled: true
+    max_depth: 8
+    ignore_parent_selectors: false
+
+  ImportantRule:
+    exclude:
+      - 'source/sass/base/_utility-classes.scss'
+    enabled: true

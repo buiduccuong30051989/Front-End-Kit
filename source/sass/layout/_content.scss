@@ -1,0 +1,10 @@
+//
+// Layout :: Content
+// --------------------------------------------------
+.content-width-sidebar {
+  width: 100%;
+  
+  &.left {
+    padding-left: ($sidebar-width + 15px);
+  }
+}
