@@ -94,7 +94,7 @@ var scss = {
 // fonts
 var fonts = {
   in: [
-    source + 'fonts/*.*',
+    source + 'fonts/**/*.*',
   ],
   out: dest + 'fonts/'
 };

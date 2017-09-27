@@ -58,9 +58,28 @@ html
       #js-list-example.elements-content-wrapper(data-spy='scroll', data-target='#js-sidebar-elements-link', data-offset='0')
       .container-fluid
         h4.my-3#buttons Buttons
+        .card.mb-3.d-block.p3.bg-danger
+          a(href='#').btn-play.sm.white
         .card.mb-3.d-block.p-3
-          button.btn.btn-material-secondary(type='button') Secondary
-          button.btn.btn-outline-material-brown(type='button') Secondary
+          a(href='#') Links
+          a(href='#').btn-floating-main
+            i.icon.ion-gear-a
+          a(href='#').btn-floating-secondary
+            i.icon.ion-gear-a
+          a(href='#').btn-play.lg.main-color
+          a(href='#').btn-play.sm.main-color
+
+          button.btn.btn-circle-main(type='button') Main Circle Button
+          button.btn.btn-circle-secondary(type='button')
+            i.icon.ion-gear-a.mr-1
+            | Secondary Circle Button
+          button.btn.btn-circle-secondary.text-white(type='button') 
+            i.icon.ion-gear-a.mr-1
+            | Secondary Circle Button
+          button.btn.btn-circle-outline-gray(type='button') Outline Gray Button
+          button.btn.btn-circle-secondary.text-white.hight-light-icon(type='button') 
+            i.icon.ion-gear-a.mr-1
+            | Button Hight Light Icon
           button.btn.btn-primary(type='button') Primary
           button.btn.btn-secondary(type='button') Secondary
           button.btn.btn-success(type='button') Success

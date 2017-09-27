@@ -8,17 +8,12 @@
 /// Colors
 /// -------------------------------------------------
 
-$material-secondary: #a6c; 
-$material-brown: #896052;
-
-$theme-colors-material: (
-  material-secondary: $material-secondary,
-  material-brown: $material-brown
-) !default;
+$main-color: #fd6500;
+$secondary-color: #696969;
 
 /// Typography
 /// -------------------------------------------------
-
+$font-icon: "Ionicons";
 /// Transitions
 /// -------------------------------------------------
 

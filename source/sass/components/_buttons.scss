@@ -1,19 +1,137 @@
 //
 // Components :: Buttons
 // --------------------------------------------------
+.btn-circle-main {
+  @include button-variant($main-color, $main-color);
+  border-color: $main-color;
+}
 
-//
-// Alternate buttons
-//
+.btn-circle-secondary {
+  border-color: $secondary-color;
+  color: $main-color;
+  background-color: transparent;
 
-@each $color, $value in $theme-colors-material {
-  .btn-#{$color} {
-    @include button-variant($value, $value);
+  &:hover {
+    background-color: $secondary-color;
+    color: $white;
   }
 }
 
-@each $color, $value in $theme-colors-material {
-  .btn-outline-#{$color} {
-    @include button-outline-variant($value, $white);
+.btn-circle-secondary.hight-light-icon {
+  i {
+    color: $main-color;
+  }
+
+  &:hover {
+    i {
+      color: $main-color;
+    }
+  }
+}
+
+.btn-circle-outline-gray {
+  @extend .btn-circle-secondary;
+  color: $secondary-color;
+}
+
+[class*="btn-circle-"] {
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 24px;
+  padding: 11px 20px;
+  border-radius: 25px;
+  border-width: 2px;
+  transition: $transition-base;
+}
+
+.btn-floating-main {
+  background-color: $main-color;
+  color: $white;
+  border-color: $main-color;
+}
+
+.btn-floating-secondary {
+  background-color: transparent;
+  border-color: $secondary-color;
+  color: $main-color;
+}
+
+[class*="btn-floating-"] {
+  width: 40px;
+  height: 40px;
+  line-height: 36px;
+  display: inline-block;
+  border-width: 2px;
+  border-style: solid;
+  text-align: center;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 14px;
+  transition: $transition-base;
+
+  &:hover {
+    border-color: darken($main-color,4%);
+    color: $white;
+    background-color: darken($main-color,4%);
+  }
+}
+
+.btn-play {
+  border-width: 1px;
+  border-style: solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: $transition-base;
+  text-decoration: none;
+
+  &:before {
+    content: "\f488";
+    font-family: $font-icon;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.btn-play.lg {
+  width: 100px;
+  height: 100px;
+
+  &:before {
+    font-size: 48px;
+    margin-right: -6px;
+  }  
+}
+
+.btn-play.sm {
+  width: 50px;
+  height: 50px;
+
+  &:before {
+    font-size: 24px;
+    margin-right: -3px;
+  }  
+}
+
+.btn-play.main-color {
+  border-color: $main-color;
+  color: $main-color;
+
+  &:hover {
+    color: $white;
+    background-color: $main-color;
+  }
+}
+
+.btn-play.white{
+  border-color: $white;
+  color: $white;
+
+  &:hover {
+    color: $main-color;
+    background-color: $white;
   }
 }
