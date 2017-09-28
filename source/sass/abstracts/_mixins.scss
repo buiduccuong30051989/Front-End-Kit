@@ -79,13 +79,6 @@ $breakpoints: (
   }
 }
 
-@each $color, $value in $theme-colors {
-  .swatch-#{$color} {
-    background-color: #{$value};
-    @include color-yiq($value);
-  }
-}
-
 @each $color, $value in $grays {
   .swatch-#{$color} {
     background-color: #{$value};
