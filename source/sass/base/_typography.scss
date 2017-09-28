@@ -1,3 +1,9 @@
 //
 // Abstracts :: Typography
 // --------------------------------------------------
+.title {
+  font-family: $heading-font;
+  color: $gray-800;
+  letter-spacing: 1px;
+  font-weight: bold;
+}

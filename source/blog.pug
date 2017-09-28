@@ -1,0 +1,49 @@
+include modules/head/head
+include modules/elements/elements
+
+doctype html
+html
+  +head(head.home)
+  body
+    .container.p-3
+      .card-deck.mt-5
+        .card.blog
+          .card-header
+            img(src='images/blog-01.jpg', alt='Feature Image').feature-blog-img
+            a(href='#').overlay.justify-content-center.align-items-center.d-flex
+              p.btn-play.sm.white
+          .card-body.text-center
+            p.h6.mb-3
+              a(href='#').cate.font-italic MUSIC VIDEO
+            h3.title.title-blog.sm.mb-3
+              a(href='#') Obituary Writers at the New York Times Discuss Their Craft
+            p.meta.mb-3
+              span
+                i.icon.ion-ios-person.mr-2
+                a(href='#') Connie Wilson
+              span
+                i.icon.ion-ios-calendar-outline.mr-2
+                a(href='#') 20 Aug, 2017
+              span
+                i.icon.ion-chatbubble-working.mr-2
+                a(href='#') Comment
+            p.mb-5 Nullam imperdiet, sem at fringilla lobortis, sem nibh fringilla nibh, idae gravida mi purus sit amet erat. Ut dictum nisi massa.Maecenas id justo rhoncus, volutpat nunc sit amet, facilisiulum scelerisque dictum Maecenas id justo rhoncus, volutpat nunc sit amet, facilisis sem. Vestibulum scelerisque dictsap
+            a(href='#').btn-circle-main.mw-120 View More
+        .card.blog.single-img
+          .card-header
+            img(src='images/blog-01.jpg', alt='Feature Image').feature-blog-img
+            a(href='#').overlay
+              p.meta.text-center
+                span
+                  i.icon.ion-ios-calendar-outline.mr-2
+                  | 11/09/2017
+                span
+                  i.icon.ion-chatbubble-working.mr-2
+                  | 3
+          .card-body.text-center
+            p.h6.mb-3
+              a(href='#').cate.font-italic MUSIC VIDEO
+            h3.title.title-blog.sm
+              a(href='#') Obituary Writers at the New York Times Discuss Their Craft
+            p.mb-5 Nullam imperdiet, sem at fringilla lobortis, sem nibh fringilla nibh, idae gravida mi purus sit amet erat. Ut dictum nisi massa.Maecenas id justo rhoncus, volutpat nunc sit amet, facilisiulum scelerisque dictum Maecenas id justo rhoncus, volutpat nunc sit amet, facilisis sem. Vestibulum scelerisque dictsap
+            a(href='#').btn-circle-main.mw-120 View More

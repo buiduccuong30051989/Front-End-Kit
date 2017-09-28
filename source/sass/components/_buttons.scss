@@ -4,6 +4,7 @@
 .btn-circle-main {
   @include button-variant($main-color, $main-color);
   border-color: $main-color;
+  display: inline-block;
 }
 
 .btn-circle-secondary {
@@ -90,10 +91,6 @@
     content: "\f488";
     font-family: $font-icon;
   }
-
-  &:hover {
-    text-decoration: none;
-  }
 }
 
 .btn-play.lg {
@@ -107,8 +104,8 @@
 }
 
 .btn-play.sm {
-  width: 50px;
-  height: 50px;
+  width: 72px;
+  height: 72px;
 
   &:before {
     font-size: 24px;
@@ -119,19 +116,9 @@
 .btn-play.main-color {
   border-color: $main-color;
   color: $main-color;
-
-  &:hover {
-    color: $white;
-    background-color: $main-color;
-  }
 }
 
 .btn-play.white{
   border-color: $white;
   color: $white;
-
-  &:hover {
-    color: $main-color;
-    background-color: $white;
-  }
 }
