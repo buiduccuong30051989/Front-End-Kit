@@ -116,9 +116,48 @@
 .btn-play.main-color {
   border-color: $main-color;
   color: $main-color;
+
+  &:hover {
+    background-color: $main-color;
+    color: $white;
+  }
 }
 
 .btn-play.white{
   border-color: $white;
   color: $white;
+
+  &:hover {
+    background-color: $white;
+    color: $main-color;
+  }
+}
+
+
+//Read More
+.read-more-1 {
+  font-family: $heading-font;
+  color: $gray-500;
+  font-size: 18px;
+  line-height: 36px;
+  transition: $transition-base;
+  font-style: italic;
+  position: relative;
+
+  i {
+    opacity: 0;
+    position: absolute;
+    left: 15px;
+    transition: $transition-base;
+  }
+
+  &:hover {
+    color: $main-color;
+    margin-left: 30px;
+
+    i {
+      opacity: 1;
+      left: -20px;
+    }
+  }
 }

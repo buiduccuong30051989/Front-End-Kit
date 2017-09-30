@@ -86,7 +86,9 @@ var scss = {
     errLogToConsole: true,
     includePaths: [
       lib + 'bootstrap/scss',
-      lib + 'components-font-awesome/scss'
+      lib + 'components-font-awesome/scss',
+      lib + 'owl.carousel/dist/assets',
+      lib + 'lightgallery/src/sass',
     ]
   }
 };
@@ -102,10 +104,11 @@ var fonts = {
 // js
 var js = {
   in: [
-    source + 'js/*.*',
+    source + 'js/**/*.*',
     lib + 'jquery/dist/jquery.min.js',
-    lib + 'popper.js/dist/popper.js',
-    lib + 'bootstrap/dist/js/bootstrap.min.js'
+    lib + 'bootstrap/dist/js/bootstrap.min.js',
+    lib + 'owl.carousel/dist/owl.carousel.min.js',
+    lib + 'lightgallery/dist/js/lightgallery-all.min.js'
   ],
   out: dest + 'js/'
 };

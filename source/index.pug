@@ -7,76 +7,116 @@ doctype html
 html
   +head(head.home)
   body
-    +header()
+    nav.navigation.fixed
+      #menuzord.menuzord
+        a.menuzord-brand(href='javascript:void(0)') Brand Name
+        ul.menuzord-menu.menuzord-left.menuzord-indented.scrollable
+          li
+            a(href='javascript:void(0)') Group 1
+          li
+            a(href='javascript:void(0)') Group 2
+          li
+            a(href='#') Verify
+        ul.menuzord-menu.menuzord-right.scrollable
+          li
+            a(href='#')
+              em Joe Public
+              |  Account
+    section#revo-slider
+      img(src='images/demo.jpg', alt='demo', style=('width: 100vw; height: 100vh'))
+    section#call-to-action
+    section#services
+      .services-wrapper
+        .container
+          .row
+            .title-section-wrapper.text-center.w-100
+                h3.title Our Services
+                h6.sub-title LET'S MAKE GREAT THINGS TOGETHER
+          .card-deck.deck-icon-box-1.mt-5
+            .card.icon-box-style-1
+              .card-body.text-center
+                .icon-bg.rounded-circle.mx-auto.mb-4
+                  img(src='images/icon-cinema-1.png', alt='Icon')
+                h4.title.mb-4 Film Production
+                p Nullam imperdiet, sem at fringilla lobortis, sem nibh fringilla nibh, id gravida mi purus sit amet erat. Ut dictum nisi masvitp
+                a(href='#').read-more-1
+                  i.icon.ion-android-add
+                  | Read more
+            .card.icon-box-style-1
+              .card-body.text-center
+                .icon-bg.rounded-circle.mx-auto.mb-4
+                  img(src='images/icon-cinema-2.png', alt='Icon')
+                h4.title.mb-4 Creative Direction
+                p Nullam imperdiet, sem at fringilla lobortis, sem nibh fringilla nibh, id gravida mi purus sit amet erat. Ut dictum nisi masvitp
+                a(href='#').read-more-1
+                  i.icon.ion-android-add
+                  | Read more
+            .card.icon-box-style-1
+              .card-body.text-center
+                .icon-bg.rounded-circle.mx-auto.mb-4
+                  img(src='images/icon-cinema-3.png', alt='Icon')
+                h4.title.mb-4 Visual Effects
+                p Nullam imperdiet, sem at fringilla lobortis, sem nibh fringilla nibh, id gravida mi purus sit amet erat. Ut dictum nisi masvitp
+                a(href='#').read-more-1
+                  i.icon.ion-android-add
+                  | Read more
+    section#portfolio
+      .portfolio-wrapper
+        .container
+          .row
+            .title-section-wrapper.text-center.w-100
+              h3.title Our Works
+              h6.sub-title WE WILL DEVELOP YOUR FILM, YOUR TALENT
+          .card-deck.mt-5
+            .card.portfolio.text-center
+              .card-header(style='background-image: url("images/blog-02.jpg");')
+                .card-header-inner
+                  img.feature-img.hidden(src='images/blog-02.jpg')
+                  .info
+                    h3.title.title-blog.sm.mb-3
+                      a(href='#') Portfolio Video Light Box
+                    p.h6.mb-3
+                      a.cate.font-italic(href='#') MUSIC VIDEO
+                  .overlay.justify-content-center.align-items-center.d-flex.js-open-lightbox.open-lightbox
+                    p.btn-play.sm.white
+                  .js-lightbox.hidden
+                    a(href='https://www.youtube.com/watch?v=meBbDqAXago')
+            .card.portfolio
+              .card-header(style='background-image: url("images/blog-01.jpg");')
+                .card-header-inner
+                  img.feature-img.hidden(src='images/blog-02.jpg')
+                  .overlay.justify-content-center.align-items-center.d-flex.js-open-lightbox.open-lightbox
+                    p.btn-play.sm.white
+                  .js-lightbox.hidden
+                    a(href='https://www.youtube.com/watch?v=meBbDqAXago')
+              .card-body
+                .info
+                  h3.title.title-blog.sm.mb-3
+                    a(href='#') Portfolio Video Light Box
+                  p.h6.mb-3
+                    a.cate.font-italic(href='#') MUSIC VIDEO
+            .card.portfolio.text-center
+              .card-header(style='background-image: url("images/blog-03.jpg");')
+                .card-header-inner
+                  img.feature-img.hidden(src='images/blog-02.jpg')
+                  .info
+                    h3.title.title-blog.sm.mb-3
+                      a(href='#') Portfolio Video Light Box
+                    p.h6.mb-3
+                      a.cate.font-italic(href='#') MUSIC VIDEO
+                  .overlay.justify-content-center.align-items-center.d-flex.js-open-lightbox.open-lightbox
+                    p.btn-play.sm.white
+                  .js-lightbox.hidden
+                    a(href='https://www.youtube.com/watch?v=meBbDqAXago')
 
-    .container
-      .row
-        .cuong
-          h2#examples Examples
-          p
-            | Bootstrap includes several predefined button styles, each serving its own semantic purpose, with a few extras thrown in for more control.
-          .bd-example(data-example-id='')
-            button.cuong-btn LLALAL
-            button.btn.btn-primary(type='button') Primary
-            button.btn.btn-secondary(type='button') Secondary
-            button.btn.btn-success(type='button') Success
-            button.btn.btn-danger(type='button') Danger
-            button.btn.btn-warning(type='button') Warning
-            button.btn.btn-info(type='button') Info
-            button.btn.btn-light(type='button') Light
-            button.btn.btn-dark(type='button') Dark
-      .row
-        .col-md-4
-          .p-3.mb-3.swatch-primary Primary
-        .col-md-4
-          .p-3.mb-3.swatch-secondary Secondary
-        .col-md-4
-          .p-3.mb-3.swatch-success Success
-        .col-md-4
-          .p-3.mb-3.swatch-danger Danger
-        .col-md-4
-          .p-3.mb-3.swatch-warning Warning
-        .col-md-4
-          .p-3.mb-3.swatch-info Info
-        .col-md-4
-          .p-3.mb-3.swatch-light Light
-        .col-md-4
-          .p-3.mb-3.swatch-dark Dark
-      .row
-        .col-md-4
-          .p-3.mb-3.swatch-blue Blue
-        .col-md-4
-          .p-3.mb-3.swatch-indigo Indigo
-        .col-md-4
-          .p-3.mb-3.swatch-purple Purple
-        .col-md-4
-          .p-3.mb-3.swatch-pink Pink
-        .col-md-4
-          .p-3.mb-3.swatch-red Red
-        .col-md-4
-          .p-3.mb-3.swatch-orange Orange
-        .col-md-4
-          .p-3.mb-3.swatch-yellow Yellow
-        .col-md-4
-          .p-3.mb-3.swatch-green Green
-        .col-md-4
-          .p-3.mb-3.swatch-teal Teal
-        .col-md-4
-          .p-3.mb-3.swatch-cyan Cyan
-      .row.mb-3
-        .col-md-4
-          .p-3.swatch-100 100
-          .p-3.swatch-200 200
-          .p-3.swatch-300 300
-          .p-3.swatch-400 400
-          .p-3.swatch-500 500
-          .p-3.swatch-600 600
-          .p-3.swatch-700 700
-          .p-3.swatch-800 800
-          .p-3.swatch-900 900
-
-
-
-    +footer()
-
-    script(type='text/javascript', src='js/main.js')
+    section#team
+      .title-section-wrapper
+        h3.title Creative team
+        h6.sub-title LET'S MAKE GREAT THINGS TOGETHER
+    section#awards
+    section#testimonials
+    section#branding
+    section#gallery
+    section#blog
+    section#subscribe
+  script(type='text/javascript', src='js/main.js')

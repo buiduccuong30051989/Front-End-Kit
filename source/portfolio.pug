@@ -1,0 +1,51 @@
+include modules/head/head
+include modules/elements/elements
+
+doctype html
+html
+  +head(head.home)
+  body
+    .container.p-3
+      .card-deck.mt-5
+        .card.portfolio.text-center
+          .card-header(style='background-image: url("images/blog-02.jpg")')
+            .card-header-inner
+              img(src='images/blog-02.jpg').feature-img.hidden
+              .info
+                h3.title.title-blog.sm.mb-3
+                  a(href='#') Portfolio Video Light Box
+                p.h6.mb-3
+                  a(href='#').cate.font-italic MUSIC VIDEO
+              .overlay.justify-content-center.align-items-center.d-flex.js-open-lightbox.open-lightbox
+                p.btn-play.sm.white
+              .js-lightbox.hidden
+                a(href='https://www.youtube.com/watch?v=meBbDqAXago')
+        .card.portfolio
+          .card-header(style='background-image: url("images/blog-01.jpg")')
+            .card-header-inner
+              img(src='images/blog-02.jpg').feature-img.hidden
+              .overlay.justify-content-center.align-items-center.d-flex.js-open-lightbox.open-lightbox
+                p.btn-play.sm.white
+              .js-lightbox.hidden
+                a(href='https://www.youtube.com/watch?v=meBbDqAXago')
+          .card-body
+            .info
+              h3.title.title-blog.sm.mb-3
+                a(href='#') Portfolio Video Light Box
+              p.h6.mb-3
+                a(href='#').cate.font-italic MUSIC VIDEO
+        .card.portfolio.text-center
+          .card-header(style='background-image: url("images/blog-03.jpg")')
+            .card-header-inner
+              img(src='images/blog-02.jpg').feature-img.hidden
+              .info
+                h3.title.title-blog.sm.mb-3
+                  a(href='#') Portfolio Video Light Box
+                p.h6.mb-3
+                  a(href='#').cate.font-italic MUSIC VIDEO
+              .overlay.justify-content-center.align-items-center.d-flex.js-open-lightbox.open-lightbox
+                p.btn-play.sm.white
+              .js-lightbox.hidden
+                a(href='https://www.youtube.com/watch?v=meBbDqAXago')
+
+  script(type='text/javascript', src='js/main.js')

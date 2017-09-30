@@ -7,16 +7,18 @@ html
   body
     .container.p-3
       .card-deck.mt-5
-        .card.blog
+        .card.blog.post-video-popup
           .card-header
-            img(src='images/blog-01.jpg', alt='Feature Image').feature-blog-img
-            a(href='#').overlay.justify-content-center.align-items-center.d-flex
+            img(src='images/blog-02.jpg').feature-img
+            .overlay.justify-content-center.align-items-center.d-flex.js-open-lightbox.open-lightbox
               p.btn-play.sm.white
+            .js-lightbox.hidden
+              a(href='https://www.youtube.com/watch?v=meBbDqAXago')
           .card-body.text-center
             p.h6.mb-3
               a(href='#').cate.font-italic MUSIC VIDEO
             h3.title.title-blog.sm.mb-3
-              a(href='#') Obituary Writers at the New York Times Discuss Their Craft
+              a(href='#') PopUp Video Post Type
             p.meta.mb-3
               span
                 i.icon.ion-ios-person.mr-2
@@ -29,9 +31,9 @@ html
                 a(href='#') Comment
             p.mb-5 Nullam imperdiet, sem at fringilla lobortis, sem nibh fringilla nibh, idae gravida mi purus sit amet erat. Ut dictum nisi massa.Maecenas id justo rhoncus, volutpat nunc sit amet, facilisiulum scelerisque dictum Maecenas id justo rhoncus, volutpat nunc sit amet, facilisis sem. Vestibulum scelerisque dictsap
             a(href='#').btn-circle-main.mw-120 View More
-        .card.blog.single-img
+        .card.blog.post-sigle-image
           .card-header
-            img(src='images/blog-01.jpg', alt='Feature Image').feature-blog-img
+            img(src='images/blog-01.jpg', alt='Feature Image').feature-img
             a(href='#').overlay
               p.meta.text-center
                 span
@@ -44,6 +46,61 @@ html
             p.h6.mb-3
               a(href='#').cate.font-italic MUSIC VIDEO
             h3.title.title-blog.sm
-              a(href='#') Obituary Writers at the New York Times Discuss Their Craft
+              a(href='#') Single Feature Image Post Type
             p.mb-5 Nullam imperdiet, sem at fringilla lobortis, sem nibh fringilla nibh, idae gravida mi purus sit amet erat. Ut dictum nisi massa.Maecenas id justo rhoncus, volutpat nunc sit amet, facilisiulum scelerisque dictum Maecenas id justo rhoncus, volutpat nunc sit amet, facilisis sem. Vestibulum scelerisque dictsap
             a(href='#').btn-circle-main.mw-120 View More
+        .card.blog.post-slider
+          .card-header
+            .owl-carousel.carousel(data-carousel-col='1')
+              img(src='images/blog-01.jpg', alt='Feature Image')
+              img(src='images/blog-01.jpg', alt='Feature Image')  
+          .card-body.text-center
+            p.h6.mb-3
+              a(href='#').cate.font-italic MUSIC VIDEO
+            h3.title.title-blog.sm
+              a(href='#') Slider Image Post Type
+            p.mb-5 Nullam imperdiet, sem at fringilla lobortis, sem nibh fringilla nibh, idae gravida mi purus sit amet erat. Ut dictum nisi massa.Maecenas id justo rhoncus, volutpat nunc sit amet, facilisiulum scelerisque dictum Maecenas id justo rhoncus, volutpat nunc sit amet, facilisis sem. Vestibulum scelerisque dictsap
+            a(href='#').btn-circle-main.mw-120 View More
+        .card.blog.post-video
+          .card-header
+            .fluid-width-video-wrapper
+              .embed-responsive.embed-responsive-16by9
+                iframe.embed-responsive-item(src="//www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen="")
+          .card-body.text-center
+            p.h6.mb-3
+              a(href='#').cate.font-italic MUSIC VIDEO
+            h3.title.title-blog.sm
+              a(href='#') Slider Image Post Type
+            p.mb-5 Nullam imperdiet, sem at fringilla lobortis, sem nibh fringilla nibh, idae gravida mi purus sit amet erat. Ut dictum nisi massa.Maecenas id justo rhoncus, volutpat nunc sit amet, facilisiulum scelerisque dictum Maecenas id justo rhoncus, volutpat nunc sit amet, facilisis sem. Vestibulum scelerisque dictsap
+            a(href='#').btn-circle-main.mw-120 View More
+        .card.blog.post-gallery-images-lightbox
+          .card-header
+            img(src='images/blog-01.jpg').feature-img.js-open-lightbox.open-lightbox
+            .js-lightbox.hidden
+              a(href="images/blog-01.jpg")
+                img(src='images/blog-01.jpg', alt='Feature Image').feature-img
+          .card-body.text-center
+            p.h6.mb-3
+              a(href='#').cate.font-italic MUSIC VIDEO
+            h3.title.title-blog.sm
+              a(href='#') Single Feature Image Post Type
+            p.mb-5 Nullam imperdiet, sem at fringilla lobortis, sem nibh fringilla nibh, idae gravida mi purus sit amet erat. Ut dictum nisi massa.Maecenas id justo rhoncus, volutpat nunc sit amet, facilisiulum scelerisque dictum Maecenas id justo rhoncus, volutpat nunc sit amet, facilisis sem. Vestibulum scelerisque dictsap
+            a(href='#').btn-circle-main.mw-120 View More
+        .card.blog.post-gallery-images-lightbox
+          .card-header
+            img(src='images/blog-03.jpg').feature-img.open-lightbox.js-open-lightbox
+            .js-lightbox.hidden
+              a(href="images/blog-03.jpg")
+                img(src='images/blog-03.jpg', alt='Feature Image').feature-img
+              a(href="images/blog-01.jpg")
+                img(src='images/blog-01.jpg', alt='Feature Image').feature-img
+              a(href="images/blog-02.jpg")
+                img(src='images/blog-02.jpg', alt='Feature Image').feature-img
+          .card-body.text-center
+            p.h6.mb-3
+              a(href='#').cate.font-italic MUSIC VIDEO
+            h3.title.title-blog.sm
+              a(href='#') Single Feature Image Post Type
+            p.mb-5 Nullam imperdiet, sem at fringilla lobortis, sem nibh fringilla nibh, idae gravida mi purus sit amet erat. Ut dictum nisi massa.Maecenas id justo rhoncus, volutpat nunc sit amet, facilisiulum scelerisque dictum Maecenas id justo rhoncus, volutpat nunc sit amet, facilisis sem. Vestibulum scelerisque dictsap
+            a(href='#').btn-circle-main.mw-120 View More
+  script(type='text/javascript', src='js/main.js')

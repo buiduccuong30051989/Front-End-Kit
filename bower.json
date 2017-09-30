@@ -18,6 +18,18 @@
   ],
   "devDependencies": {
     "bootstrap": "v4.0.0-beta",
-    "components-font-awesome": "^4.7.0"
+    "components-font-awesome": "^4.7.0",
+    "lightgallery": "^1.6.1",
+    "lg-thumbnail": "^1.1.0",
+    "lg-autoplay": "^1.0.4",
+    "lg-video": "^1.1.0",
+    "lg-fullscreen": "^1.0.1",
+    "lg-pager": "^1.0.2",
+    "lg-zoom": "^1.1.0",
+    "lg-hash": "^1.0.2",
+    "lg-share": "^1.0.2"
+  },
+  "dependencies": {
+    "owl.carousel": "^2.2.1"
   }
 }

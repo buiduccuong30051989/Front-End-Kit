@@ -1,0 +1,53 @@
+//
+// Components :: Portfolio
+// --------------------------------------------------
+.card.portfolio {
+  overflow: hidden;
+  border: 0;
+
+  .card-header {
+	  position: relative;
+	  display: block;
+	  padding: 0;
+	  border: 0;
+	  background-size: cover;
+  	background-position: center center;
+
+	  .card-header-inner {
+	  	position: relative;
+	  	display: block;
+	  	padding-top: 62.5%;
+	  }
+
+	  .overlay {
+	    background-color: rgba(0,0,0,.2);
+	    opacity: 1;
+	    position: absolute;
+	    width: 100%;
+	    height: 100%;
+	    top: 0;
+	    left: 0;
+	    transition: $transition-base;
+	  }
+
+	  .info {
+      position: absolute;
+      z-index: 2;
+      bottom: 0;
+      width: 100%;
+      margin-bottom: 0;
+      padding: 15px;
+      @include gradient-y(rgba(0,0,0,0), rgba(0,0,0,1), 0%, 100%);
+
+      a {
+      	color: $white;
+      }
+    }
+
+	  &:hover .overlay {
+	  	background-color: rgba(0,0,0,.3);
+	    text-decoration: none;
+	    opacity: 1;
+	  }
+	}
+}
