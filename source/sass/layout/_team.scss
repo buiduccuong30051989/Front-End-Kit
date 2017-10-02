@@ -1,0 +1,40 @@
+//
+// Components :: Team
+// --------------------------------------------------
+
+.card-overlay {
+  position: relative;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  color: $white;
+  // e
+  transition: $transition-base;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.overlay.main-color {
+  background-color: rgba($main-color, .8);
+}
+
+.overlay.secondary-color {
+  background-color: rgba($secondary-color, .95);
+}
+
+.overlay.team-2 {
+  padding: 15px;
+
+  p {
+    margin: 0;
+  }
+}
+

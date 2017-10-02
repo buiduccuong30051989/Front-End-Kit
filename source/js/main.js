@@ -1,7 +1,7 @@
 //=require jquery/dist/jquery.min.js
 //=require extention/popper.min.js
 //=require bootstrap/dist/js/bootstrap.min.js
-//=require owl.carousel/dist/owl.carousel.min.js
+//=require slick-carousel/slick/slick.min.js
 //=require lightgallery/dist/js/lightgallery-all.min.js
 //=require extention/menuzord.js
 
@@ -38,7 +38,7 @@ $(function() {
 
   // Navigation
   $("#menuzord").menuzord({
-    indicatorFirstLevel: "<i class='fa fa-angle-down'></i>",
+    indicatorFirstLevel: "<i class='faslick-carousel/slick/slick.min.js fa-angle-down'></i>",
     indicatorSecondLevel: "<i class='fa fa-angle-right'></i>"
   });
 });
@@ -140,182 +140,131 @@ var INSPIRO = {};
     //----------------------------------------------------/
     INSPIRO.carouselInspiro = function () {
 
-        var $sliderCarousel = $('.carousel') || $('.owl-carousel'),
-            $postCarousel = $(".post-mini-slider");
-
-        if ($sliderCarousel.exists()) {
-            $sliderCarousel.each(function () {
-                var element = $(this),
-
-                    sliderCarouselColumns = element.attr('data-carousel-col') || "4",
-                    sliderCarouselColumnsMedium = element.attr('data-carousel-col-md') || "4",
-                    sliderCarouselColumnsSmall = element.attr('data-carousel-col-sm') || "3",
-                    sliderCarouselColumnsExtraSmall = element.attr('data-carousel-col-xs') || "1",
-                    $sliderCarouselMargins = element.attr('data-carousel-margins') || "20",
-                    $sliderCarouseDots = element.attr('data-carousel-dots') || false,
-                    $sliderCarouseNav = false,
-                    $sliderCarouseAutoPlay = element.attr('data-carousel-autoplay') || false,
-                    $sliderCarouseVideo = element.attr('data-carousel-video') || false;
-
-
-                if ($sliderCarouseDots === false) {
-                    $sliderCarouseNav = true;
-                } else {
-                    $sliderCarouseDots = true;
-                }
-
-                if (sliderCarouselColumns == 1) {
-                    element.owlCarousel({
-                        margin: Number($sliderCarouselMargins),
-                        nav: $sliderCarouseNav,
-                        navText: ['<i class="icon ion-ios-arrow-left"></i>',
-                              '<i class="icon ion-ios-arrow-right"></i>'],
-                        autoplay: $sliderCarouseAutoPlay,
-                        autoplayHoverPause: true,
-                        dots: $sliderCarouseDots,
-                        items: 1,
-                        autoHeight: false,
-                        video: $sliderCarouseVideo,
-
-                    });
-
-
-                } else {
-
-                    element.owlCarousel({
-                        margin: Number($sliderCarouselMargins),
-                        nav: $sliderCarouseNav,
-                        navText: ['<i class="fa fa-arrow-left icon-white"></i>',
-                              '<i class="fa fa-arrow-right icon-white"></i>'],
-                        autoplay: $sliderCarouseAutoPlay,
-                        autoplayHoverPause: true,
-                        dots: $sliderCarouseDots,
-                        video: $sliderCarouseVideo,
-                        responsive: {
-                            0: {
-                                items: sliderCarouselColumnsExtraSmall
-                            },
-                            600: {
-                                items: sliderCarouselColumnsSmall
-                            },
-                            1000: {
-                                items: sliderCarouselColumnsMedium
-                            },
-                            1200: {
-                                items: sliderCarouselColumns
-                            }
-                        }
-                    });
-
-
-                }
-
-            });
-        }
-
+        var $postCarousel = $(".js-post-mini-slider");
         if ($postCarousel.exists()) {
             $postCarousel.each(function () {
-                $postCarousel.owlCarousel({
-                    autoplay: true,
-                    autoplayHoverPause: true,
-                    dots: true,
-                    mouseDrag: false,
-                    touchDrag: false,
-                    items: 1,
-                });
+                var element = $(this),
+                    $sliderCarouseDots = element.attr('data-carousel-dots') || false,
+                    $sliderCarouseNav = element.attr('data-carousel-arrow') || true,
+                    $sliderCarouseLoop = element.attr('data-carousel-loop') || false,
+                    $sliderCarouseAutoPlay = element.attr('data-carousel-autoplay') || false;
 
-            });
-        }
-
-        if ($("#slider-carousel").exists()) {
-            $("#slider-carousel").each(function () {
-                $("#slider-carousel").owlCarousel({
-                    margin: 0,
-                    loop: true,
-                    nav: true,
-                    navText: ['<i class="fa fa-arrow-left icon-white"></i>',
-                              '<i class="fa fa-arrow-right icon-white"></i>'],
-                    autoplay: true,
-                    dots: false,
-                    autoplayHoverPause: true,
-                    navigation: true,
-                    items: 1,
-                    animateOut: 'fadeOut'
-
-
-                });
-
-                var owl = $("#slider-carousel");
-
-                $('.owl-item.active .slider-content').addClass("animated fadeIn");
-
-
-                owl.on('changed.owl.carousel', function (event) {
-
-                    $('.owl-item:not(.active)').siblings().find(".slider-content").removeClass("animated fadeIn");
-                    setTimeout(function () {
-                        $('.owl-item.active .slider-content').addClass("animated fadeIn");
-                    }, 300);
-
-
-                    //stop embed videos if they exists
-                    if ($("#slider-carousel .owl-item.active .slider-content iframe").length) {
-                        var url = $("#slider-carousel .owl-item.active .slider-content iframe").attr("src");
-                        $('iframe').attr('src', '');
-                        $('iframe').attr('src', url);
-
-                    }
-
-                });
-
-
-
-
-
-            });
-        }
-        // News ticker
-        if ($('.news-ticker-content').exists()) {
-            $('.news-ticker-content').each(function () {
-                $('.news-ticker-content').owlCarousel({
-                    autoplay: true,
-                    autoplayHoverPause: true,
-                    dots: false,
-                    mouseDrag: true,
-                    touchDrag: true,
-                    margin: 40,
-                    autoWidth: true,
-                    autoplayTimeout: "3000",
-                    loop: true,
-                });
-
-            });
-        }
-
-        if ($('.tab-carousel').exists()) {
-
-            if ($('.tab-carousel').parent().hasClass('active')) {
-                $('.tab-carousel').owlCarousel({
-                    navText: ['<i class="fa fa-arrow-left icon-white"></i>',
-                              '<i class="fa fa-arrow-right icon-white"></i>'],
-                    margin: 0,
-                    nav: true,
-                    dots: false,
-                    items: 1
-                });
-            } else {
-                $('.tabs-navigation li a').click(function () {
-                    $('.tab-carousel').owlCarousel({
-                        navText: ['<i class="fa fa-arrow-left icon-white"></i>',
-                              '<i class="fa fa-arrow-right icon-white"></i>'],
-                        margin: 0,
-                        nav: true,
-                        dots: false,
-                        items: 1
+                    element.slick({
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        nav: $sliderCarouseNav,
+                      	prevArrow: '<a class="slick-prev"><i class="icon ion-ios-arrow-left"></i></a>',
+          				nextArrow: '<a class="slick-next"><i class="icon ion-ios-arrow-right"></i></a>',
+                        autoplay: $sliderCarouseAutoPlay,
+                        dots: $sliderCarouseDots
                     });
-                });
-            }
+
+            });
         }
+
+        // if ($postCarousel.exists()) {
+        //     $postCarousel.each(function () {
+        //         $postCarousel.owlCarousel({
+        //             autoplay: true,
+        //             autoplayHoverPause: true,
+        //             dots: true,
+        //             mouseDrag: false,
+        //             touchDrag: false,
+        //             items: 1,
+        //         });
+
+        //     });
+        // }
+
+        // if ($("#slider-carousel").exists()) {
+        //     $("#slider-carousel").each(function () {
+        //         $("#slider-carousel").owlCarousel({
+        //             margin: 0,
+        //             loop: true,
+        //             nav: true,
+        //             navText: ['<i class="fa fa-arrow-left icon-white"></i>',
+        //                       '<i class="fa fa-arrow-right icon-white"></i>'],
+        //             autoplay: true,
+        //             dots: false,
+        //             autoplayHoverPause: true,
+        //             navigation: true,
+        //             items: 1,
+        //             animateOut: 'fadeOut'
+
+
+        //         });
+
+        //         var owl = $("#slider-carousel");
+
+        //         $('.owl-item.active .slider-content').addClass("animated fadeIn");
+
+
+        //         owl.on('changed.owl.carousel', function (event) {
+
+        //             $('.owl-item:not(.active)').siblings().find(".slider-content").removeClass("animated fadeIn");
+        //             setTimeout(function () {
+        //                 $('.owl-item.active .slider-content').addClass("animated fadeIn");
+        //             }, 300);
+
+
+        //             //stop embed videos if they exists
+        //             if ($("#slider-carousel .owl-item.active .slider-content iframe").length) {
+        //                 var url = $("#slider-carousel .owl-item.active .slider-content iframe").attr("src");
+        //                 $('iframe').attr('src', '');
+        //                 $('iframe').attr('src', url);
+
+        //             }
+
+        //         });
+
+
+
+
+
+        //     });
+        // }
+        // // News ticker
+        // if ($('.news-ticker-content').exists()) {
+        //     $('.news-ticker-content').each(function () {
+        //         $('.news-ticker-content').owlCarousel({
+        //             autoplay: true,
+        //             autoplayHoverPause: true,
+        //             dots: false,
+        //             mouseDrag: true,
+        //             touchDrag: true,
+        //             margin: 40,
+        //             autoWidth: true,
+        //             autoplayTimeout: "3000",
+        //             loop: true,
+        //         });
+
+        //     });
+        // }
+
+        // if ($('.tab-carousel').exists()) {
+
+        //     if ($('.tab-carousel').parent().hasClass('active')) {
+        //         $('.tab-carousel').owlCarousel({
+        //             navText: ['<i class="fa fa-arrow-left icon-white"></i>',
+        //                       '<i class="fa fa-arrow-right icon-white"></i>'],
+        //             margin: 0,
+        //             nav: true,
+        //             dots: false,
+        //             items: 1
+        //         });
+        //     } else {
+        //         $('.tabs-navigation li a').click(function () {
+        //             $('.tab-carousel').owlCarousel({
+        //                 navText: ['<i class="fa fa-arrow-left icon-white"></i>',
+        //                       '<i class="fa fa-arrow-right icon-white"></i>'],
+        //                 margin: 0,
+        //                 nav: true,
+        //                 dots: false,
+        //                 items: 1
+        //             });
+        //         });
+        //     }
+        // }
 
     };
 

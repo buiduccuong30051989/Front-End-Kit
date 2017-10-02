@@ -1,0 +1,39 @@
+include modules/head/head
+include modules/elements/elements
+
+doctype html
+html
+  +head(head.home)
+  body
+    .container.p-3
+      .card-deck
+        .card.card-overlay
+          .card-header.p-0
+            img(src='images/blog-01.jpg', alt='Team Images').feature-img
+            .overlay.main-color.justify-content-center.align-items-center.d-flex.flex-column
+              h4 IRA BANANA
+              p Photography
+        .card.card-overlay
+          .card-header.p-0
+            img(src='images/blog-01.jpg', alt='Team Images').feature-img
+            .overlay.secondary-color.justify-content-center.align-items-center.d-flex.flex-column
+              h4 IRA BANANA
+              p Photography
+        .card.card-overlay
+          .card-header.p-0
+            img(src='images/blog-01.jpg', alt='Team Images').feature-img
+            .overlay.secondary-color.team-2.d-flex.justify-content-end.flex-column
+              p
+                a(href='#').read-more-1.clearfix
+                  i.icon.ion-android-add
+                  | FACEBOOK
+              p
+                a(href='#').read-more-1.clearfix
+                  i.icon.ion-android-add
+                  | TWITTER
+              p
+                a(href='#').read-more-1.clearfix
+                  i.icon.ion-android-add
+                  | INSTAGRAM
+
+  script(type='text/javascript', src='js/main.js')

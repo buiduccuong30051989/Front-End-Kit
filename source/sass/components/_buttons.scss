@@ -143,6 +143,7 @@
   transition: $transition-base;
   font-style: italic;
   position: relative;
+  display: inline-block;
 
   i {
     opacity: 0;
@@ -153,11 +154,11 @@
 
   &:hover {
     color: $main-color;
-    margin-left: 30px;
+    padding-left: 30px;
 
     i {
       opacity: 1;
-      left: -20px;
+      left: 10px;
     }
   }
 }
