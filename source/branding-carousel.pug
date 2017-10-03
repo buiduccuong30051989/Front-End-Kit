@@ -1,0 +1,28 @@
+include modules/head/head
+include modules/elements/elements
+
+doctype html
+html
+  +head(head.home)
+  body
+    .container.p-3
+      .js-carousel.carousel-branding.slider(
+        data-carousel-lg="6", 
+        data-carousel-autoplay="true",
+        data-carousel-drag="true",
+        data-carousel-swipe="true",
+        data-carousel-swipe-to="true",
+        data-carousel-arrow="true",
+        data-carousel-loop="true"
+        )
+        img(src='http://lorempixel.com/200/200/sports', alt='Branding Image') 
+        img(src='http://lorempixel.com/200/200/food', alt='Branding Image') 
+        img(src='http://lorempixel.com/200/200/nature', alt='Branding Image') 
+        img(src='http://lorempixel.com/200/200/transport', alt='Branding Image') 
+        img(src='http://lorempixel.com/200/200/city', alt='Branding Image') 
+        img(src='http://lorempixel.com/200/200/people', alt='Branding Image') 
+        img(src='http://lorempixel.com/200/200/nature', alt='Branding Image') 
+        img(src='http://lorempixel.com/200/200/cats', alt='Branding Image') 
+        img(src='http://lorempixel.com/200/200/sports', alt='Branding Image') 
+        img(src='http://lorempixel.com/200/200/nature', alt='Branding Image') 
+  script(type='text/javascript', src='js/main.js')

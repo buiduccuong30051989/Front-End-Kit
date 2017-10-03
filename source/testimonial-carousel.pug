@@ -1,0 +1,73 @@
+include modules/head/head
+include modules/elements/elements
+
+doctype html
+html
+  +head(head.home)
+  body
+    .container.p-3
+      .js-carousel.carousel-branding(
+        data-carousel-lg="6", 
+        data-carousel-autoplay="true",
+        data-carousel-drag="true",
+        data-carousel-swipe="true",
+        data-carousel-swipe-to="true",
+        data-carousel-arrow="true",
+        data-carousel-loop="true"
+        )
+        img(src='http://lorempixel.com/200/200/sports', alt='Branding Image') 
+        img(src='http://lorempixel.com/200/200/food', alt='Branding Image') 
+        img(src='http://lorempixel.com/200/200/nature', alt='Branding Image') 
+        img(src='http://lorempixel.com/200/200/transport', alt='Branding Image') 
+        img(src='http://lorempixel.com/200/200/city', alt='Branding Image') 
+        img(src='http://lorempixel.com/200/200/people', alt='Branding Image') 
+        img(src='http://lorempixel.com/200/200/nature', alt='Branding Image') 
+        img(src='http://lorempixel.com/200/200/cats', alt='Branding Image') 
+        img(src='http://lorempixel.com/200/200/sports', alt='Branding Image') 
+        img(src='http://lorempixel.com/200/200/nature', alt='Branding Image') 
+
+      .js-carousel.carousel-testimonial.js-testimonial-carousel-main(
+        data-carousel-lg="1", 
+        data-carousel-fade="true",
+        data-carousel-autoplay="true",
+        data-carousel-drag="true",
+        data-carousel-swipe="true",
+        data-carousel-swipe-to="true",
+        data-carousel-arrow="true",
+        data-carousel-loop="true",
+        data-carousel-thumb=".js-testimonial-carousel-sub"
+        )
+        img(src='http://lorempixel.com/200/200/sports', alt='Branding Image') 
+        img(src='http://lorempixel.com/200/200/food', alt='Branding Image') 
+        img(src='http://lorempixel.com/200/200/nature', alt='Branding Image') 
+        img(src='http://lorempixel.com/200/200/transport', alt='Branding Image') 
+        img(src='http://lorempixel.com/200/200/city', alt='Branding Image') 
+        img(src='http://lorempixel.com/200/200/people', alt='Branding Image') 
+        img(src='http://lorempixel.com/200/200/nature', alt='Branding Image') 
+        img(src='http://lorempixel.com/200/200/cats', alt='Branding Image') 
+        img(src='http://lorempixel.com/200/200/sports', alt='Branding Image') 
+        img(src='http://lorempixel.com/200/200/nature', alt='Branding Image') 
+      .js-carousel.carousel-testimonial.js-testimonial-carousel-sub(
+          data-carousel-lg="6", 
+          data-carousel-autoplay="true",
+          data-carousel-drag="true",
+          data-carousel-swipe="true",
+          data-carousel-swipe-to="true",
+          data-carousel-arrow="true",
+          data-carousel-loop="true",
+          data-carousel-thumb=".js-testimonial-carousel-main",
+          data-carousel-thumb-focus="true",
+          data-carousel-center="true",
+          data-carousel-variable-width="true"
+          )
+          img(src='http://lorempixel.com/400/200/sports', alt='Branding Image') 
+          img(src='http://lorempixel.com/300/200/food', alt='Branding Image') 
+          img(src='http://lorempixel.com/500/200/nature', alt='Branding Image') 
+          img(src='http://lorempixel.com/600/200/transport', alt='Branding Image') 
+          img(src='http://lorempixel.com/100/200/city', alt='Branding Image') 
+          img(src='http://lorempixel.com/200/200/people', alt='Branding Image') 
+          img(src='http://lorempixel.com/600/200/nature', alt='Branding Image') 
+          img(src='http://lorempixel.com/150/200/cats', alt='Branding Image') 
+          img(src='http://lorempixel.com/250/200/sports', alt='Branding Image') 
+          img(src='http://lorempixel.com/80/200/nature', alt='Branding Image') 
+  script(type='text/javascript', src='js/main.js')
