@@ -186,7 +186,7 @@ var INSPIRO = {};
         element.slick({
           slidesToShow: Number($sliderCarouselLg),
           slidesToScroll: Number($sliderCarouselPerPage),
-          arrows: $sliderCarouselArrow,
+          arrows: false,
           dots: $sliderCarouselDots,
           swipe: $sliderCarouselSwipe,
           swipeToSlide: $sliderCarouselSwipeTo,
@@ -199,8 +199,8 @@ var INSPIRO = {};
           infinite: $sliderCarouselLoop,
           draggable: $sliderCarouselDrag,
           asNavFor: $sliderCarouselThumb,
-          focusOnSelect: $sliderCarouselThumbFocus,
           centerPadding: $sliderCarouselCenterPadding,
+          focusOnSelect: true,
           responsive: [
             {
               breakpoint: 1200,

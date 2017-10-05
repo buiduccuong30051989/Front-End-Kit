@@ -1,0 +1,118 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/elements/elements
+
+doctype html
+html
+  +head(head.home)
+  body.light(style="background-color: #000")
+    nav.navigation
+      #menuzord.menuzord.justify-content-between.align-items-center
+        a.menuzord-brand(href='javascript:void(0)')
+          img(src="http://via.placeholder.com/121x47", alt='logo')
+        ul.menuzord-menu.menuzord-right.menuzord-indented.scrollable
+          li
+            a(href='#') HOME
+          li
+            a(href='#') DIRECTOR
+          li
+            a(href='#') FILMS
+          li
+            a(href='#') GALLERY
+          li
+            a(href='#') PAGES
+          li
+            a(href='#') BLOG
+          li
+            a(href='#') CONTACT
+    nav.navigation.mt-3
+      #menuzord.menuzord.justify-content-between.align-items-center
+        a.menuzord-brand(href='javascript:void(0)')
+          img(src="http://via.placeholder.com/121x47", alt='logo')
+        ul.menuzord-menu
+          li
+            a(href='#') HOME
+          li
+            a(href='#') DIRECTOR
+          li
+            a(href='#') FILMS
+          li
+            a(href='#') GALLERY
+          li
+            a(href='#') PAGES
+          li
+            a(href='#') BLOG
+          li
+            a(href='#') CONTACT
+        .menuzord-form
+          form.form-inline
+            .input-group
+              input.form-control(type='text')
+              button.input-group-addon 
+                i.icon.ion-ios-search
+    nav.navigation.mt-3
+      #menuzord.menuzord.justify-content-center.align-items-center
+        ul.menuzord-menu
+          li
+            a(href='#') HOME
+          li
+            a(href='#') DIRECTOR
+          li
+            a(href='#') FILMS
+          li
+            a(href='#') GALLERY
+        a.menuzord-brand(href='javascript:void(0)')
+          img(src="http://via.placeholder.com/121x47", alt='logo')
+        ul.menuzord-menu
+          li
+            a(href='#') PAGES
+          li
+            a(href='#') BLOG
+          li
+            a(href='#') CONTACT
+    nav.navigation.mt-3
+      .top-header
+        .container
+          .row.justify-content-between.align-items-center
+            .col-3.widget-social-list
+              ul.list-unstyled
+                li.d-inline-block
+                  a(href='#')
+                    i.icon.ion-social-facebook
+                li.d-inline-block
+                  a(href='#')
+                    i.icon.ion-social-twitter
+                li.d-inline-block
+                  a(href='#')
+                    i.icon.ion-social-youtube
+                li.d-inline-block
+                  a(href='#')
+                    i.icon.ion-social-vimeo
+            .col-6.justify-content-center.d-flex
+              a.menuzord-brand(href='javascript:void(0)')
+                img(src="http://via.placeholder.com/121x47", alt='logo')
+            .col-3.menuzord-form
+              form.form-inline
+                .input-group
+                  input.form-control(type='text')
+                  button.input-group-addon 
+                    i.icon.ion-ios-search
+      #menuzord.menuzord.justify-content-center.align-items-center
+        ul.menuzord-menu
+          li
+            a(href='#') HOME
+          li
+            a(href='#') DIRECTOR
+          li
+            a(href='#') FILMS
+          li
+            a(href='#') GALLERY
+          li
+            a(href='#') PAGES
+          li
+            a(href='#') BLOG
+          li
+            a(href='#') CONTACT
+    +footer
+  script(type='text/javascript', src='js/main.js')

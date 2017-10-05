@@ -6,7 +6,7 @@ include modules/elements/elements
 doctype html
 html
   +head(head.home)
-  body.light(style="background: black")
+  body.light
     nav.navigation
       #menuzord.menuzord.justify-content-between.align-items-center
         a.menuzord-brand(href='javascript:void(0)')
@@ -26,99 +26,18 @@ html
             a(href='#') BLOG
           li
             a(href='#') CONTACT
-    nav.navigation.mt-3
-      #menuzord.menuzord.justify-content-between.align-items-center
-        a.menuzord-brand(href='javascript:void(0)')
-          img(src="http://via.placeholder.com/121x47", alt='logo')
-        ul.menuzord-menu
-          li
-            a(href='#') HOME
-          li
-            a(href='#') DIRECTOR
-          li
-            a(href='#') FILMS
-          li
-            a(href='#') GALLERY
-          li
-            a(href='#') PAGES
-          li
-            a(href='#') BLOG
-          li
-            a(href='#') CONTACT
-        .menuzord-form
-          form.form-inline
-            .input-group
-              input.form-control(type='text')
-              button.input-group-addon 
-                i.icon.ion-ios-search
-    nav.navigation.mt-3
-      #menuzord.menuzord.justify-content-center.align-items-center
-        ul.menuzord-menu
-          li
-            a(href='#') HOME
-          li
-            a(href='#') DIRECTOR
-          li
-            a(href='#') FILMS
-          li
-            a(href='#') GALLERY
-        a.menuzord-brand(href='javascript:void(0)')
-          img(src="http://via.placeholder.com/121x47", alt='logo')
-        ul.menuzord-menu
-          li
-            a(href='#') PAGES
-          li
-            a(href='#') BLOG
-          li
-            a(href='#') CONTACT
-    nav.navigation.mt-3
-      .top-header
-        .container
-          .row
-            .widget-social-list
-              ul.list-unstyled
-                li.d-inline-block
-                  a(href='#')
-                    i.icon.ion-social-facebook
-                li.d-inline-block
-                  a(href='#')
-                    i.icon.ion-social-twitter
-                li.d-inline-block
-                  a(href='#')
-                    i.icon.ion-social-youtube
-                li.d-inline-block
-                  a(href='#')
-                    i.icon.ion-social-vimeo                                                  
-      #menuzord.menuzord.justify-content-center.align-items-center
-        ul.menuzord-menu
-          li
-            a(href='#') HOME
-          li
-            a(href='#') DIRECTOR
-          li
-            a(href='#') FILMS
-          li
-            a(href='#') GALLERY
-        a.menuzord-brand(href='javascript:void(0)')
-          img(src="http://via.placeholder.com/121x47", alt='logo')
-        ul.menuzord-menu
-          li
-            a(href='#') PAGES
-          li
-            a(href='#') BLOG
-          li
-            a(href='#') CONTACT
     section#revo-slider
       img(src='images/slider-01.jpg', alt='demo', style=('width: 100vw; height: 100vh'))
-    section#call-to-action
-    section#services
-      .services-wrapper
-        .container
-          .row
-            .col.title-section-wrapper.text-center
-                h3.title Our Services
-                h6.sub-title LET'S MAKE GREAT THINGS TOGETHER
-          .card-deck.deck-icon-box-1.mt-5
+    section#feature
+      .boxed-fluid
+    section#services.mt-3
+      .container
+        .row
+          .col.title-wrapper.text-center
+              h3.title Our Services
+              h6.sub-title LET'S MAKE GREAT THINGS TOGETHER
+        .row.deck-icon-box-1.mt-5
+          .col-md-4
             .card.icon-box-style-1
               .card-body.text-center
                 .icon-bg.rounded-circle.mx-auto.mb-4
@@ -128,6 +47,7 @@ html
                 a(href='#').read-more-1
                   i.icon.ion-android-add
                   | Read more
+          .col-md-4
             .card.icon-box-style-1
               .card-body.text-center
                 .icon-bg.rounded-circle.mx-auto.mb-4
@@ -137,6 +57,7 @@ html
                 a(href='#').read-more-1
                   i.icon.ion-android-add
                   | Read more
+          .col-md-4
             .card.icon-box-style-1
               .card-body.text-center
                 .icon-bg.rounded-circle.mx-auto.mb-4
@@ -146,13 +67,13 @@ html
                 a(href='#').read-more-1
                   i.icon.ion-android-add
                   | Read more
-    section#portfolio
-      .container-fluid.boxed-fluid
+    section#portfolio.mt-3.bg-light-gray
+      .boxed-fluid
         .row
-          .col.title-section-wrapper.text-center
+          .col.title-wrapper.text-center
             h3.title Our Works
             h6.sub-title WE WILL DEVELOP YOUR FILM, YOUR TALENT
-        .row.gutters-10.mt-5
+        .row.gutters-10.mt-5.portfolio-home-1
           .col-lg-4.col-sm-6.card.portfolio.text-center
             .card-header(style='background-image: url("images/portfolio-01.jpg");')
               .card-header-inner
@@ -231,64 +152,57 @@ html
                   p.btn-play.sm.white
                 .js-lightbox.hidden
                   a(href='https://www.youtube.com/watch?v=meBbDqAXago')
-        .row
+        .row.section-footer
           .col.text-center
             a(href='#').btn.btn-circle-secondary View More
             a(href='#').btn.btn-circle-main Hire us Now
-    section#team
+    section#team.mt-3
       .container
           .row
-            .col.title-section-wrapper.text-center
+            .col.title-wrapper.text-center
               h3.title Creative team
               h6.sub-title LET'S MAKE GREAT THINGS TOGETHER
-          .row.gutters-10
-            .col-md-6.col-sm-12
-              .card.card-overlay
-                .card-header.h-100.justify-content-center.d-flex.flex-column
-                  h4 We are the best team!
-                  p Nullam imperdiet, sem at fringilla lobortis, sem nibh fringilla nibh, idae gravida mi purus sit amet erat. Ut dictum nisi massa, vitae pulvinar metus scelerisque in. 
-                  p Ut dictum nisi massa, vitae pulvinar metus scelerisque in. 
-            .col-md-3.col-sm-3
-              .card.card-overlay
-                .card-header.p-0
-                  img(src='images/team-01.jpg', alt='Team Images').feature-img
-                  .overlay.main-color.justify-content-center.align-items-center.d-flex.flex-column
-                    h4 IRA BANANA
-                    p Photography
-            .col-md-3.col-sm-3
-              .card.card-overlay
-                .card-header.p-0
-                  img(src='images/team-02.jpg', alt='Team Images').feature-img
-                  .overlay.main-color.justify-content-center.align-items-center.d-flex.flex-column
-                    h4 IRA BANANA
-                    p Photography
-            .col-md-3.col-sm-3
-              .card.card-overlay
-                .card-header.p-0
-                  img(src='images/team-03.jpg', alt='Team Images').feature-img
-                  .overlay.main-color.justify-content-center.align-items-center.d-flex.flex-column
-                    h4 IRA BANANA
-                    p Photography
-            .col-md-3.col-sm-3
-              .card.card-overlay
-                .card-header.p-0
-                  img(src='images/team-04.jpg', alt='Team Images').feature-img
-                  .overlay.main-color.justify-content-center.align-items-center.d-flex.flex-column
-                    h4 IRA BANANA
-                    p Photography
-            .col-md-3.col-sm-12
-              .card.card-overlay
-                .card-header.p-0
-                  img(src='images/team-05.jpg', alt='Team Images').feature-img
-                  .overlay.main-color.justify-content-center.align-items-center.d-flex.flex-column
-                    h4 IRA BANANA
-                    p Photography
-            .col-md-3.col-sm-12
-              .card.card-overlay
-                .card-header.p-0
-                  a(href='#').overlay.secondary-color.overlay-view-more-square.justify-content-center.align-items-center.d-flex.flex-column
-                    i.icon.ion-ios-plus-empty
-                    h5.mt-3 VIEW MORE
+          .row.gutters-10.team-home-1.mt-5
+            .col-md-6.col-sm-12.card.card-overlay.border-0
+              .card-header.h-100.justify-content-center.d-flex.flex-column.border.bg-white
+                h4.title We are the best team!
+                p Nullam imperdiet, sem at fringilla lobortis, sem nibh fringilla nibh, idae gravida mi purus sit amet erat. Ut dictum nisi massa, vitae pulvinar metus scelerisque in. 
+                p Ut dictum nisi massa, vitae pulvinar metus scelerisque in. 
+            .col-md-3.col-sm-3.card.card-overlay.border-0
+              .card-header.p-0
+                img(src='images/team-01.jpg', alt='Team Images').feature-img
+                .overlay.main-color.justify-content-center.align-items-center.d-flex.flex-column
+                  h4 IRA BANANA
+                  p Photography
+            .col-md-3.col-sm-3.card.card-overlay.border-0
+              .card-header.p-0
+                img(src='images/team-02.jpg', alt='Team Images').feature-img
+                .overlay.main-color.justify-content-center.align-items-center.d-flex.flex-column
+                  h4 IRA BANANA
+                  p Photography
+            .col-md-3.col-sm-3.card.card-overlay.border-0
+              .card-header.p-0
+                img(src='images/team-03.jpg', alt='Team Images').feature-img
+                .overlay.main-color.justify-content-center.align-items-center.d-flex.flex-column
+                  h4 IRA BANANA
+                  p Photography
+            .col-md-3.col-sm-3.card.card-overlay.border-0
+              .card-header.p-0
+                img(src='images/team-04.jpg', alt='Team Images').feature-img
+                .overlay.main-color.justify-content-center.align-items-center.d-flex.flex-column
+                  h4 IRA BANANA
+                  p Photography
+            .col-md-3.col-sm-12.card.card-overlay.border-0
+              .card-header.p-0
+                img(src='images/team-05.jpg', alt='Team Images').feature-img
+                .overlay.main-color.justify-content-center.align-items-center.d-flex.flex-column
+                  h4 IRA BANANA
+                  p Photography
+            .col-md-3.col-sm-12.card.card-overlay.border-0
+              .card-header.p-0.h-100
+                a(href='#').overlay.secondary-color.overlay-view-more-square.justify-content-center.align-items-center.d-flex.flex-column
+                  i.icon.ion-ios-plus-empty
+                  h5.mt-3 VIEW MORE
     section#awards.swatch-dark.p-3
       .container
         .row.d-block
@@ -303,36 +217,41 @@ html
             data-carousel-thumb=".js-awards-carousel-sub"
             )
             .item-award.text-center
-              h3 Heading Title 1
+              h3.title Heading Title 1
               p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
             .item-award.text-center
-              h3 Heading Title 2
+              h3.title Heading Title 2
               p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
             .item-award.text-center
-              h3 Heading Title 3
+              h3.title Heading Title 3
               p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
             .item-award.text-center
-              h3 Heading Title 4
+              h3.title Heading Title 4
               p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
             .item-award.text-center
-              h3 Heading Title 5
+              h3.title Heading Title 5
               p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo. 
-          .js-carousel.carousel-awards.js-awards-carousel-sub(
-              data-carousel-lg="3", 
-              data-carousel-md="3", 
-              data-carousel-xs="3", 
-              data-carousel-autoplay="true",
-              data-carousel-drag="true",
-              data-carousel-swipe="true",
-              data-carousel-swipe-to="true",
-              data-carousel-loop="true",
-              data-carousel-thumb=".js-awards-carousel-main",
-              data-carousel-thumb-focus="true",
-              data-carousel-center="true")
+          .js-carousel.carousel-awards-logo.js-awards-carousel-sub(
+            data-carousel-lg="5", 
+            data-carousel-md="3", 
+            data-carousel-xs="3", 
+            data-carousel-autoplay="true",
+            data-carousel-drag="true",
+            data-carousel-swipe="true",
+            data-carousel-swipe-to="true",
+            data-carousel-loop="true",
+            data-carousel-thumb=".js-awards-carousel-main",
+            data-carousel-thumb-focus="true",
+            data-carousel-center="true")
+            .item-award-logo
               img(src='images/logo-01.png', alt='Award Image') 
+            .item-award-logo
               img(src='images/logo-02.png', alt='Award Image') 
+            .item-award-logo
               img(src='images/logo-03.png', alt='Award Image') 
+            .item-award-logo
               img(src='images/logo-04.png', alt='Award Image') 
+            .item-award-logo
               img(src='images/logo-05.png', alt='Award Image') 
     section#testimonials
       .container
@@ -420,7 +339,7 @@ html
             img(src='images/logo-010.png', alt='Logo Branding Image') 
             img(src='images/logo-011.png', alt='Logo Branding Image') 
     section#gallery
-      .container-fluid.boxed-fluid
+      .boxed-fluid
         .js-carousel.carousel-gallery-variable-width(
           data-carousel-lg="5", 
           data-carousel-md="3", 
