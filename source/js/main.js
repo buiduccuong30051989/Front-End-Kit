@@ -165,7 +165,8 @@ var INSPIRO = {};
       $carousel.each(function () {
         var element = $(this),
           $sliderCarouselDots = element.attr('data-carousel-dots') === "true" ? true : false,
-          $sliderCarouselNav = element.attr('data-carousel-arrow') === "true" ? true : false,
+          $sliderCarouselCenterPadding = element.attr('data-carousel-center-padding') || '50px',
+          $sliderCarouselArrow = element.attr('data-carousel-arrow') === "true" ? true : false,
           $sliderCarouselLoop = element.attr('data-carousel-loop') === "true" ? true : false,
           $sliderCarouselPerPage = element.attr('data-carousel-perpage') || 1,
           $sliderCarouselAutoPlay = element.attr('data-carousel-autoplay') === "true" ? true : false,
@@ -185,7 +186,7 @@ var INSPIRO = {};
         element.slick({
           slidesToShow: Number($sliderCarouselLg),
           slidesToScroll: Number($sliderCarouselPerPage),
-          nav: $sliderCarouselNav,
+          arrows: $sliderCarouselArrow,
           dots: $sliderCarouselDots,
           swipe: $sliderCarouselSwipe,
           swipeToSlide: $sliderCarouselSwipeTo,
@@ -199,6 +200,7 @@ var INSPIRO = {};
           draggable: $sliderCarouselDrag,
           asNavFor: $sliderCarouselThumb,
           focusOnSelect: $sliderCarouselThumbFocus,
+          centerPadding: $sliderCarouselCenterPadding,
           responsive: [
             {
               breakpoint: 1200,

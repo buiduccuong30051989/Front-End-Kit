@@ -10,20 +10,15 @@ html
     nav.navigation.fixed
       #menuzord.menuzord
         a.menuzord-brand(href='javascript:void(0)') Brand Name
-        ul.menuzord-menu.menuzord-left.menuzord-indented.scrollable
+        ul.menuzord-menu.menuzord-right.menuzord-indented.scrollable
           li
             a(href='javascript:void(0)') Group 1
           li
             a(href='javascript:void(0)') Group 2
           li
             a(href='#') Verify
-        ul.menuzord-menu.menuzord-right.scrollable
-          li
-            a(href='#')
-              em Joe Public
-              |  Account
     section#revo-slider
-      img(src='images/demo.jpg', alt='demo', style=('width: 100vw; height: 100vh'))
+      img(src='images/slider-01.jpg', alt='demo', style=('width: 100vw; height: 100vh'))
     section#call-to-action
     section#services
       .services-wrapper
@@ -61,95 +56,94 @@ html
                   i.icon.ion-android-add
                   | Read more
     section#portfolio
-      .portfolio-wrapper
-        .container
-          .row
-            .col.title-section-wrapper.text-center
-              h3.title Our Works
-              h6.sub-title WE WILL DEVELOP YOUR FILM, YOUR TALENT
-          .row.gutters-10.mt-5
-            .col-lg-4.col-sm-6.card.portfolio.text-center
-              .card-header(style='background-image: url("images/portfolio-01.jpg");')
-                .card-header-inner
-                  img.feature-img.hidden(src='images/portfolio-01.jpg')
-                  .info
-                    h3.title.title-blog.sm.mb-3
-                      a(href='#') Portfolio Video Light Box
-                    p.h6.mb-3
-                      a.cate.font-italic(href='#') MUSIC VIDEO
-                  .overlay.justify-content-center.align-items-center.d-flex.js-open-lightbox.open-lightbox
-                    p.btn-play.sm.white
-                  .js-lightbox.hidden
-                    a(href='https://www.youtube.com/watch?v=meBbDqAXago')
-            .col-lg-4.col-sm-6.card.portfolio
-              .card-header(style='background-image: url("images/portfolio-02.jpg");')
-                .card-header-inner
-                  img.feature-img.hidden(src='images/portfolio-02.jpg')
-                  .info
-                    h3.title.title-blog.sm.mb-3
-                      a(href='#') Portfolio Video Light Box
-                    p.h6.mb-3
-                      a.cate.font-italic(href='#') MUSIC VIDEO
-                  .overlay.justify-content-center.align-items-center.d-flex.js-open-lightbox.open-lightbox
-                    p.btn-play.sm.white
-                  .js-lightbox.hidden
-                    a(href='https://www.youtube.com/watch?v=meBbDqAXago')
-            .col-lg-4.col-sm-6.card.portfolio.text-center
-              .card-header(style='background-image: url("images/portfolio-03.jpg");')
-                .card-header-inner
-                  img.feature-img.hidden(src='images/portfolio-03.jpg')
-                  .info
-                    h3.title.title-blog.sm.mb-3
-                      a(href='#') Portfolio Video Light Box
-                    p.h6.mb-3
-                      a.cate.font-italic(href='#') MUSIC VIDEO
-                  .overlay.justify-content-center.align-items-center.d-flex.js-open-lightbox.open-lightbox
-                    p.btn-play.sm.white
-                  .js-lightbox.hidden
-                    a(href='https://www.youtube.com/watch?v=meBbDqAXago')
-            .col-lg-4.col-sm-6.card.portfolio.text-center
-              .card-header(style='background-image: url("images/portfolio-04.jpg");')
-                .card-header-inner
-                  img.feature-img.hidden(src='images/portfolio-04.jpg')
-                  .info
-                    h3.title.title-blog.sm.mb-3
-                      a(href='#') Portfolio Video Light Box
-                    p.h6.mb-3
-                      a.cate.font-italic(href='#') MUSIC VIDEO
-                  .overlay.justify-content-center.align-items-center.d-flex.js-open-lightbox.open-lightbox
-                    p.btn-play.sm.white
-                  .js-lightbox.hidden
-                    a(href='https://www.youtube.com/watch?v=meBbDqAXago')
-            .col-lg-4.col-sm-6.card.portfolio
-              .card-header(style='background-image: url("images/portfolio-05.jpg");')
-                .card-header-inner
-                  img.feature-img.hidden(src='images/portfolio-05.jpg')
-                  .info
-                    h3.title.title-blog.sm.mb-3
-                      a(href='#') Portfolio Video Light Box
-                    p.h6.mb-3
-                      a.cate.font-italic(href='#') MUSIC VIDEO
-                  .overlay.justify-content-center.align-items-center.d-flex.js-open-lightbox.open-lightbox
-                    p.btn-play.sm.white
-                  .js-lightbox.hidden
-                    a(href='https://www.youtube.com/watch?v=meBbDqAXago')
-            .col-lg-4.col-sm-6.card.portfolio.text-center
-              .card-header(style='background-image: url("images/portfolio-06.jpg");')
-                .card-header-inner
-                  img.feature-img.hidden(src='images/portfolio-06.jpg')
-                  .info
-                    h3.title.title-blog.sm.mb-3
-                      a(href='#') Portfolio Video Light Box
-                    p.h6.mb-3
-                      a.cate.font-italic(href='#') MUSIC VIDEO
-                  .overlay.justify-content-center.align-items-center.d-flex.js-open-lightbox.open-lightbox
-                    p.btn-play.sm.white
-                  .js-lightbox.hidden
-                    a(href='https://www.youtube.com/watch?v=meBbDqAXago')
-          .row
-            .col.text-center
-              a(href='#').btn.btn-circle-secondary View More
-              a(href='#').btn.btn-circle-main Hire us Now
+      .container-fluid.boxed-fluid
+        .row
+          .col.title-section-wrapper.text-center
+            h3.title Our Works
+            h6.sub-title WE WILL DEVELOP YOUR FILM, YOUR TALENT
+        .row.gutters-10.mt-5
+          .col-lg-4.col-sm-6.card.portfolio.text-center
+            .card-header(style='background-image: url("images/portfolio-01.jpg");')
+              .card-header-inner
+                img.feature-img.hidden(src='images/portfolio-01.jpg')
+                .info
+                  h3.title.title-blog.sm.mb-3
+                    a(href='#') Portfolio Video Light Box
+                  p.h6.mb-3
+                    a.cate.font-italic(href='#') MUSIC VIDEO
+                .overlay.justify-content-center.align-items-center.d-flex.js-open-lightbox.open-lightbox
+                  p.btn-play.sm.white
+                .js-lightbox.hidden
+                  a(href='https://www.youtube.com/watch?v=meBbDqAXago')
+          .col-lg-4.col-sm-6.card.portfolio
+            .card-header(style='background-image: url("images/portfolio-02.jpg");')
+              .card-header-inner
+                img.feature-img.hidden(src='images/portfolio-02.jpg')
+                .info
+                  h3.title.title-blog.sm.mb-3
+                    a(href='#') Portfolio Video Light Box
+                  p.h6.mb-3
+                    a.cate.font-italic(href='#') MUSIC VIDEO
+                .overlay.justify-content-center.align-items-center.d-flex.js-open-lightbox.open-lightbox
+                  p.btn-play.sm.white
+                .js-lightbox.hidden
+                  a(href='https://www.youtube.com/watch?v=meBbDqAXago')
+          .col-lg-4.col-sm-6.card.portfolio.text-center
+            .card-header(style='background-image: url("images/portfolio-03.jpg");')
+              .card-header-inner
+                img.feature-img.hidden(src='images/portfolio-03.jpg')
+                .info
+                  h3.title.title-blog.sm.mb-3
+                    a(href='#') Portfolio Video Light Box
+                  p.h6.mb-3
+                    a.cate.font-italic(href='#') MUSIC VIDEO
+                .overlay.justify-content-center.align-items-center.d-flex.js-open-lightbox.open-lightbox
+                  p.btn-play.sm.white
+                .js-lightbox.hidden
+                  a(href='https://www.youtube.com/watch?v=meBbDqAXago')
+          .col-lg-4.col-sm-6.card.portfolio.text-center
+            .card-header(style='background-image: url("images/portfolio-04.jpg");')
+              .card-header-inner
+                img.feature-img.hidden(src='images/portfolio-04.jpg')
+                .info
+                  h3.title.title-blog.sm.mb-3
+                    a(href='#') Portfolio Video Light Box
+                  p.h6.mb-3
+                    a.cate.font-italic(href='#') MUSIC VIDEO
+                .overlay.justify-content-center.align-items-center.d-flex.js-open-lightbox.open-lightbox
+                  p.btn-play.sm.white
+                .js-lightbox.hidden
+                  a(href='https://www.youtube.com/watch?v=meBbDqAXago')
+          .col-lg-4.col-sm-6.card.portfolio
+            .card-header(style='background-image: url("images/portfolio-05.jpg");')
+              .card-header-inner
+                img.feature-img.hidden(src='images/portfolio-05.jpg')
+                .info
+                  h3.title.title-blog.sm.mb-3
+                    a(href='#') Portfolio Video Light Box
+                  p.h6.mb-3
+                    a.cate.font-italic(href='#') MUSIC VIDEO
+                .overlay.justify-content-center.align-items-center.d-flex.js-open-lightbox.open-lightbox
+                  p.btn-play.sm.white
+                .js-lightbox.hidden
+                  a(href='https://www.youtube.com/watch?v=meBbDqAXago')
+          .col-lg-4.col-sm-6.card.portfolio.text-center
+            .card-header(style='background-image: url("images/portfolio-06.jpg");')
+              .card-header-inner
+                img.feature-img.hidden(src='images/portfolio-06.jpg')
+                .info
+                  h3.title.title-blog.sm.mb-3
+                    a(href='#') Portfolio Video Light Box
+                  p.h6.mb-3
+                    a.cate.font-italic(href='#') MUSIC VIDEO
+                .overlay.justify-content-center.align-items-center.d-flex.js-open-lightbox.open-lightbox
+                  p.btn-play.sm.white
+                .js-lightbox.hidden
+                  a(href='https://www.youtube.com/watch?v=meBbDqAXago')
+        .row
+          .col.text-center
+            a(href='#').btn.btn-circle-secondary View More
+            a(href='#').btn.btn-circle-main Hire us Now
     section#team
       .container
           .row
@@ -159,7 +153,7 @@ html
           .row.gutters-10
             .col-md-6.col-sm-12
               .card.card-overlay
-                .card-header
+                .card-header.h-100.justify-content-center.d-flex.flex-column
                   h4 We are the best team!
                   p Nullam imperdiet, sem at fringilla lobortis, sem nibh fringilla nibh, idae gravida mi purus sit amet erat. Ut dictum nisi massa, vitae pulvinar metus scelerisque in. 
                   p Ut dictum nisi massa, vitae pulvinar metus scelerisque in. 
@@ -201,14 +195,232 @@ html
             .col-md-3.col-sm-12
               .card.card-overlay
                 .card-header.p-0
-                  img(src='images/team-06.jpg', alt='Team Images').feature-img
-                  .overlay.main-color.justify-content-center.align-items-center.d-flex.flex-column
-                    h4 IRA BANANA
-                    p Photography
-    section#awards
+                  a(href='#').overlay.secondary-color.overlay-view-more-square.justify-content-center.align-items-center.d-flex.flex-column
+                    i.icon.ion-ios-plus-empty
+                    h5.mt-3 VIEW MORE
+    section#awards.swatch-dark.p-3
+      .container
+        .row.d-block
+          .js-carousel.carousel-awards.js-awards-carousel-main(
+            data-carousel-lg="1", 
+            data-carousel-fade="true",
+            data-carousel-autoplay="true",
+            data-carousel-drag="true",
+            data-carousel-swipe="true",
+            data-carousel-swipe-to="true",
+            data-carousel-loop="true",
+            data-carousel-thumb=".js-awards-carousel-sub"
+            )
+            .item-award.text-center
+              h3 Heading Title 1
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+            .item-award.text-center
+              h3 Heading Title 2
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+            .item-award.text-center
+              h3 Heading Title 3
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+            .item-award.text-center
+              h3 Heading Title 4
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+            .item-award.text-center
+              h3 Heading Title 5
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo. 
+          .js-carousel.carousel-awards.js-awards-carousel-sub(
+              data-carousel-lg="3", 
+              data-carousel-md="3", 
+              data-carousel-xs="3", 
+              data-carousel-autoplay="true",
+              data-carousel-drag="true",
+              data-carousel-swipe="true",
+              data-carousel-swipe-to="true",
+              data-carousel-loop="true",
+              data-carousel-thumb=".js-awards-carousel-main",
+              data-carousel-thumb-focus="true",
+              data-carousel-center="true")
+              img(src='images/logo-01.png', alt='Award Image') 
+              img(src='images/logo-02.png', alt='Award Image') 
+              img(src='images/logo-03.png', alt='Award Image') 
+              img(src='images/logo-04.png', alt='Award Image') 
+              img(src='images/logo-05.png', alt='Award Image') 
     section#testimonials
+      .container
+        .row.d-block
+          .js-carousel.carousel-testimonials.js-testimonials-carousel-main(
+            data-carousel-lg="1", 
+            data-carousel-fade="true",
+            data-carousel-autoplay="true",
+            data-carousel-drag="true",
+            data-carousel-swipe="true",
+            data-carousel-swipe-to="true",
+            data-carousel-arrow="true",
+            data-carousel-loop="true",
+            data-carousel-thumb=".js-testimonials-carousel-sub"
+            )
+            .item-award.text-center
+              h5 
+                span.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                span sed do eiusmod 
+                span.text-muted tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco 
+                span laboris nisi ut aliquip 
+                span.text-muted ex ea commodo.
+            .item-award.text-center
+              h5 
+                span.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                span sed do eiusmod 
+                span.text-muted tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco 
+                span laboris nisi ut aliquip 
+                span.text-muted ex ea commodo.
+            .item-award.text-center
+              h5 
+                span.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                span sed do eiusmod 
+                span.text-muted tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco 
+                span laboris nisi ut aliquip 
+                span.text-muted ex ea commodo.
+            .item-award.text-center
+              h5 
+                span.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                span sed do eiusmod 
+                span.text-muted tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco 
+                span laboris nisi ut aliquip 
+                span.text-muted ex ea commodo.
+            .item-award.text-center
+              h5 
+                span.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                span sed do eiusmod 
+                span.text-muted tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco 
+                span laboris nisi ut aliquip e
+                span.text-muted x ea commodo. 
+          .js-carousel.carousel-testimonials.js-testimonials-carousel-sub(
+              data-carousel-lg="3", 
+              data-carousel-md="3", 
+              data-carousel-xs="3", 
+              data-carousel-autoplay="true",
+              data-carousel-drag="true",
+              data-carousel-swipe="true",
+              data-carousel-swipe-to="true",
+              data-carousel-loop="true",
+              data-carousel-thumb=".js-testimonials-carousel-main",
+              data-carousel-thumb-focus="true",
+              data-carousel-center="true"
+              )
+              img(src='images/testimonial-01.jpg', alt='Avatar Custommer Image') 
+              img(src='images/testimonial-02.jpg', alt='Avatar Custommer Image') 
+              img(src='images/testimonial-03.jpg', alt='Avatar Custommer Image') 
+              img(src='images/testimonial-04.jpg', alt='Avatar Custommer Image') 
+              img(src='images/testimonial-05.jpg', alt='Avatar Custommer Image') 
     section#branding
+      .container
+        .row.d-block
+          .js-carousel.carousel-logo-branding(
+            data-carousel-lg="5", 
+            data-carousel-md="3", 
+            data-carousel-xs="1", 
+            data-carousel-autoplay="true",
+            data-carousel-drag="true",
+            data-carousel-swipe="true",
+            data-carousel-swipe-to="true",
+            data-carousel-loop="true")
+            img(src='images/logo-06.png', alt='Logo Branding Image') 
+            img(src='images/logo-07.png', alt='Logo Branding Image') 
+            img(src='images/logo-08.png', alt='Logo Branding Image') 
+            img(src='images/logo-09.png', alt='Logo Branding Image') 
+            img(src='images/logo-010.png', alt='Logo Branding Image') 
+            img(src='images/logo-011.png', alt='Logo Branding Image') 
     section#gallery
+      .container-fluid.boxed-fluid
+        .js-carousel.carousel-gallery-variable-width(
+          data-carousel-lg="5", 
+          data-carousel-md="3", 
+          data-carousel-xs="1", 
+          data-carousel-autoplay="true",
+          data-carousel-drag="true",
+          data-carousel-swipe="true",
+          data-carousel-swipe-to="true",
+          data-carousel-loop="true",
+          data-carousel-variable-width="true",
+          data-carousel-arrow="true",
+          )
+          img(src='images/gallery-01.jpg', alt='Galler Image') 
+          img(src='images/gallery-02.jpg', alt='Galler Image') 
+          img(src='images/gallery-03.jpg', alt='Galler Image') 
+          img(src='images/gallery-04.jpg', alt='Galler Image') 
+          img(src='images/gallery-01.jpg', alt='Galler Image') 
+          img(src='images/gallery-02.jpg', alt='Galler Image') 
     section#blog
+      .container
+        .row
+          .col.title-section-wrapper.text-center
+              h3.title Blog Update
+              h6.sub-title LET'S MAKE GREAT THINGS TOGETHER
+      .container
+        .row
+          .col-md-4.col-sm-4
+            .card.blog.post-sigle-image.h-100
+              .card-header
+                img(src='images/blog-04.jpg', alt='Feature Image').feature-img
+                a(href='#').overlay
+                  p.meta.text-center
+                    span
+                      i.icon.ion-ios-calendar-outline.mr-2
+                      | 11/09/2017
+                    span
+                      i.icon.ion-chatbubble-working.mr-2
+                      | 3
+              .card-body.text-center
+                p.h6.mb-3
+                  a(href='#').cate.font-italic MUSIC VIDEO
+                h3.title.title-blog.sm
+                  a(href='#') Single Feature Image Post Type
+          .col-md-4.col-sm-4
+            .card.blog.post-sigle-image.h-100
+              .card-header
+                img(src='images/blog-05.jpg', alt='Feature Image').feature-img
+                a(href='#').overlay
+                  p.meta.text-center
+                    span
+                      i.icon.ion-ios-calendar-outline.mr-2
+                      | 11/09/2017
+                    span
+                      i.icon.ion-chatbubble-working.mr-2
+                      | 3
+              .card-body.text-center
+                p.h6.mb-3
+                  a(href='#').cate.font-italic MUSIC VIDEO
+                h3.title.title-blog.sm
+                  a(href='#') Single Feature Image Post Type
+          .col-md-4.col-sm-4
+            .card.blog.post-sigle-image.h-100
+              .card-header
+                img(src='images/blog-06.jpg', alt='Feature Image').feature-img
+                a(href='#').overlay
+                  p.meta.text-center
+                    span
+                      i.icon.ion-ios-calendar-outline.mr-2
+                      | 11/09/2017
+                    span
+                      i.icon.ion-chatbubble-working.mr-2
+                      | 3
+              .card-body.text-center
+                p.h6.mb-3
+                  a(href='#').cate.font-italic MUSIC VIDEO
+                h3.title.title-blog.sm
+                  a(href='#') Single Feature Image Post Type Single Feature Image Post Type Single Feature Image Post Type
+        .row
+          .col.text-center
+            a(href='#').btn.btn-circle-secondary Go To Blog
     section#subscribe
+      .container
+        .row
+          .col.text-center
+            img(src='http://via.placeholder.com/300x100', alt="Logo Image")
+            h6.sub-title SUBCRIBE TO OUR NEWSLETTER
+        .row.justify-content-center
+          form.form-inline
+            .form-group
+              label.sr-only(for='staticEmail2') Email
+              input.form-control(type='text', placeholder='email@example.com')
+            button.btn.btn-main-color(type='submit') Subcribe
+    +footer
   script(type='text/javascript', src='js/main.js')

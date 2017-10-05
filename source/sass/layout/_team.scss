@@ -38,3 +38,25 @@
   }
 }
 
+.overlay-view-more-square {
+  opacity: 1;
+
+  i {
+    color: $main-color;
+    font-size: 48px;
+    transition: $transition-base;
+  }
+
+  h5 {
+    color: $white;
+  }
+
+  &:hover {
+    background-color: $main-color;
+    text-decoration: none;
+
+    i {
+      color: $white;
+    }
+  }
+}
