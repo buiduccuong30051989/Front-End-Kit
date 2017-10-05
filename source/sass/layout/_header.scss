@@ -4,16 +4,19 @@
 
 // Verision Dark
 	.dark {
+		.menuzord {
+			background-color: $secondary-color;
 
-		.transparent {
-
+			&.transparent {
+				background-color: transparent;
+			}
 		}
 	}
 
 // Verision Dark
 	.light {
 
-		.transparent {
+		.menuzord.transparent {
 			
 		}
 	}

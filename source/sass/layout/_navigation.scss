@@ -7,3 +7,26 @@
 		width: 100%;
 	}
 }
+
+// Verision Dark
+	.dark {
+		.menuzord-menu > li > a {
+			color: $white;
+
+			&:hover {
+				color: $main-color;
+			}
+		}
+	}
+
+// Verision Dark
+	.light {
+
+		.menuzord-menu > li > a {
+			color: $secondary-color;
+
+			&:hover {
+				color: $main-color;
+			}
+		}
+	}
