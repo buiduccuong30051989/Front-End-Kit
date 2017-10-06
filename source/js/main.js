@@ -1,7 +1,7 @@
 //=require jquery/dist/jquery.min.js
 //=require extention/popper.min.js
 //=require bootstrap/dist/js/bootstrap.min.js
-//=require slick-carousel/slick/slick.min.js
+//=require extention/slick.js
 //=require lightgallery/dist/js/lightgallery-all.min.js
 //=require extention/menuzord.js
 
@@ -186,7 +186,7 @@ var INSPIRO = {};
         element.slick({
           slidesToShow: Number($sliderCarouselLg),
           slidesToScroll: Number($sliderCarouselPerPage),
-          arrows: false,
+          arrows: $sliderCarouselArrow,
           dots: $sliderCarouselDots,
           swipe: $sliderCarouselSwipe,
           swipeToSlide: $sliderCarouselSwipeTo,
@@ -200,7 +200,7 @@ var INSPIRO = {};
           draggable: $sliderCarouselDrag,
           asNavFor: $sliderCarouselThumb,
           centerPadding: $sliderCarouselCenterPadding,
-          focusOnSelect: true,
+          focusOnSelect: $sliderCarouselThumbFocus,
           responsive: [
             {
               breakpoint: 1200,

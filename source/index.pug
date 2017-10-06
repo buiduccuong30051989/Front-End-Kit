@@ -203,7 +203,7 @@ html
                 a(href='#').overlay.secondary-color.overlay-view-more-square.justify-content-center.align-items-center.d-flex.flex-column
                   i.icon.ion-ios-plus-empty
                   h5.mt-3 VIEW MORE
-    section#awards.swatch-dark.p-3
+    section#awards.p-3.dark(style="background-color: #000")
       .container
         .row.d-block
           .js-carousel.carousel-awards.js-awards-carousel-main(
@@ -216,21 +216,48 @@ html
             data-carousel-loop="true",
             data-carousel-thumb=".js-awards-carousel-sub"
             )
-            .item-award.text-center
-              h3.title Heading Title 1
-              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
-            .item-award.text-center
-              h3.title Heading Title 2
-              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
-            .item-award.text-center
-              h3.title Heading Title 3
-              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
-            .item-award.text-center
-              h3.title Heading Title 4
-              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
-            .item-award.text-center
-              h3.title Heading Title 5
-              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo. 
+            .item-award
+              .item-award-inner.text-center
+                h3.title Heading Title 1
+                p 
+                  span CIRCLE 
+                  | IS AN AWARD WINNING CREATIVE PRODUCTION COMPANY WORKING FOR VARIOUS CLIENTS AND AGENCIES IN BOTH NEW YORK AND LA
+            .item-award
+              .item-award-inner.text-center
+                h3.title Heading Title 2
+                p 
+                  span CIRCLE 
+                  | IS AN AWARD WINNING CREATIVE PRODUCTION COMPANY WORKING FOR VARIOUS CLIENTS AND AGENCIES IN BOTH NEW YORK AND LA
+            .item-award
+              .item-award-inner.text-center
+                h3.title Heading Title 3
+                p 
+                  span CIRCLE 
+                  | IS AN AWARD WINNING CREATIVE PRODUCTION COMPANY WORKING FOR VARIOUS CLIENTS AND AGENCIES IN BOTH NEW YORK AND LA
+            .item-award
+              .item-award-inner.text-center
+                h3.title Heading Title 4
+                p 
+                  span CIRCLE 
+                  | IS AN AWARD WINNING CREATIVE PRODUCTION COMPANY WORKING FOR VARIOUS CLIENTS AND AGENCIES IN BOTH NEW YORK AND LA
+            .item-award
+              .item-award-inner.text-center
+                h3.title Heading Title 4
+                p 
+                  span CIRCLE 
+                  | IS AN AWARD WINNING CREATIVE PRODUCTION COMPANY WORKING FOR VARIOUS CLIENTS AND AGENCIES IN BOTH NEW YORK AND LA
+            .item-award
+              .item-award-inner.text-center
+                h3.title Heading Title 4
+                p 
+                  span CIRCLE 
+                  | IS AN AWARD WINNING CREATIVE PRODUCTION COMPANY WORKING FOR VARIOUS CLIENTS AND AGENCIES IN BOTH NEW YORK AND LA
+            .item-award
+              .item-award-inner.text-center
+                h3.title Heading Title 5
+                p 
+                  span CIRCLE 
+                  | IS AN AWARD WINNING CREATIVE PRODUCTION COMPANY WORKING FOR VARIOUS CLIENTS AND AGENCIES IN BOTH NEW YORK AND LA
           .js-carousel.carousel-awards-logo.js-awards-carousel-sub(
             data-carousel-lg="5", 
             data-carousel-md="3", 
@@ -253,6 +280,10 @@ html
               img(src='images/logo-04.png', alt='Award Image') 
             .item-award-logo
               img(src='images/logo-05.png', alt='Award Image') 
+            .item-award-logo
+              img(src='images/logo-02.png', alt='Award Image') 
+            .item-award-logo
+              img(src='images/logo-03.png', alt='Award Image') 
     section#testimonials
       .container
         .row.d-block
@@ -302,24 +333,47 @@ html
                 span.text-muted tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco 
                 span laboris nisi ut aliquip e
                 span.text-muted x ea commodo. 
-          .js-carousel.carousel-testimonials.js-testimonials-carousel-sub(
-              data-carousel-lg="3", 
-              data-carousel-md="3", 
-              data-carousel-xs="3", 
-              data-carousel-autoplay="true",
-              data-carousel-drag="true",
-              data-carousel-swipe="true",
-              data-carousel-swipe-to="true",
-              data-carousel-loop="true",
-              data-carousel-thumb=".js-testimonials-carousel-main",
-              data-carousel-thumb-focus="true",
-              data-carousel-center="true"
-              )
+            .item-award.text-center
+              h5 
+                span.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                span sed do eiusmod 
+                span.text-muted tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco 
+                span laboris nisi ut aliquip 
+                span.text-muted ex ea commodo.
+            .item-award.text-center
+              h5 
+                span.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                span sed do eiusmod 
+                span.text-muted tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco 
+                span laboris nisi ut aliquip e
+                span.text-muted x ea commodo. 
+          .js-carousel.carousel-testimonials-thumb.js-testimonials-carousel-sub(
+            data-carousel-lg="5", 
+            data-carousel-md="3", 
+            data-carousel-xs="1", 
+            data-carousel-autoplay="false",
+            data-carousel-drag="true",
+            data-carousel-swipe="true",
+            data-carousel-swipe-to="true",
+            data-carousel-loop="true",
+            data-carousel-thumb=".js-testimonials-carousel-main",
+            data-carousel-thumb-focus="true",
+            data-carousel-center="true"
+            )
+            .item-testimonial-thumb
               img(src='images/testimonial-01.jpg', alt='Avatar Custommer Image') 
+            .item-testimonial-thumb
               img(src='images/testimonial-02.jpg', alt='Avatar Custommer Image') 
+            .item-testimonial-thumb
               img(src='images/testimonial-03.jpg', alt='Avatar Custommer Image') 
+            .item-testimonial-thumb
               img(src='images/testimonial-04.jpg', alt='Avatar Custommer Image') 
+            .item-testimonial-thumb
               img(src='images/testimonial-05.jpg', alt='Avatar Custommer Image') 
+            .item-testimonial-thumb
+              img(src='images/testimonial-02.jpg', alt='Avatar Custommer Image') 
+            .item-testimonial-thumb
+              img(src='images/testimonial-03.jpg', alt='Avatar Custommer Image') 
     section#branding
       .container
         .row.d-block
