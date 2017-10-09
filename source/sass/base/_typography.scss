@@ -20,3 +20,20 @@
 	  color: #757575;	
 	}
 }
+
+.text-hightlight {
+  font-family: $heading-font;
+  color: #ABABAB;
+  font-size: 36px;
+  line-height: 56px;
+  letter-spacing: 2px;
+
+  span {
+    color: #333;
+  }
+
+  &.small {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
