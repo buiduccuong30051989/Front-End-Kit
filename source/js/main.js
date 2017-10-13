@@ -199,7 +199,7 @@ var INSPIRO = {};
           infinite: $sliderCarouselLoop,
           draggable: $sliderCarouselDrag,
           asNavFor: $sliderCarouselThumb,
-          centerPadding: $sliderCarouselCenterPadding,
+          centerPadding: Number($sliderCarouselCenterPadding),
           focusOnSelect: $sliderCarouselThumbFocus,
           responsive: [
             {

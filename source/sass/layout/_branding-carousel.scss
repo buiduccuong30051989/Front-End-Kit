@@ -3,7 +3,12 @@
 // --------------------------------------------------
 .carousel-awards {
   .item-award {
-
+    .text-hightlight {
+      max-width: 750px;
+      width: 100%;
+      margin: 0 auto;
+      font-family: $font-family-base;
+    }
   }
 }
 
@@ -27,4 +32,10 @@
 }
 
 // Dark Verision
-	
+.dark {
+  .text-hightlight {
+    span {
+      color: $white;
+    }
+  }
+}

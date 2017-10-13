@@ -24,12 +24,26 @@
 	}
 }
 
-
 .slick-current {
 	.item-testimonial-thumb {
 		img {
 			transform: none;
 			opacity: 1;
 		}
+	}
+}
+
+.carousel-testimonials {
+	.slick-next, .slick-prev {
+		width: 21px;
+		height: 36px;
+
+		i {
+			font-size: 56px;
+		}
+	}
+
+	.slick-next:before {
+		display: none;
 	}
 }
