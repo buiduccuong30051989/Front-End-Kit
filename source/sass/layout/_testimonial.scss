@@ -22,12 +22,34 @@
 			}
 		}
 	}
+
+	.testimonial-info {
+		padding: 38px 0;
+		opacity: 0;
+		transition: $transition-base;
+
+		h5 {
+			white-space: nowrap;
+			color: #333;
+		}
+
+		span {
+			font-style: italic;
+			color: #ABABAB;
+			font-family: $heading-font;
+			font-size: 14px;
+		}
+	}
 }
 
 .slick-current {
 	.item-testimonial-thumb {
 		img {
 			transform: none;
+			opacity: 1;
+		}
+
+		.testimonial-info {
 			opacity: 1;
 		}
 	}
@@ -41,9 +63,16 @@
 		i {
 			font-size: 56px;
 		}
+
+		&:hover {
+      i {
+        color: $main-color;
+      }
+    }
 	}
 
-	.slick-next:before {
+	.slick-next:before,
+	.slick-prev:before {
 		display: none;
 	}
 }

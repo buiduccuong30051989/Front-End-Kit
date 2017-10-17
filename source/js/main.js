@@ -1,4 +1,6 @@
 //=require jquery/dist/jquery.min.js
+//=require extention/Headroom.js
+//=require extention/jQuery.headroom.js
 //=require extention/popper.min.js
 //=require bootstrap/dist/js/bootstrap.min.js
 //=require extention/slick.js
@@ -26,6 +28,17 @@ $(function() {
 
   });
 
+  //Navigation
+  $("#js-headroom").headroom({
+    "offset": 205,
+    "tolerance": 5,
+    "classes": {
+      "initial": "animated",
+      "pinned": "slideDown",
+      "unpinned": "slideUp"
+    }
+  });
+
   //Video Lightbox
   $('.js-lightbox').lightGallery({
   zoom: false
@@ -42,7 +55,6 @@ $(function() {
   indicatorSecondLevel: "<i class='fa fa-angle-right'></i>"
   });
 });
-
 
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()

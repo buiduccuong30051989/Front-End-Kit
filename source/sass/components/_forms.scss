@@ -1,3 +1,43 @@
 //
 // Components :: Forms
 // --------------------------------------------------
+.form-group.form-circle {
+  .form-control {
+    height: 48px;
+  }
+}
+
+.btn-in {
+  background-color: $bg-gray;
+  border-radius: 25px;
+  transition: $transition-base;
+
+  .form-group {
+    flex: 1 0 auto;
+  }
+
+  .form-control {
+    border: 0;
+    background-color: transparent;
+    padding-left: 30px;
+    width: 100%;
+  }
+
+  .btn {
+    border-radius: 25px;
+    background-color: $main-color;
+    color: $white;
+    margin-right: 5px;
+    min-width: 120px;
+    transition: $transition-base;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($main-color, 8%);
+    }
+  }
+
+  &:hover {
+    background-color: darken($bg-gray, 2%);
+  }
+}

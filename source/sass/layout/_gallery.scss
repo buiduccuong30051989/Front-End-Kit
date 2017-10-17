@@ -1,0 +1,59 @@
+//
+// Layout :: Gallery
+// --------------------------------------------------
+.carousel-gallery-variable-width {
+  .item-gallery {
+    padding: 0 10px;
+    position: relative;
+    padding-bottom: 50px;
+
+    img {
+      filter: brightness(.5);
+      transition: $transition-base;
+    }
+
+    &:hover {
+      img {
+        filter: brightness(1);
+      }
+    }
+  }
+
+  .slick-current {
+    .item-gallery img {
+      filter: brightness(1);
+      box-shadow: 0 25px 25px -5px rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+
+.carousel-gallery-variable-width {
+  .slick-next, .slick-prev {
+    width: 21px;
+    height: 36px;
+    margin-top: -25px;
+
+    i {
+      font-size: 56px;
+    }
+
+    &:hover {
+      i {
+        color: $main-color;
+      }
+    }
+  }
+
+  .slick-prev {
+    left: -65px;
+  }
+
+  .slick-next {
+    right: -65px;
+  }
+
+  .slick-next:before,
+  .slick-prev:before {
+    display: none;
+  }
+}

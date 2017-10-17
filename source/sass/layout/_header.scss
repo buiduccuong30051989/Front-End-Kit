@@ -5,14 +5,86 @@
 	background-color: $white;
 }
 
+header {
+	padding: 30px 60px;
+	transition: $transition-base;
+	transition-duration: .5s;
+
+  @include media-breakpoint-down(lg) {
+    padding: 8px 10px;
+    position: relative;
+    background-color: $black;
+
+    .menuzord {
+      padding-bottom: 8px;
+
+      .showhide {
+      	margin: 0;
+      	padding: 0;
+      	height: auto;
+      	width: 20px;
+      	position: absolute;
+      	right: 10px;
+      	top: 50%;
+      	transform: translateY(-50%);
+
+      	em {
+			    height: 1px;
+			    margin: 2px 0;
+			    float: right;
+			    background: $white;
+				}
+      }
+
+      .menuzord-brand img {
+      	height: 34px;
+      	width: auto;
+      	margin-left: 10px;
+      }
+    }
+
+    &.dark {
+    	.menuzord-menu > li:first-child > a,
+    	.menuzord-menu > li > a {
+		    border: 0;
+			}
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+  	.menuzord {
+  		display: block;
+  	}
+  }
+}
+
+header.fixed {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 9;
+}
+
+header.headroom--not-top {
+	background-color: $black;
+	padding: 10px 60px;
+
+	@include media-breakpoint-down(lg) {
+		padding: 8px 10px;
+	}
+}
+
 // Verision Dark
 	.dark {
 		.menuzord {
 			background-color: $secondary-color;
+		}
+	}
 
-			&.transparent {
-				background-color: transparent;
-			}
+	.transparent {
+		.menuzord {
+			background-color: transparent;
 		}
 	}
 

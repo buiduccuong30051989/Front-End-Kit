@@ -41,3 +41,36 @@ body {
   cursor: pointer;
 }
 
+.bg-overlay {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.relative {
+  position: relative;
+}
+
+.mw-160 {
+  min-width: 160px;
+}
+
+.py-xl-100 {
+  @include media-breakpoint-up(xl) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.pt-xl-100 {
+  @include media-breakpoint-up(xl) {
+    padding-top: 100px;
+  }
+}
+
+.pb-xl-100 {
+  @include media-breakpoint-up(xl) {
+    padding-bottom: 100px;
+  }
+}

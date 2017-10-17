@@ -6,31 +6,34 @@ include modules/elements/elements
 doctype html
 html
   +head(head.home)
-  body.light
-    nav.navigation
-      #menuzord.menuzord.justify-content-between.align-items-center
-        a.menuzord-brand(href='javascript:void(0)')
-          img(src="http://via.placeholder.com/121x47", alt='logo')
-        ul.menuzord-menu.menuzord-right.menuzord-indented.scrollable
-          li
-            a(href='#') HOME
-          li
-            a(href='#') DIRECTOR
-          li
-            a(href='#') FILMS
-          li
-            a(href='#') GALLERY
-          li
-            a(href='#') PAGES
-          li
-            a(href='#') BLOG
-          li
-            a(href='#') CONTACT
+  body
+    header#js-headroom.fixed.header.header-home-1.transparent.dark
+      nav.navigation.transparent
+        #menuzord.menuzord.justify-content-between.align-items-center
+          a.menuzord-brand(href='javascript:void(0)')
+            img(src="images/logo-light-03.png", alt='logo')
+          ul.menuzord-menu.menuzord-right.menuzord-indented.scrollable
+            li
+              a(href='#') HOME
+            li
+              a(href='#') DIRECTOR
+            li
+              a(href='#') FILMS
+            li
+              a(href='#') GALLERY
+            li
+              a(href='#') PAGES
+            li
+              a(href='#') BLOG
+            li
+              a(href='#') CONTACT
+            li
+              a(href='#') CONTACT
     section#revo-slider
-      img(src='images/slider-01.jpg', alt='demo', style=('width: 100vw; height: 100vh'))
+      img(src='images/slider-01.jpg', alt='demo', style=('width: 100%; height: 100vh'))
     section#feature
       .boxed-fluid
-    section#services.mt-3
+    section#services.py-xl-100
       .container
         .row
           .col.title-wrapper.text-center
@@ -38,7 +41,7 @@ html
               h6.sub-title LET'S MAKE GREAT THINGS TOGETHER
         .row.deck-icon-box-1.mt-5
           .col-md-4
-            .card.icon-box-style-1
+            .card.icon-box-style-1.border-0
               .card-body.text-center
                 .icon-bg.rounded-circle.mx-auto.mb-4
                   img(src='images/icon-cinema-1.png', alt='Icon')
@@ -48,7 +51,7 @@ html
                   i.icon.ion-android-add
                   | Read more
           .col-md-4
-            .card.icon-box-style-1
+            .card.icon-box-style-1.border-0
               .card-body.text-center
                 .icon-bg.rounded-circle.mx-auto.mb-4
                   img(src='images/icon-cinema-2.png', alt='Icon')
@@ -58,7 +61,7 @@ html
                   i.icon.ion-android-add
                   | Read more
           .col-md-4
-            .card.icon-box-style-1
+            .card.icon-box-style-1.border-0
               .card-body.text-center
                 .icon-bg.rounded-circle.mx-auto.mb-4
                   img(src='images/icon-cinema-3.png', alt='Icon')
@@ -67,7 +70,7 @@ html
                 a(href='#').read-more-1
                   i.icon.ion-android-add
                   | Read more
-    section#portfolio.mt-3.bg-light-gray
+    section#portfolio.bg-light-gray.py-xl-100
       .boxed-fluid
         .row
           .col.title-wrapper.text-center
@@ -87,7 +90,7 @@ html
                   p.btn-play.sm.white
                 .js-lightbox.hidden
                   a(href='https://www.youtube.com/watch?v=meBbDqAXago')
-          .col-lg-4.col-sm-6.card.portfolio
+          .col-lg-4.col-sm-6.card.portfolio.text-center
             .card-header(style='background-image: url("images/portfolio-02.jpg");')
               .card-header-inner
                 img.feature-img.hidden(src='images/portfolio-02.jpg')
@@ -126,7 +129,7 @@ html
                   p.btn-play.sm.white
                 .js-lightbox.hidden
                   a(href='https://www.youtube.com/watch?v=meBbDqAXago')
-          .col-lg-4.col-sm-6.card.portfolio
+          .col-lg-4.col-sm-6.card.portfolio.text-center
             .card-header(style='background-image: url("images/portfolio-05.jpg");')
               .card-header-inner
                 img.feature-img.hidden(src='images/portfolio-05.jpg')
@@ -154,15 +157,15 @@ html
                   a(href='https://www.youtube.com/watch?v=meBbDqAXago')
         .row.section-footer
           .col.text-center
-            a(href='#').btn.btn-circle-secondary View More
-            a(href='#').btn.btn-circle-main Hire us Now
-    section#team.mt-3
+            a(href='#').btn.btn-circle-secondary.mw-160 View More
+            a(href='#').btn.btn-circle-main.mw-160 Hire us Now
+    section#team.py-xl-100
       .container
           .row
             .col.title-wrapper.text-center
               h3.title Creative team
               h6.sub-title LET'S MAKE GREAT THINGS TOGETHER
-          .row.gutters-10.team-home-1.mt-5
+          .row.gutters-10.team-home-1
             .col-md-6.col-sm-12.card.card-overlay.border-0
               .card-header.h-100.justify-content-center.d-flex.flex-column.border.bg-white
                 h4.title We are the best team!
@@ -203,13 +206,13 @@ html
                 a(href='#').overlay.secondary-color.overlay-view-more-square.justify-content-center.align-items-center.d-flex.flex-column
                   i.icon.ion-ios-plus-empty
                   h5.mt-3 VIEW MORE
-    section#awards.p-3.dark(style="background-color: #000")
+    section#awards.dark.py-xl-100.bg-overlay(style="background-image: url('images/bg-overlay-01.jpg')")
       .container
         .row
           .col.text-center.title-wrapper
             h3.title Winning Awards
         .row.d-block
-          .js-carousel.carousel-awards.js-awards-carousel-main(
+          .js-carousel.carousel-awards.js-awards-carousel-main.mb-5.mt-3(
             data-carousel-lg="1", 
             data-carousel-fade="true",
             data-carousel-autoplay="true",
@@ -247,7 +250,7 @@ html
               p.text-hightlight.font-italic.small.text-center
                 span CIRCLE 
                 | IS AN AWARD WINNING CREATIVE PRODUCTION COMPANY WORKING FOR VARIOUS CLIENTS AND AGENCIES IN BOTH NEW YORK AND LA
-          .js-carousel.carousel-awards-logo.js-awards-carousel-sub(
+          .js-carousel.carousel-awards-logo.js-awards-carousel-sub.mt-5.d-inline-block.w-100(
             data-carousel-lg="5", 
             data-carousel-md="3", 
             data-carousel-xs="3", 
@@ -273,10 +276,13 @@ html
               img(src='images/logo-02.png', alt='Award Image') 
             .item-award-logo
               img(src='images/logo-03.png', alt='Award Image') 
-    section#testimonials
+    section#testimonials.py-xl-100
       .container
-        .row.d-block
-          .js-carousel.carousel-testimonials.testimonial-home-1.js-testimonials-carousel-main(
+        .row
+          .col.title-wrapper.text-center
+            p.symbol “
+        .row.d-block.pt-5
+          .js-carousel.carousel-testimonials.testimonial-home-1.js-testimonials-carousel-main.mb-3(
             data-carousel-lg="1", 
             data-carousel-fade="true",
             data-carousel-autoplay="true",
@@ -318,37 +324,7 @@ html
                 span see themselves in film, but it’s even more important they 
                 span see people they maybe don’t know as well.
           .js-carousel.carousel-testimonials-thumb
-          .js-carousel.carousel-testimonials-thumb.js-testimonials-carousel-sub(
-            data-carousel-lg="5", 
-            data-carousel-md="3", 
-            data-carousel-xs="1", 
-            data-carousel-autoplay="false",
-            data-carousel-drag="true",
-            data-carousel-swipe="true",
-            data-carousel-swipe-to="true",
-            data-carousel-loop="true",
-            data-carousel-thumb=".js-testimonials-carousel-main",
-            data-carousel-thumb-focus="true",
-            data-carousel-center="true",data-carousel-center-padding="0"
-            )
-            .item-testimonial-thumb
-              img(src='images/testimonial-01.jpg', alt='Avatar Custommer Image') 
-            .item-testimonial-thumb
-              img(src='images/testimonial-02.jpg', alt='Avatar Custommer Image') 
-            .item-testimonial-thumb
-              img(src='images/testimonial-03.jpg', alt='Avatar Custommer Image') 
-            .item-testimonial-thumb
-              img(src='images/testimonial-04.jpg', alt='Avatar Custommer Image') 
-            .item-testimonial-thumb
-              img(src='images/testimonial-05.jpg', alt='Avatar Custommer Image') 
-            .item-testimonial-thumb
-              img(src='images/testimonial-02.jpg', alt='Avatar Custommer Image') 
-            .item-testimonial-thumb
-              img(src='images/testimonial-03.jpg', alt='Avatar Custommer Image') 
-    section#branding
-      .container
-        .row.d-block
-          .js-carousel.carousel-logo-branding(
+          .js-carousel.carousel-testimonials-thumb.js-testimonials-carousel-sub.mt-5(
             data-carousel-lg="5", 
             data-carousel-md="3", 
             data-carousel-xs="1", 
@@ -357,43 +333,127 @@ html
             data-carousel-swipe="true",
             data-carousel-swipe-to="true",
             data-carousel-loop="true",
-            data-carousel-center-padding="0")
-            img(src='images/logo-06.png', alt='Logo Branding Image') 
-            img(src='images/logo-07.png', alt='Logo Branding Image') 
-            img(src='images/logo-08.png', alt='Logo Branding Image') 
-            img(src='images/logo-09.png', alt='Logo Branding Image') 
-            img(src='images/logo-010.png', alt='Logo Branding Image') 
-            img(src='images/logo-011.png', alt='Logo Branding Image') 
-    section#gallery
+            data-carousel-thumb=".js-testimonials-carousel-main",
+            data-carousel-thumb-focus="true",
+            data-carousel-center="true",
+            data-carousel-center-padding="0"
+            )
+            .item-testimonial-thumb
+              img(src='images/testimonial-01.jpg', alt='Avatar Custommer Image')
+              .testimonial-info.text-center
+                h5 BRYAN FREEMAN
+                span Partner / Director 
+            .item-testimonial-thumb
+              img(src='images/testimonial-02.jpg', alt='Avatar Custommer Image')
+              .testimonial-info.text-center
+                h5 BRYAN FREEMAN
+                span Partner / Director 
+            .item-testimonial-thumb
+              img(src='images/testimonial-03.jpg', alt='Avatar Custommer Image')
+              .testimonial-info.text-center
+                h5 BRYAN FREEMAN
+                span Partner / Director 
+            .item-testimonial-thumb
+              img(src='images/testimonial-04.jpg', alt='Avatar Custommer Image')
+              .testimonial-info.text-center
+                h5 BRYAN FREEMAN
+                span Partner / Director 
+            .item-testimonial-thumb
+              img(src='images/testimonial-05.jpg', alt='Avatar Custommer Image')
+              .testimonial-info.text-center
+                h5 BRYAN FREEMAN
+                span Partner / Director 
+            .item-testimonial-thumb
+              img(src='images/testimonial-02.jpg', alt='Avatar Custommer Image')
+              .testimonial-info.text-center
+                h5 BRYAN FREEMAN
+                span Partner / Director 
+            .item-testimonial-thumb
+              img(src='images/testimonial-03.jpg', alt='Avatar Custommer Image')
+              .testimonial-info.text-center
+                h5 BRYAN FREEMAN
+                span Partner / Director 
+    section#branding.pb-5.mb-5
+      .container
+        .row.d-block
+          .js-carousel.carousel-logo-branding(
+            data-carousel-lg="6", 
+            data-carousel-md="3", 
+            data-carousel-xs="1", 
+            data-carousel-autoplay="true",
+            data-carousel-drag="false",
+            data-carousel-swipe="false",
+            data-carousel-swipe-to="false",
+            data-carousel-loop="true",
+            data-carousel-center="true",
+            data-carousel-center-padding="0",
+            )
+            .item-branding-logo
+              img(src='images/logo-06.png', alt='Logo Branding Image') 
+            .item-branding-logo
+              img(src='images/logo-07.png', alt='Logo Branding Image') 
+            .item-branding-logo
+              img(src='images/logo-08.png', alt='Logo Branding Image') 
+            .item-branding-logo
+              img(src='images/logo-09.png', alt='Logo Branding Image') 
+            .item-branding-logo
+              img(src='images/logo-010.png', alt='Logo Branding Image') 
+            .item-branding-logo
+              img(src='images/logo-011.png', alt='Logo Branding Image') 
+            .item-branding-logo
+              img(src='images/logo-06.png', alt='Logo Branding Image') 
+            .item-branding-logo
+              img(src='images/logo-07.png', alt='Logo Branding Image')
+    section#gallery.pt-xl-100.relative.dark
+      .overlay-gallery-home-1
+      .container
+        .row
+          .col.title-wrapper.text-center
+            h3.title Our Gallery
+            h6.sub-title LET'S MAKE GREATE THINGS TOGETHER
       .boxed-fluid
-        .js-carousel.carousel-gallery-variable-width(
-          data-carousel-lg="5", 
-          data-carousel-md="3", 
-          data-carousel-xs="1", 
-          data-carousel-autoplay="true",
-          data-carousel-drag="true",
-          data-carousel-swipe="true",
-          data-carousel-swipe-to="true",
-          data-carousel-loop="true",
-          data-carousel-variable-width="true",
-          data-carousel-arrow="true",
-          )
-          img(src='images/gallery-01.jpg', alt='Galler Image') 
-          img(src='images/gallery-02.jpg', alt='Galler Image') 
-          img(src='images/gallery-03.jpg', alt='Galler Image') 
-          img(src='images/gallery-04.jpg', alt='Galler Image') 
-          img(src='images/gallery-01.jpg', alt='Galler Image') 
-          img(src='images/gallery-02.jpg', alt='Galler Image') 
-    section#blog
+        .row.gutters-10.d-block
+          .js-carousel.carousel-gallery-variable-width.py-5(
+            data-carousel-lg="5", 
+            data-carousel-md="3", 
+            data-carousel-xs="1", 
+            data-carousel-autoplay="false",
+            data-carousel-drag="true",
+            data-carousel-swipe="true",
+            data-carousel-swipe-to="true",
+            data-carousel-loop="true",
+            data-carousel-variable-width="true",
+            data-carousel-arrow="true",
+            data-carousel-center="true",
+            data-carousel-center-padding="0",
+            data-carousel-thumb-focus="true"
+            )
+            .item-gallery
+              img(src='images/gallery-01.jpg', alt='Galler Image') 
+            .item-gallery
+              img(src='images/gallery-02.jpg', alt='Galler Image') 
+            .item-gallery
+              img(src='images/gallery-03.jpg', alt='Galler Image') 
+            .item-gallery
+              img(src='images/gallery-04.jpg', alt='Galler Image') 
+            .item-gallery
+              img(src='images/gallery-01.jpg', alt='Galler Image') 
+            .item-gallery
+              img(src='images/gallery-02.jpg', alt='Galler Image') 
+    section#blog.pb-xl-100.relative
+      .overlay-blog-home-1
       .container
         .row
-          .col.title-section-wrapper.text-center
-              h3.title Blog Update
-              h6.sub-title LET'S MAKE GREAT THINGS TOGETHER
+          .col.title-wrapper.text-center
+            h3.title Blog Update
+        .row.justify-content-center
+          .col-7.text-hightlight.font-italic.small.text-center.body-font.mt-3.mb-5
+            span CIRCLE 
+            | FILM STUDIO  IS COMMITTED TO BOTH PROVEN AND EMERGING FILMMAKERS WITH ASSISTANCE AT EVERY STAGE OF PRODUCTION 
       .container
-        .row
+        .row.gutters-10
           .col-md-4.col-sm-4
-            .card.blog.post-sigle-image.h-100
+            .card.blog.post-sigle-image.h-100.border-0
               .card-header
                 img(src='images/blog-04.jpg', alt='Feature Image').feature-img
                 a(href='#').overlay
@@ -410,7 +470,7 @@ html
                 h3.title.title-blog.sm
                   a(href='#') Single Feature Image Post Type
           .col-md-4.col-sm-4
-            .card.blog.post-sigle-image.h-100
+            .card.blog.post-sigle-image.h-100.border-0
               .card-header
                 img(src='images/blog-05.jpg', alt='Feature Image').feature-img
                 a(href='#').overlay
@@ -427,7 +487,7 @@ html
                 h3.title.title-blog.sm
                   a(href='#') Single Feature Image Post Type
           .col-md-4.col-sm-4
-            .card.blog.post-sigle-image.h-100
+            .card.blog.post-sigle-image.h-100.border-0
               .card-header
                 img(src='images/blog-06.jpg', alt='Feature Image').feature-img
                 a(href='#').overlay
@@ -443,20 +503,21 @@ html
                   a(href='#').cate.font-italic MUSIC VIDEO
                 h3.title.title-blog.sm
                   a(href='#') Single Feature Image Post Type Single Feature Image Post Type Single Feature Image Post Type
-        .row
+        .row.section-footer
           .col.text-center
-            a(href='#').btn.btn-circle-secondary Go To Blog
-    section#subscribe
+            a(href='#').btn.btn-circle-secondary.mw-160 Go To Blog
+    section#subscribe.py-5.subcribe-home-1
       .container
         .row
           .col.text-center
-            img(src='http://via.placeholder.com/300x100', alt="Logo Image")
-            h6.sub-title SUBCRIBE TO OUR NEWSLETTER
+            img.logo(src='images/logo-light-01.png', alt="Logo Image")
+            h6.sub-title.mb-5.d-block SUBCRIBE TO OUR NEWSLETTER
         .row.justify-content-center
-          form.form-inline
-            .form-group
-              label.sr-only(for='staticEmail2') Email
-              input.form-control(type='text', placeholder='email@example.com')
-            button.btn.btn-main-color(type='submit') Subcribe
+          .col-6
+            form.form-inline.btn-in.w-100.d-flex
+              .form-group.form-circle
+                label.sr-only(for='staticEmail2') Email
+                input.form-control(type='text', placeholder='Enter your email...')
+              button.btn(type='submit') Subcribe
     +footer
-  script(type='text/javascript', src='js/main.js')
+    script(type='text/javascript', src='js/main.js')

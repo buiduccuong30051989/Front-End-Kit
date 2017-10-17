@@ -2,14 +2,29 @@
 // Components :: Navigation
 // --------------------------------------------------
 .navigation {
-	&.fixed {
-		position: fixed;
-		width: 100%;
+	.menuzord-brand {
+		img {
+			width: 210px;
+		}
+	}
+}
+
+.menuzord {
+	min-height: 0;
+	padding: 0;
+}
+
+.menuzord {
+	&.transparent {
+		background: transparent;
 	}
 }
 
 // Verision Dark
 	.dark {
+		.menuzord-menu > li {
+			text-align: center;
+		}
 		.menuzord-menu > li > a {
 			color: $white;
 

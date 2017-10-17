@@ -14,7 +14,7 @@
 
 .carousel-awards-logo {
   .item-award-logo {
-    height: 84px;
+    width: 115px;
 
     img {
       margin: 0 auto;
@@ -27,6 +27,27 @@
 	.item-award-logo {
     img {
       opacity: 1;
+    }
+  }
+}
+
+.carousel-logo-branding {
+  .slick-slide {
+    .item-branding-logo {
+      img {
+        width: 115px;
+        opacity: .4;
+        margin: 0 auto;
+        transition: $transition-base;
+      }
+    }
+
+    &.slick-current {
+      .item-branding-logo {
+        img {
+          opacity: 1;
+        }
+      }
     }
   }
 }
