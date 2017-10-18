@@ -175,6 +175,13 @@ gulp.task('watch', function(cb) {
   });
 });
 
+// copy revo
+gulp.task('revo', function() {
+  return gulp
+    .src(source + 'revolution/**/*.*')
+    .pipe(gulp.dest(dest+ 'revolution/'));
+});
+
 // copy js
 gulp.task('js', function() {
   return gulp
@@ -341,6 +348,7 @@ gulp.task('build', function(cb) {
   return runSequence(
     'cleanup',
     'bower',
+    'revo',
     'compile-images',
     'compile-styles',
     'compile-js',

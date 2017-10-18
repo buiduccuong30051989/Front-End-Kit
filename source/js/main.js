@@ -28,6 +28,16 @@ $(function() {
 
   });
 
+  // search form
+  $('.js-open-search-form-header').on('click', function() {
+    $(this).siblings('.form-outer').addClass('open');
+  });
+
+  $('.js-close-search-form-header').on('click', function() {
+    $(this).parent().removeClass('open');
+  });  
+
+
   //Navigation
   $("#js-headroom").headroom({
     "offset": 205,

@@ -41,6 +41,12 @@
 
       a {
       	color: $white;
+        transition: $transition-base;
+
+        &:hover {
+          color: $main-color;
+          text-decoration: none;
+        }
       }
     }
 

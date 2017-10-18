@@ -32,6 +32,7 @@
     width: 21px;
     height: 36px;
     margin-top: -25px;
+    z-index: 9;
 
     i {
       font-size: 56px;
@@ -55,5 +56,15 @@
   .slick-next:before,
   .slick-prev:before {
     display: none;
+  }
+
+  @include media-breakpoint-down(md) {
+    .slick-prev {
+      left: 15px;
+    }
+
+    .slick-next {
+      right: 15px;
+    } 
   }
 }

@@ -55,6 +55,12 @@
 	}
 }
 
+.item-testimonial {
+	.text-hightlight {
+		width: 80%;
+	}
+}
+
 .carousel-testimonials {
 	.slick-next, .slick-prev {
 		width: 21px;
@@ -70,6 +76,16 @@
       }
     }
 	}
+
+	@include media-breakpoint-down(md) {
+    .slick-prev {
+    	left: 0;
+    }
+
+    .slick-next {
+    	right: 0;
+    }	
+  }
 
 	.slick-next:before,
 	.slick-prev:before {

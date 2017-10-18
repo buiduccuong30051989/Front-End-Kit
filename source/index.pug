@@ -27,13 +27,77 @@ html
               a(href='#') BLOG
             li
               a(href='#') CONTACT
-            li
-              a(href='#') CONTACT
+            li.widget-search-header
+              button.btn-open-search-form.js-open-search-form-header
+                i.icon.ion-ios-search
+              .form-outer
+                button.btn-close-form-search-header.js-close-search-form-header
+                  i.icon.ion-ios-close-empty
+                form
+                  input.form-control(placeholder='Search')
+                  button.search
+                    i.icon.ion-ios-search
     section#revo-slider
-      img(src='images/slider-01.jpg', alt='demo', style=('width: 100%; height: 100vh'))
-    section#feature
-      .boxed-fluid
-    section#services.py-xl-100
+      #slider_home-1.rev_slider.slider-home-1
+        ul
+          li(data-title='FOCUS ON')
+            img.rev-slidebg(
+              src='images/slider-01.jpg', 
+              alt='Slider Image',
+              data-bgposition='center center', 
+              data-bgfit='cover'
+            )
+            .tp-caption.caption-1(
+              data-x='left', 
+              data-hoffset="['15','15','15','15']", 
+              data-y='center', 
+              data-voffset="['-30','30','-50','-50']", 
+              data-width="['auto','auto','480','320']", 
+              data-transform_idle='o:1;', 
+              data-whitespace="['nowrap','nowrap','nowrap','normal']", 
+              data-fontsize="['16','16','16','16']"
+              data-transform_in='y:-100px;opacity:0;s:1500;e:Power3.easeOut;', data-transform_out='y:-100;opacity:0;s:1000;e:Power3.easeInOut;', data-start='1000'
+            )
+              p IN FILM WE TRUST
+            .tp-caption.caption-2(
+              data-x='left', 
+              data-hoffset="['15','15','15','15']",
+              data-y='center', 
+              data-voffset="['125','125','20','0']", 
+              data-width="['776','500','320','320']", 
+              data-transform_idle='o:1;', 
+              data-transform_in='y:100px;opacity:0;s:1500;e:Power3.easeOut;', data-transform_out='y:100px;opacity:0;s:1000;e:Power3.easeInOut;', data-start='1300', 
+              data-whitespace="['normal','normal','normal','normal']", 
+              data-fontsize="['100','60','40','30']", 
+              data-lineheight="['120','70','50','40']"
+            )
+              p Stories can inspire change!
+            .tp-caption(
+              data-x='left', 
+              data-hoffset="['15','15','15','15']", 
+              data-y='bottom', 
+              data-voffset="['-140','-140','70','-5']", 
+              data-transform_idle='o:1;', 
+              data-transform_in='y:100px;opacity:0;s:1500;e:Power3.easeOut;', data-transform_out='y:100px;opacity:0;s:1000;e:Power3.easeInOut;',data-start='1700'
+            )
+              a.btn.btn-circle-main.mw-160(href='#') Hire Us Now
+    section#feature.feature-home-1.py-lg-100.pb-0
+      .container
+        .row
+          .col-md-6.align-items-center.d-flex
+            .pr-5
+              h2.title.mb-4 Let’s make great things together!
+              p Nullam imperdiet, sem at fringilla lobortis, sem nibh fringilla nibh, id gravida mi purus sit amet erat. Ut dictum nisi massa, vitae pulvinar metus scelerisque in.
+              p.mb-4 Gravida mi purus sit amet erat. Ut dictum nisi massa, vitae pulvinar metus scelerisque in. 
+              a(href='#').btn.btn-circle-main.mw-160 Hire Us Now
+          .col-md-6
+            .box-feature-image
+              img.img-1(src="images/feature-01.jpg", alt='feature-image')
+              img.img-2(src="images/feature-02.jpg", alt='feature-image')
+              .creative-text-box
+                p CIRCLE
+                span studio
+    section#services.py-lg-100
       .container
         .row
           .col.title-wrapper.text-center
@@ -70,7 +134,7 @@ html
                 a(href='#').read-more-1
                   i.icon.ion-android-add
                   | Read more
-    section#portfolio.bg-light-gray.py-xl-100
+    section#portfolio.bg-light-gray.py-lg-100
       .boxed-fluid
         .row
           .col.title-wrapper.text-center
@@ -159,61 +223,64 @@ html
           .col.text-center
             a(href='#').btn.btn-circle-secondary.mw-160 View More
             a(href='#').btn.btn-circle-main.mw-160 Hire us Now
-    section#team.py-xl-100
+    section#team.py-lg-100
       .container
           .row
             .col.title-wrapper.text-center
               h3.title Creative team
               h6.sub-title LET'S MAKE GREAT THINGS TOGETHER
           .row.gutters-10.team-home-1
-            .col-md-6.col-sm-12.card.card-overlay.border-0
+            .col-lg-6.col-12-12.card.card-overlay.border-0
               .card-header.h-100.justify-content-center.d-flex.flex-column.border.bg-white
                 h4.title We are the best team!
                 p Nullam imperdiet, sem at fringilla lobortis, sem nibh fringilla nibh, idae gravida mi purus sit amet erat. Ut dictum nisi massa, vitae pulvinar metus scelerisque in. 
                 p Ut dictum nisi massa, vitae pulvinar metus scelerisque in. 
-            .col-md-3.col-sm-3.card.card-overlay.border-0
+            .col-lg-3.col-md-4.card.card-overlay.border-0
               .card-header.p-0
                 img(src='images/team-01.jpg', alt='Team Images').feature-img
                 .overlay.main-color.justify-content-center.align-items-center.d-flex.flex-column
                   h4 IRA BANANA
                   p Photography
-            .col-md-3.col-sm-3.card.card-overlay.border-0
+            .col-lg-3.col-md-4.card.card-overlay.border-0
               .card-header.p-0
                 img(src='images/team-02.jpg', alt='Team Images').feature-img
                 .overlay.main-color.justify-content-center.align-items-center.d-flex.flex-column
                   h4 IRA BANANA
                   p Photography
-            .col-md-3.col-sm-3.card.card-overlay.border-0
+            .col-lg-3.col-md-4.card.card-overlay.border-0
               .card-header.p-0
                 img(src='images/team-03.jpg', alt='Team Images').feature-img
                 .overlay.main-color.justify-content-center.align-items-center.d-flex.flex-column
                   h4 IRA BANANA
                   p Photography
-            .col-md-3.col-sm-3.card.card-overlay.border-0
+            .col-lg-3.col-md-4.card.card-overlay.border-0
               .card-header.p-0
                 img(src='images/team-04.jpg', alt='Team Images').feature-img
                 .overlay.main-color.justify-content-center.align-items-center.d-flex.flex-column
                   h4 IRA BANANA
                   p Photography
-            .col-md-3.col-sm-12.card.card-overlay.border-0
+            .col-lg-3.col-md-4.card.card-overlay.border-0
               .card-header.p-0
                 img(src='images/team-05.jpg', alt='Team Images').feature-img
                 .overlay.main-color.justify-content-center.align-items-center.d-flex.flex-column
                   h4 IRA BANANA
                   p Photography
-            .col-md-3.col-sm-12.card.card-overlay.border-0
+            .col-lg-3.col-md-4.card.card-overlay.border-0
               .card-header.p-0.h-100
                 a(href='#').overlay.secondary-color.overlay-view-more-square.justify-content-center.align-items-center.d-flex.flex-column
                   i.icon.ion-ios-plus-empty
                   h5.mt-3 VIEW MORE
-    section#awards.dark.py-xl-100.bg-overlay(style="background-image: url('images/bg-overlay-01.jpg')")
+    section#awards.dark.py-lg-100.bg-overlay(style="background-image: url('images/bg-overlay-01.jpg')")
       .container
         .row
           .col.text-center.title-wrapper
             h3.title Winning Awards
         .row.d-block
           .js-carousel.carousel-awards.js-awards-carousel-main.mb-5.mt-3(
-            data-carousel-lg="1", 
+            data-carousel-lg="1",
+            data-carousel-md="1",
+            data-carousel-sm="1",
+            data-carousel-xs="1", 
             data-carousel-fade="true",
             data-carousel-autoplay="true",
             data-carousel-drag="true",
@@ -250,7 +317,7 @@ html
               p.text-hightlight.font-italic.small.text-center
                 span CIRCLE 
                 | IS AN AWARD WINNING CREATIVE PRODUCTION COMPANY WORKING FOR VARIOUS CLIENTS AND AGENCIES IN BOTH NEW YORK AND LA
-          .js-carousel.carousel-awards-logo.js-awards-carousel-sub.mt-5.d-inline-block.w-100(
+          .js-carousel.carousel-awards-logo.js-awards-carousel-sub.mt-lg-5.d-inline-block.w-100(
             data-carousel-lg="5", 
             data-carousel-md="3", 
             data-carousel-xs="3", 
@@ -276,7 +343,7 @@ html
               img(src='images/logo-02.png', alt='Award Image') 
             .item-award-logo
               img(src='images/logo-03.png', alt='Award Image') 
-    section#testimonials.py-xl-100
+    section#testimonials.py-lg-100
       .container
         .row
           .col.title-wrapper.text-center
@@ -284,6 +351,9 @@ html
         .row.d-block.pt-5
           .js-carousel.carousel-testimonials.testimonial-home-1.js-testimonials-carousel-main.mb-3(
             data-carousel-lg="1", 
+            data-carousel-md="1",
+            data-carousel-sm="1",
+            data-carousel-xs="1",
             data-carousel-fade="true",
             data-carousel-autoplay="true",
             data-carousel-drag="true",
@@ -293,37 +363,36 @@ html
             data-carousel-loop="true",
             data-carousel-thumb=".js-testimonials-carousel-sub"
             )
-            .item-award.text-center
+            .item-testimonial.text-center
               p.text-hightlight.font-italic
                 | I think it's important people 
                 span see themselves in film, but it’s even more important they 
                 span see people they maybe don’t know as well.
-            .item-award.text-center
+            .item-testimonial.text-center
               p.text-hightlight.font-italic
                 | I think it's important people 
                 span see themselves in film, but it’s even more important they 
                 span see people they maybe don’t know as well.
-            .item-award.text-center
+            .item-testimonial.text-center
               p.text-hightlight.font-italic
                 | I think it's important people 
                 span see themselves in film, but it’s even more important they 
                 span see people they maybe don’t know as well.
-            .item-award.text-center
+            .item-testimonial.text-center
               p.text-hightlight.font-italic
                 | I think it's important people 
                 span see themselves in film, but it’s even more important they 
                 span see people they maybe don’t know as well.
-            .item-award.text-center
+            .item-testimonial.text-center
               p.text-hightlight.font-italic
                 | I think it's important people 
                 span see themselves in film, but it’s even more important they 
                 span see people they maybe don’t know as well.
-            .item-award.text-center
+            .item-testimonial.text-center
               p.text-hightlight.font-italic
                 | I think it's important people 
                 span see themselves in film, but it’s even more important they 
                 span see people they maybe don’t know as well.
-          .js-carousel.carousel-testimonials-thumb
           .js-carousel.carousel-testimonials-thumb.js-testimonials-carousel-sub.mt-5(
             data-carousel-lg="5", 
             data-carousel-md="3", 
@@ -373,7 +442,7 @@ html
               .testimonial-info.text-center
                 h5 BRYAN FREEMAN
                 span Partner / Director 
-    section#branding.pb-5.mb-5
+    section#branding.pb-5.mb-md-5
       .container
         .row.d-block
           .js-carousel.carousel-logo-branding(
@@ -404,7 +473,7 @@ html
               img(src='images/logo-06.png', alt='Logo Branding Image') 
             .item-branding-logo
               img(src='images/logo-07.png', alt='Logo Branding Image')
-    section#gallery.pt-xl-100.relative.dark
+    section#gallery.pt-lg-100.relative.dark
       .overlay-gallery-home-1
       .container
         .row
@@ -440,7 +509,7 @@ html
               img(src='images/gallery-01.jpg', alt='Galler Image') 
             .item-gallery
               img(src='images/gallery-02.jpg', alt='Galler Image') 
-    section#blog.pb-xl-100.relative
+    section#blog.pb-lg-100.relative
       .overlay-blog-home-1
       .container
         .row
@@ -521,3 +590,21 @@ html
               button.btn(type='submit') Subcribe
     +footer
     script(type='text/javascript', src='js/main.js')
+    +revo
+    script.
+      var revapi;
+      jQuery(document).ready(function() {
+        revapi = jQuery("#slider_home-1").revolution({
+          sliderType:"standard",
+          sliderLayout:"fullscreen",
+          delay:9000,
+          navigation: {
+            arrows:{enable:true}
+          },
+          gridwidth:1230,
+          gridheight:720,
+            responsiveLevels:[4096,1024,778,480],
+            gridwidth:[1140,800,750,480],
+            gridheight:[420,360,420,220]    
+        });
+      });
