@@ -82,3 +82,45 @@
     }
   }
 }
+
+.video-wrapper {
+  width: 100%;
+  background-size: cover!important;
+  background-position: center center!important;
+  overflow: hidden;
+  position: relative;
+
+  .overlay-play-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: $transition-base;
+    z-index: 2;
+    display: flex;
+
+    .btn-play {
+      margin-bottom: 40px;
+    }
+
+    .title {
+      margin-bottom: 20px;
+    }
+  }
+
+  .embed-responsive {
+    height: 100%;
+    opacity: 0;
+    z-index: 0;
+    transition: all 4s;
+  }
+
+  &:hover {
+    .overlay-play-video {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+}

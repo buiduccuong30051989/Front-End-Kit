@@ -48,6 +48,14 @@
           text-decoration: none;
         }
       }
+
+      @include media-breakpoint-down(xs) {
+        padding: 10px;
+
+        .h6 {
+          font-size: 13px;
+        }
+      }
     }
 
 	  &:hover .overlay {

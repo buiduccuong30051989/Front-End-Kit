@@ -63,3 +63,17 @@
     }
   }
 }
+
+.item-team {
+  @include media-breakpoint-down(sm) {
+    h4 {
+      font-size: 16px;
+      margin: 0;
+    }
+
+    p {
+      font-size: 13px;
+      margin: 0;
+    }
+  }
+}

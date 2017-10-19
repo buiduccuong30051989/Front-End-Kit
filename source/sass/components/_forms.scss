@@ -4,6 +4,10 @@
 .form-group.form-circle {
   .form-control {
     height: 48px;
+
+    @include media-breakpoint-down(sm) {
+      height: 44px;
+    }
   }
 }
 

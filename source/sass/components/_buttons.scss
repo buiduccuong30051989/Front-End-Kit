@@ -16,6 +16,10 @@
     background-color: $secondary-color;
     color: $white;
   }
+
+  &.text-white {
+    color: $white;
+  }
 }
 
 .btn-circle-secondary.hight-light-icon {
@@ -43,6 +47,11 @@
   border-radius: 25px;
   border-width: 2px;
   transition: $transition-base;
+
+  @include media-breakpoint-down(sm) {
+    padding: 6px 10px;
+    min-width: 120px;
+  }
 }
 
 .btn-floating-main {
@@ -110,6 +119,15 @@
   &:before {
     font-size: 24px;
     margin-right: -3px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: 40px;
+    height: 40px;
+
+    &:before {
+      font-size: 16px;
+    }
   }  
 }
 

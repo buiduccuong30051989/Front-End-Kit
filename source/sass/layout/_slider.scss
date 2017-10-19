@@ -25,3 +25,28 @@
     }
   }
 }
+
+.slider-home-2 {
+  .caption-1 {
+    color: $white;
+    letter-spacing: 3px;
+    font-weight: normal;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.1);
+  }
+
+  .caption-2 {
+    font-family: $heading-font;
+    font-weight: bold;
+    color: $white;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.1);
+  }
+
+  .btn {
+    @include media-breakpoint-down(xs) {
+      padding: 5px 10px;
+      line-height: 16px;
+      min-width: 120px;
+    }
+  }
+}

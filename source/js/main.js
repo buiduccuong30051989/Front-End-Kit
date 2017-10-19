@@ -54,6 +54,15 @@ $(function() {
   zoom: false
   }); 
 
+  //Video Youtube
+  $('.js-play-yoututbe').on('click', function(ev) {
+    var videoWrapper = $(this).siblings('.js-video-youtube');
+    videoWrapper.children('iframe')[0].src += "rel=0&autoplay=1";
+    videoWrapper.css('opacity', '1');
+    $(this).fadeOut('fast');
+    ev.preventDefault();
+  });
+
   $('.js-open-lightbox').on('click', function() {
   // $('.first-item').trigger('click');
   $(this).next('.js-lightbox').find('a:first-child').trigger('click');
