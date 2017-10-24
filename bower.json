@@ -18,6 +18,12 @@
   ],
   "devDependencies": {
     "bootstrap": "v4.0.0-beta",
-    "components-font-awesome": "^4.7.0"
+    "components-font-awesome": "^4.7.0",
+    "jquery.countdown": "^2.2.0",
+    "wow": "wowjs#^1.1.2"
+  },
+  "dependencies": {
+    "owl.carousel": "^2.2.1",
+    "sticky-kit": "^1.1.2"
   }
 }

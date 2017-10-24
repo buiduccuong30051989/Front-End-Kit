@@ -2,6 +2,8 @@
 @import 'vendors/bootstrap-override-variable';
 @import 'bootstrap';
 @import 'font-awesome';
+@import 'owl.carousel';
+@import 'lightgallery';
 
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
@@ -26,5 +28,6 @@
 @import 'components/icons';
 @import 'components/buttons';
 @import 'components/forms';
+@import 'components/slider';
 
 @import 'pages/home';

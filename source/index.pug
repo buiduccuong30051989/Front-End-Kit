@@ -7,76 +7,488 @@ doctype html
 html
   +head(head.home)
   body
-    +header()
+    header.header#header
+      .container
+        .row.justify-content-between
+          .logo
+            a(href='index.html')
+              img(src='http://via.placeholder.com/120x50', alt="logo")
+          .right
+              img(src='http://via.placeholder.com/120x50', alt="logo")
+    nav.mainnav.swatch-primary#js-main-nav
+      .container
+        .row
+          ul.menu.d-flex
+            li
+              a(href='#header') Trang chủ
+            li
+              a(href='#promotion-01') lo lắng về tóc
+            li
+              a(href='#promotion-02') Giải pháp
+            li
+              a(href='#reason-why-order') Thành phần
+            li
+              a(href='#') Trải nghiệm
+            li
+              a(href='#testimonial') Ý kiến chuyên gia
+            li
+              a(href='#sale-off') Khuyến mại
+            li
+              a(href='#contact')
+                | Contact
+    section#main-slider.main-slider(style="background: url('images/slider-01.jpg')")
+      .js-main-slider.slider.owl-carousel
+        .item.text-center
+          .item-inner
+            h2.title Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            .slider-product-info
+              img(src='http://via.placeholder.com/400x420', alt="logo")
+              ul
+                li
+                  p Lorem ipsum dolor sit amet
+                li
+                  p Lorem ipsum dolor sit amet
+                li
+                  p Lorem ipsum dolor sit amet
+        .item.text-center
+          .item-inner
+            h2.title LoLo ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            .slider-product-info
+              img(src='http://via.placeholder.com/400x420', alt="logo")
+              ul
+                li
+                  p Lorem ipsum dolor sit amet
+                li
+                  p Lorem ipsum dolor sit amet
+                li
+                  p Lorem ipsum dolor sit amet
+    
+    section#promotion-01
+      .container
+        .row
+          .title-wrapper.text-center.my-5
+            h2.title Lorem ipsum dolor sit amet, consectetur
+        .row
+          .col-md-4.col-sm-6.wow.fadeInUp(data-wow-delay="0")
+            .box-promotion-01
+              img(src='http://novophane.net/wp-content/uploads/2017/05/rung-toc-05.jpg', alt='demo')
+              footer.swatch-orange
+                h3.title Lorem ipsum dolor 
+          .col-md-4.col-sm-6.wow.fadeInUp(data-wow-delay=".3s")
+            .box-promotion-01
+              img(src='http://novophane.net/wp-content/uploads/2017/05/rung-toc-05.jpg', alt='demo')
+              footer.swatch-orange
+                h3.title Lorem ipsum dolor 
+          .col-md-4.col-sm-6.wow.fadeInUp(data-wow-delay=".6s")
+            .box-promotion-01
+              img(src='http://novophane.net/wp-content/uploads/2017/05/rung-toc-05.jpg', alt='demo')
+              footer.swatch-orange
+                h3.title Lorem ipsum dolor 
+          .col-md-4.col-sm-6.wow.fadeInUp(data-wow-delay=".9s")
+            .box-promotion-01
+              img(src='http://novophane.net/wp-content/uploads/2017/05/rung-toc-05.jpg', alt='demo')
+              footer.swatch-orange
+                h3.title Lorem ipsum dolor 
+          .col-md-4.col-sm-6.wow.fadeInUp(data-wow-delay="1.2s")
+            .box-promotion-01
+              img(src='http://novophane.net/wp-content/uploads/2017/05/rung-toc-05.jpg', alt='demo')
+              footer.swatch-orange
+                h3.title Lorem ipsum dolor 
+          .col-md-4.col-sm-6.wow.fadeInUp(data-wow-delay="1.5s")
+            .box-promotion-01
+              img(src='http://novophane.net/wp-content/uploads/2017/05/rung-toc-05.jpg', alt='demo')
+              footer.swatch-orange
+                h3.title Lorem ipsum dolor 
+    
+    section#promotion-02.swatch-light
+      .container
+        .row
+          .title-wrapper.text-center.my-5
+            h2.title Lorem ipsum dolor sit amet, consectetur
+        .row.swatch-primary.wow.fadeIn(data-wow-delay=".3s")
+          .col-md-6(style="background: url('http://novophane.net/wp-content/uploads/2017/05/toc-rung-stress.jpg') no-repeat center; background-size: cover;")
+          .col-md-6
+            .card.promotion-02-box-info
+              .card-body
+                h3 Các vấn đề bạn đang gặp phải ?
+                ul.list-unstyled.alert-style
+                  li
+                    i.fa.fa-exclamation-triangle
+                    p TÓC RỤNG quá nhiều bạn sợ phải cầm lược , hay sợ sau mỗi lần gội đầu.
+                  li
+                    i.fa.fa-exclamation-triangle
+                    p Đàn ông hói đầu MẤT TỰ TIN khi phụ nữ cho rằng bị họ dễ bị “YẾU SINH LÝ”
+                  li
+                    i.fa.fa-exclamation-triangle
+                    p Thường xuyên bị ÁNH MẮT SOI MÓI của mọi người
+                  li
+                    i.fa.fa-exclamation-triangle
+                    p Lo sợ không biết mình có mắc BỆNH LÝ NGHIÊM TRỌNG gì không?
+                  li
+                    i.fa.fa-exclamation-triangle
+                    p Nhìn nhà đâu cũng thấy TÓC RỤNG, thật là KHÓ CHỊU
+                  li
+                    i.fa.fa-exclamation-triangle
+                    p Rụng tóc gây KHÓ CHỊU, ĐẢO LỘN cuộc sống gia đình. 
+                h3 Giải pháp dành cho bạn
+                ul.list-unstyled.alert-style
+                  li
+                    i.fa.fa-check-circle
+                    p Hãy sử dụng ngay bộ sản phẩm NOVOPHANE để cảm nhận sự thay đổi.
+                  li
+                    i.fa.fa-check-circle
+                    p Tóc giảm rụng ngay sau 2 TUẦN sử dụng . 
+                  li
+                    i.fa.fa-check-circle
+                    p Thúc đẩy và KÍCH THÍCH SỰ PHÁT TRIỂN CỦA NANG TÓC, NGĂN CHẶN HÓI ĐẦU và phục hồi tình trạng hói đầu .
+                  li
+                    i.fa.fa-check-circle
+                    p Thiết kế bộ sản phẩm chuyên biệt PHÙ HỢP từng loại da đầu: DA ĐẦU DẦU, DA ĐẦU KHÔ và DA ĐẦU THƯỜNG cho hiệu quả tối ưu.
 
-    .container
-      .row
-        .cuong
-          h2#examples Examples
-          p
-            | Bootstrap includes several predefined button styles, each serving its own semantic purpose, with a few extras thrown in for more control.
-          .bd-example(data-example-id='')
-            button.cuong-btn LLALAL
-            button.btn.btn-primary(type='button') Primary
-            button.btn.btn-secondary(type='button') Secondary
-            button.btn.btn-success(type='button') Success
-            button.btn.btn-danger(type='button') Danger
-            button.btn.btn-warning(type='button') Warning
-            button.btn.btn-info(type='button') Info
-            button.btn.btn-light(type='button') Light
-            button.btn.btn-dark(type='button') Dark
-      .row
-        .col-md-4
-          .p-3.mb-3.swatch-primary Primary
-        .col-md-4
-          .p-3.mb-3.swatch-secondary Secondary
-        .col-md-4
-          .p-3.mb-3.swatch-success Success
-        .col-md-4
-          .p-3.mb-3.swatch-danger Danger
-        .col-md-4
-          .p-3.mb-3.swatch-warning Warning
-        .col-md-4
-          .p-3.mb-3.swatch-info Info
-        .col-md-4
-          .p-3.mb-3.swatch-light Light
-        .col-md-4
-          .p-3.mb-3.swatch-dark Dark
-      .row
-        .col-md-4
-          .p-3.mb-3.swatch-blue Blue
-        .col-md-4
-          .p-3.mb-3.swatch-indigo Indigo
-        .col-md-4
-          .p-3.mb-3.swatch-purple Purple
-        .col-md-4
-          .p-3.mb-3.swatch-pink Pink
-        .col-md-4
-          .p-3.mb-3.swatch-red Red
-        .col-md-4
-          .p-3.mb-3.swatch-orange Orange
-        .col-md-4
-          .p-3.mb-3.swatch-yellow Yellow
-        .col-md-4
-          .p-3.mb-3.swatch-green Green
-        .col-md-4
-          .p-3.mb-3.swatch-teal Teal
-        .col-md-4
-          .p-3.mb-3.swatch-cyan Cyan
-      .row.mb-3
-        .col-md-4
-          .p-3.swatch-100 100
-          .p-3.swatch-200 200
-          .p-3.swatch-300 300
-          .p-3.swatch-400 400
-          .p-3.swatch-500 500
-          .p-3.swatch-600 600
-          .p-3.swatch-700 700
-          .p-3.swatch-800 800
-          .p-3.swatch-900 900
+    section#promotion-03
+      .container
+        .row
+          .title-wrapper.text-center.my-5
+            h2.title Lorem ipsum dolor sit amet, consectetur
+        .row
+          .col-md-4
+            .card.box-promotion-03-info.swatch-blue.wow.fadeInLeft(data-wow-delay=".3s")
+              .card-body
+                h3.title 1. Lorem ipsum dolor sit amet
+                p - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            .card.box-promotion-03-info.swatch-blue.wow.fadeInLeft(data-wow-delay=".6s")
+              .card-body
+                h3.title 2. Lorem ipsum dolor sit amet
+                p - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          .col-md-4.d-flex.justify-content-center.align-items-center
+            .slider-promotion-03-wrapper.wow.fadeInUp(data-wow-delay=".3s")
+              .js-slider-promotion-03.slider-promotion-03.owl-carousel
+                .item
+                  img(src='images/p-03-01.jpg', alt='demo product')
+                .item
+                  img(src='images/p-03-02.jpg', alt='demo product')
+                .item
+                  img(src='images/p-03-03.jpg', alt='demo product')
+                .item
+                  img(src='images/p-03-04.jpg', alt='demo product')
+                .item
+                  img(src='images/p-03-05.jpg', alt='demo product')
+          .col-md-4
+            .card.box-promotion-03-info.swatch-blue.wow.fadeInRight(data-wow-delay=".3s")
+              .card-body
+                h3.title 3. Lorem ipsum dolor sit amet
+                p - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            .card.box-promotion-03-info.swatch-blue.wow.fadeInRight(data-wow-delay=".6s")
+              .card-body
+                h3.title 4. Lorem ipsum dolor sit amet
+                p - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    
+    section#promotion-04.swatch-light.pb-5
+      .container
+        .row
+          .title-wrapper.text-center.my-5
+            h2.title Lorem ipsum dolor sit amet, consectetur
+        .row
+          .col-md-6.d-flex.flex-column.justify-content-between
+            img.mb-3.wow.fadeInLeft(data-wow-delay=".3s")(src='images/p-04-01.jpg', alt='images demo')
+            img.mb-3.wow.fadeInLeft(data-wow-delay=".3s")(src='images/p-04-02.jpg', alt='images demo 02')
+            img.mb-3.wow.fadeInLeft(data-wow-delay=".3s")(src='images/p-04-03.jpg', alt='images demo 03')
+            img.wow.fadeInLeft(data-wow-delay=".3s")(src='images/p-04-04.jpg' alt='images demo 04')
+          .col-md-6
+            .card.box-promotion-04-info.swatch-teal
+              .card-body
+                h3.title 1. Lorem ipsum dolor sit amet: 
+                p Lorem 
+                  | ipsum dolor sit 
+                  span amet
+                  | , consectetur adipisicing elit, sed do eiusmod
+                p Lreon
+                  span proident
+                  | , sunt in culpa qui 
+                  span 
+                  | officia deserunt mollit anim id est laborum.
+                p Duis aute irure dolor in 
+                  span reprehenderit in voluptate 
+                  | velit esse cillum dolore eu fugiat nulla pariatur. 
+                  span Excepteur 
+                  | sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                h3.title 2. Lorem ipsum dolor sit amet: 
+                p Lorem 
+                  | ipsum dolor sit 
+                  span amet
+                  | , consectetur adipisicing elit, sed do eiusmod
+                p Lreon
+                  span proident
+                  | , sunt in culpa qui 
+                  span 
+                  | officia deserunt mollit anim id est laborum.
+                p Duis aute irure dolor in 
+                  span reprehenderit in voluptate 
+                  | velit esse cillum dolore eu fugiat nulla pariatur. 
+                  span Excepteur 
+                  | sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                p Lorem 
+                  | ipsum dolor sit 
+                  span amet
+                  | , consectetur adipisicing elit, sed do eiusmod
+                h3.title 3. Lorem ipsum dolor sit amet: 
+                p Lorem 
+                  | ipsum dolor sit 
+                  span amet
+                  | , consectetur adipisicing elit, sed do eiusmod
+                p Lreon
+                  span proident
+                  | , sunt in culpa qui 
+                h3.title 4. Lorem ipsum dolor sit amet: 
+                p Lorem 
+                  | ipsum dolor sit int occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  span amet
+                  | , consectetur adipisicing elit, sed do eiusmod sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                p Lreon
+                  span proident
+                  | , sunt in culpa qui 
+                  span 
+                  | officia deserunt mollit anim id est laborum.
+                h3.title 5. Lorem ipsum dolor sit amet: 
+                p Lorem 
+                  | ipsum dolor sit int occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  span amet
+                  | , consectetur adipisicing elit, sed do eiusmod sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                p Lreon
+                  span proident
+                  | , sunt in culpa qui 
+                  span 
+                  | officia deserunt mollit anim id est laborum.
+                h3.title 6. Lorem ipsum dolor sit amet: 
+                p Lorem 
+                  | ipsum dolor sit int occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  span amet
+                  | , consectetur adipisicing elit, sed do eiusmod sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                span Lreon proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    
+    section#sale-off
+      .container
+        .row
+          .title-wrapper.text-center.my-5
+            h2.title Lorem ipsum dolor sit amet, consectetur
+        .row
+          .col-md-3.wow.fadeInRight(data-wow-delay=".3s")
+            .card.card-product
+              .card-body.p-0
+                img(src='images/sale-01.jpg')
+                h4.title Novophance capsule
+          .col-md-3.wow.fadeInRight(data-wow-delay=".6s")
+            .card.card-product
+              .card-body.p-0
+                img(src='images/sale-02.jpg')
+                h4.title Novophance capsule
+          .col-md-3.wow.fadeInRight(data-wow-delay=".9s")
+            .card.card-product
+              .card-body.p-0
+                img(src='images/sale-03.jpg')
+                h4.title Novophance capsule
+          .col-md-3.wow.fadeInRight(data-wow-delay="1.2s")
+            .card.card-product
+              .card-body.p-0
+                img(src='images/sale-04.jpg')
+                h4.title Novophance capsule
+        .row.py-5
+          .col-md-12
+            .price-quotation.text-center.swatch-danger
+              p Giảm giá đặc biệt khi đặt hàng tại website: 
+                a(href='#') Xem giá tại đây
+    
+    section#reason-why-order.swatch-light
+      .container
+        .row
+          .title-wrapper.text-center.my-5
+            h2.title Lorem ipsum dolor sit amet, consectetur
+        .row.pb-3
+          .col-md-4.text-center.wow.fadeInUp(data-wow-delay=".3s")
+            h6.mb-3 Lorem ipsum dolor sit amet
+            img(src='images/order-01.jpg').img-fluid
+          .col-md-4.text-center.wow.fadeInUp(data-wow-delay=".6s")
+            h6.mb-3 Lorem ipsum dolor sit amet
+            img(src='images/order-02.jpg').img-fluid
+          .col-md-4.text-center.wow.fadeInUp(data-wow-delay=".9s")
+            h6.mb-3 Lorem ipsum dolor sit amet
+            img(src='images/order-02.jpg').img-fluid
+        .row.py-5
+          .col-md-12.text-center
+            a(href='#').btn.btn-danger Order Now
+    
+    section#promotion-video.parallax-wrapper(style="background: url('images/parallax.jpg')").d-flex.justify-content-center.align-items-center
+      .overlay
+      .promotion-video
+        p.js-open-lightbox.btn-play
+          i.fa.fa-youtube-play
+        .js-lightbox.hidden
+          a(href='https://www.youtube.com/watch?v=4ZHwu0uut3k&list=RDGMEMQ1dJ7wXfLlqCjwV0xfSNbAVM4ZHwu0uut3k')
+          a(href='https://www.youtube.com/watch?v=hTb6ClME6Eg')
+          a(href='https://www.youtube.com/watch?v=5yX6NyhCwAI&t=2923s')
+    
+    section#testimonial
+      .container
+        .row
+          .title-wrapper.text-center.my-5
+            h2.title Lorem ipsum dolor sit amet, consectetur
+        .row
+          .col-md-6.wow.fadeInUp(data-wow-delay=".3s")
+            .item-testimonial
+              img(src='http://novophane.net/wp-content/uploads/2017/05/nguyenhonglien.jpg', alt='avatar')
+              p.name.text-center Nguyễn Hồng Liên (TT Hà Trung, huyện Hà Trung, Thanh Hóa)
+              .card
+                .card-body
+                  p Mình 25 tuổi, mình hay tạo kiểu, có năm mình làm 3 lần, sau nhiều lần làm kiểu quá mình chẳng hiểu có phải do hóa chất uốn nhuộm mà tóc rụng nhiều.Bây giờ cột lên còn có một xíu, mình sợ quá tìm hiểu nguyên nhân và các khắc phục. Mình thấy có nhiều loại chống rụng tóc của Việt Nam, Hàn Quốc, xách tay các nước. Sau một thời gian thử qua 1 số loại không cho kết quả như ý, mình quyết định chọn bộ sản phẩm dành cho da đầu dầu vì tóc mình cũng dễ bết.Ôi thật ngạc nhiên sau 2 tuần sử dụng vào hanh khô luôn nhé.Tóc mình đã giảm rụng đáng kể mình vui lắm, dùng được 3 tháng tóc khỏe, dày và đẹp lên nhiều lắm. Cảm ơn Novophane nhiều lắm
+          .col-md-6.wow.fadeInUp(data-wow-delay=".6s")
+            .item-testimonial
+              img(src='http://novophane.net/wp-content/uploads/2017/05/nguyenhonglien.jpg', alt='avatar')
+              p.name.text-center Nguyễn Hồng Liên (TT Hà Trung, huyện Hà Trung, Thanh Hóa)
+              .card
+                .card-body
+                  p Mình 25 tuổi, mình hay tạo kiểu, có năm mình làm 3 lần, sau nhiều lần làm kiểu quá mình chẳng hiểu có phải do hóa chất uốn nhuộm mà tóc rụng nhiều.Bây giờ cột lên còn có một xíu, mình sợ quá tìm hiểu nguyên nhân và các khắc phục. Mình thấy có nhiều loại chống rụng tóc của Việt Nam, Hàn Quốc, xách tay các nước. Sau một thời gian thử qua 1 số loại không cho kết quả như ý, mình quyết định chọn bộ sản phẩm dành cho da đầu dầu vì tóc mình cũng dễ bết.Ôi thật ngạc nhiên sau 2 tuần sử dụng vào hanh khô luôn nhé.Tóc mình đã giảm rụng đáng kể mình vui lắm, dùng được 3 tháng tóc khỏe, dày và đẹp lên nhiều lắm. Cảm ơn Novophane nhiều lắm
+          .col-md-6.wow.fadeInUp(data-wow-delay=".9s")
+            .item-testimonial
+              img(src='http://novophane.net/wp-content/uploads/2017/05/nguyenhonglien.jpg', alt='avatar')
+              p.name.text-center Nguyễn Hồng Liên (TT Hà Trung, huyện Hà Trung, Thanh Hóa)
+              .card
+                .card-body
+                  p Mình 25 tuổi, mình hay tạo kiểu, có năm mình làm 3 lần, sau nhiều lần làm kiểu quá mình chẳng hiểu có phải do hóa chất uốn nhuộm mà tóc rụng nhiều.Bây giờ cột lên còn có một xíu, mình sợ quá tìm hiểu nguyên nhân và các khắc phục. Mình thấy có nhiều loại chống rụng tóc của Việt Nam, Hàn Quốc, xách tay các nước. Sau một thời gian thử qua 1 số loại không cho kết quả như ý, mình quyết định chọn bộ sản phẩm dành cho da đầu dầu vì tóc mình cũng dễ bết.Ôi thật ngạc nhiên sau 2 tuần sử dụng vào hanh khô luôn nhé.Tóc mình đã giảm rụng đáng kể mình vui lắm, dùng được 3 tháng tóc khỏe, dày và đẹp lên nhiều lắm. Cảm ơn Novophane nhiều lắm
+          .col-md-6.wow.fadeInUp(data-wow-delay="1.2s")
+            .item-testimonial
+              img(src='http://novophane.net/wp-content/uploads/2017/05/nguyenhonglien.jpg', alt='avatar')
+              p.name.text-center Nguyễn Hồng Liên (TT Hà Trung, huyện Hà Trung, Thanh Hóa)
+              .card
+                .card-body
+                  p Mình 25 tuổi, mình hay tạo kiểu, có năm mình làm 3 lần, sau nhiều lần làm kiểu quá mình chẳng hiểu có phải do hóa chất uốn nhuộm mà tóc rụng nhiều.Bây giờ cột lên còn có một xíu, mình sợ quá tìm hiểu nguyên nhân và các khắc phục. Mình thấy có nhiều loại chống rụng tóc của Việt Nam, Hàn Quốc, xách tay các nước. Sau một thời gian thử qua 1 số loại không cho kết quả như ý, mình quyết định chọn bộ sản phẩm dành cho da đầu dầu vì tóc mình cũng dễ bết.Ôi thật ngạc nhiên sau 2 tuần sử dụng vào hanh khô luôn nhé.Tóc mình đã giảm rụng đáng kể mình vui lắm, dùng được 3 tháng tóc khỏe, dày và đẹp lên nhiều lắm. Cảm ơn Novophane nhiều lắm
+    
+    section#certificate
+      .container
+        .row
+          .title-wrapper.text-center.my-5
+            h2.title Lorem ipsum dolor sit amet, consectetur
+        .row.box-certificate.swatch-success.wow.fadeIn(data-wow-delay=".3s")
+          .col-sm-5.d-flex
+            img.img-fluid(src='images/certificate.png', alt='people').align-self-end
+          .col-sm-7
+            .card
+              .card-body    
+                h3.title ThS.BS Vũ Huy Lượng, Nghiên cứu sinh chuyên ngành Da liễu tại Nhật
+                p Ở nam giới, rụng tóc thường do gia tăng sự chuyển hóa hoóc-môn nam thành DHT, làm bít nghẽn nang tóc. DHT (dihydrotestosterone) là một hormone nội sinh trong cơ thể, là sản phẩm của sự chuyển hóa hooc-môn nam dưới tác dụng của enzym 5α-reductase.
 
+                p Rụng tóc nữ giới thường do căng thẳng, rối loạn dinh dưỡng (muốn giảm cân nhanh, thiếu chất đạm, thiếu sắt, thừa vitamin A…), Do thay đổi nội tiết tố như phụ nữ sau sinh, mãn kinh, hoặc rụng tóc có thể gặp ở độ tuổi dậy thì.
+
+                p Sau nhiều năm nghiên cứu về vấn đề điều trị rụng tóc. Tôi thấy rằng để điều trị hiệu quả cần kết hợp các phương pháp toàn diện: Loại bỏ các yếu tố tác động từ bên ngoài như dầu, bã nhờn dư thừa, nấm..., đồng thời bổ sung dưỡng chất tác động sâu từ bên trong giúp cân bằng nội tiết tố, giảm hình thành DHT, cung cấp dưỡng chất giúp nang tóc phát triển
+
+                p Trong tất cả sản phẩm tôi đã sử dụng trong quá trình điều trị cho bệnh nhân. Tôi thấy Bộ sản phẩm Novophane – Pháp là một giải pháp toàn diện giải quyết tình trạng rụng tóc
+
+    section#faq.swatch-light.py-5
+      .container
+        .row
+          .title-wrapper.text-center.my-5
+            h2.title Lorem ipsum dolor sit amet, consectetur
+        .row
+          .col-md-3.wow.fadeInRight(data-wow-delay=".3s")
+            .card.card-step
+              .card-body.p-0
+                img(src='images/sale-01.jpg')
+                footer.swatch-dark
+                  h4.title Time after time
+                  p.sub-title.swatch-danger Status
+          .col-md-3.wow.fadeInRight(data-wow-delay=".6s")
+            .card.card-step
+              .card-body.p-0
+                img(src='images/sale-02.jpg')
+                footer.swatch-dark
+                  h4.title Time after time
+                  p.sub-title.swatch-danger Status
+          .col-md-3.wow.fadeInRight(data-wow-delay=".9s")
+            .card.card-step
+              .card-body.p-0
+                img(src='images/sale-03.jpg')
+                footer.swatch-dark
+                  h4.title Time after time
+                  p.sub-title.swatch-danger Status
+          .col-md-3.wow.fadeInRight(data-wow-delay="1.2s")
+            .card.card-step
+              .card-body.p-0
+                img(src='images/sale-04.jpg')
+                footer.swatch-dark
+                  h4.title Time after time
+                  p.sub-title.swatch-danger Status
+    
+    section#commitment
+      .container
+        .row
+          .title-wrapper.text-center.my-5
+            h2.title Lorem ipsum dolor sit amet, consectetur
+        .row
+          .col-md-4.wow.fadeInUp(data-wow-delay=".3s")
+            .card.box-commitment
+              .card-body
+                h4.title Lorem ipsum dolor sit amet
+                p - Sản xuất tại Pháp
+                p - Bộ Y tế cấp phép lưu hàng tại Việt Nam 
+                p - 100% sản phẩm có tem chống hàng giả 
+                p - Lorem ipsum dolor sit amet
+          .col-md-4.wow.fadeInUp(data-wow-delay=".9s")
+            .card.box-commitment
+              .card-body
+                h4.title Lorem ipsum dolor sit amet
+                p - Sau liệu trình sử dụng 3 tháng: 100% mọc lại nang tóc mới. Tóc giảm rụng rõ rệt, tóc dầy và chắc khỏe hơn.
+                p - Thiết kế bộ sản phẩm chuyên biệt phù hợp từng loại da đầu: da đầu dầu và da đầu thường, khô cho hiệu quả trong điều trị .
+                p - Tóc giảm rụng ngay sau 2 tuần sử dụng.
+          .col-md-4.wow.fadeInUp(data-wow-delay="1.2s")
+            .card.box-commitment
+              .card-body
+                h4.title Lorem ipsum dolor sit amet
+                p - Giao hàng trên toàn quốc 
+                p - Tư vấn 24/7 
+                p - Free ship các đơn hàng trên 500.000 VNĐ
+    
+    section#contact.my-5
+      .container
+        .row
+          .col-md-12
+            .contact-wrapper.d-flex.wow.fadeIn(data-wow-delay=".3s")
+              .col-md-4.box-1
+                h3.title.mb-3 Khuyến mãi đặc biệt! Giá khuyến mãi! 
+                .box-price-compare.mb-3
+                  .old
+                    p Gia Goc:
+                    span 580.000d
+                  .new
+                    p Gia khuyen mai
+                    span 450.000đ
+                .deadline
+                  p Chương trình khuyến mại kết thúc sau:
+                  #getting-started.counter
+              .col-md-4.d-flex.justify-content-center.align-items-center
+                .slider-promotion-03-wrapper
+                  .js-slider-promotion-03.slider-promotion-03.owl-carousel
+                    .item
+                      img(src='images/p-03-01.jpg', alt='demo product')
+                    .item
+                      img(src='images/p-03-02.jpg', alt='demo product')
+                    .item
+                      img(src='images/p-03-03.jpg', alt='demo product')
+                    .item
+                      img(src='images/p-03-04.jpg', alt='demo product')
+                    .item
+                      img(src='images/p-03-05.jpg', alt='demo product')
+              .col-md-4
+                form
+                  .form-group
+                    label Email address
+                    input.form-control(type='email', aria-describedby='emailHelp', placeholder='Enter email')
+                  .form-group
+                    label Phone Number
+                    input.form-control(type='text', placeholder='Phone')
+                  .form-group
+                    label Address
+                    input.form-control(type='text', placeholder='Address')
+                  button.btn.btn-warning.btn-block(type='submit') Submit
 
 
     +footer()
-
     script(type='text/javascript', src='js/main.js')

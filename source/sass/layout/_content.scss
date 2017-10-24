@@ -8,3 +8,336 @@
     padding-left: ($sidebar-width + 15px);
   }
 }
+
+// Promotion 01 
+	.box-promotion-01 {
+		margin-bottom: 30px;
+		box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+		transition: $transition-base;
+
+		&:hover {
+			box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+		}
+
+		img {
+			width: 100%;
+			max-width: 100%;
+		}
+
+		footer {
+			width: 100%;
+			color: $white;
+			text-align: center;
+			text-transform: uppercase;
+
+			.title {
+				font-size: 16px;
+				line-height: 40px;
+				margin: 0;
+			}
+		}
+	}
+
+// Promotion 02
+	.promotion-02-box-info {
+		border: 0;
+		background-color: transparent;
+		transition: $transition-base;
+
+		h3 {
+			color: $white;
+			margin: 15px 0;
+		}
+	}
+
+// Promotion 03
+	.box-promotion-03-info {
+		color: $white;
+		margin-bottom: 30px;
+		box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+		transition: $transition-base;
+
+		&:hover {
+			box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+		}
+
+		.title {
+			font-size: 22px;
+		}
+	}
+
+	.slider-promotion-03-wrapper {
+		padding: 0 30px;
+		width: 100%;
+
+		img {
+			width: 100%;
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+// Promotion 04
+	.box-promotion-04-info {
+		color: $white;
+		box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+
+		.title {
+			font-size: 22px;
+			color: #FFEB3B;
+		}
+
+		span {
+			color: #FFEB3B;
+		}
+	}
+
+// Sale Off
+	.card-product {
+		transition: $transition-base;
+
+		&:hover {
+			box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+		}
+
+		.card-body {
+
+			img {
+				width: 100%;
+				max-width: 100%;
+			}	
+
+			.title {
+				background-color: #2196F3;
+				color: $white;
+				text-align: center;
+				line-height: 40px;
+				font-size: 14px;
+				width: 100%;
+				margin: 0;
+			}
+		}
+	}
+
+	.price-quotation {
+		color: $white;
+		line-height: 40px;
+		font-size: 20px;
+		transition: $transition-base;
+
+		&:hover {
+			box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+		}
+
+		a {
+			color: #FFEB3B;
+		}
+	}
+
+// Promotion Video
+	.parallax-wrapper {
+		position: relative;
+		height: 600px;
+		background-size: cover!important;
+		background-position: center center !important;
+		background-attachment: fixed;
+
+		.overlay {
+			position: absolute;
+			background-color: rgba($black, .3);
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+		}
+
+		.promotion-video {
+			position: relative;
+			z-index: 2;
+
+			.btn-play {
+				font-size: 72px;
+				color: #bb0000;
+				transition: $transition-base;
+				cursor: pointer;
+
+				&:hover {
+					color: lighten(#bb0000, 10%);
+				}
+			}
+		}
+	}
+
+// Testimonials
+	.item-testimonial {
+		margin-bottom: 15px;
+
+		img {
+			border-radius: 50%;
+			overflow: hidden;
+			border: 2px solid #e2893a;
+			width: 174px;
+			margin: 30px auto;
+			display: block;
+		}
+
+		.name {
+			font-weight: bold;
+		}
+
+		.card {
+			color: $white;
+			background-color: #e2893a;
+			text-align: justify;
+			font-style: italic;
+			transition: $transition-base;
+
+			&:hover {
+				box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+			}
+		}
+	}
+
+// Certificate
+	.box-certificate {
+		.card {
+			background-color: transparent;
+			border: 0;
+			text-align: justify;
+		}
+	}
+
+// Step
+	.card-step {
+		transition: $transition-base;
+
+		&:hover {
+			box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+		}
+
+		.card-body {
+			position: relative;
+
+			img {
+				width: 100%;
+				max-width: 100%;
+			}	
+
+			footer {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: auto;
+				padding-top: 10px;
+
+				.title {
+					color: #FFEB3B;
+					font-weight: bold;
+					text-transform: uppercase;
+					text-align: center;
+					font-size: 16px;
+				}
+
+				.sub-title {
+					color: $white;
+					text-align: center;
+					margin: 0;
+					line-height: 32px;
+				}
+			}
+		}
+	}
+
+// Commmitment
+	.box-commitment {
+		background-color: #6a4a2f;
+		color: $white;
+		height: 100%;
+		transition: $transition-base;
+
+		&:hover {
+			box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+		}
+
+		.title {
+			color: #FFEB3B;
+		}
+
+		.card {
+			border: 0;
+		}
+	}
+
+// Contact
+	.contact-wrapper {
+		background-color: #6a4a2f;
+		border-radius: 10px;
+		width: 100%;
+		color: $white;
+		padding: 30px;
+		width: 100%;
+
+		.box-1 {
+			.title {
+				text-align: center;
+				color: #FFEB3B;
+			}
+
+			.box-price-compare {
+				width: 100%;
+				display: inline-block;
+
+				.old, .new {
+					width: 50%;
+					float: left;
+				}
+
+				.old {
+					span {
+						color: $white;
+						font-weight: 400;
+						font-size: 28px;
+						line-height: 28px;
+						text-decoration: line-through;
+					}
+				}
+
+				.new {
+					span {
+						color: #FFEB3B;
+						font-weight: 400;
+						font-size: 28px;
+						line-height: 28px;
+						text-decoration: line-through;
+					}
+				}
+			}
+
+			.deadline {
+				p {
+					background-color: #F44336;
+					width: 100%;
+					text-align: center;
+				}
+
+				.counter {
+					text-align: center;
+					display: block;
+					margin: 0 auto;
+					font-size: 14px;
+
+					span {
+						font-size: 22px;
+						margin-left: 5px;
+					}
+				}
+			}
+		}
+
+		.slider-promotion-03-wrapper {
+			.slider-promotion-03 {
+				width: 100%;
+			}
+		}
+	}

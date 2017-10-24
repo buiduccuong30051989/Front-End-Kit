@@ -1,3 +1,38 @@
 //
 // Layout :: Header
 // --------------------------------------------------
+.mainnav {
+	z-index: 999;
+	position: relative;
+
+	.menu {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+
+		li {
+
+			a {
+				text-transform: uppercase;
+				color: $white;
+				line-height: 50px;
+				padding: 0 15px;
+				font-size: 15px;
+				transition: $transition-base;
+				display: block;
+
+				&:hover {
+					background-color: #FF9800;
+					text-decoration: none;
+				}
+
+				&.mPS2id-highlight {
+					background-color: #FF9800;
+				}
+			}
+		}
+	}
+}
