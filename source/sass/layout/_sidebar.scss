@@ -2,66 +2,67 @@
 // Layout :: SideBar
 // --------------------------------------------------
 .sidebar {
-	height: 100vh;
-  width: $sidebar-width;
-  position: fixed;
-  top: 0;
-  left: 0;
+  height: 100vh;
   padding: 15px 0;
-  background-color: #1C2331;
 
-  .list-group-links {
-    ul {
-      list-style: none;
-      padding: 0;
+  ul {
+    list-style: none;
+    padding: 0;
 
-      li {
+    li {
+      display: block;
+
+      a {
+        text-decoration: none;
+        color: $white;
+        transition: $transition-base;
+
+        &.active {
+          background-color: $black;
+        }
+      }
+    }
+  }
+
+  //Level 1
+  > ul {
+    > li {
+      a {
+        line-height: 40px;
+        height: 40px;
         display: block;
+        padding: 0;
+        padding-left: 15px;
 
-        a {
-          text-decoration: none;
-          color: $white;
-          transition: $transition-base;
+        //Sidebar menu active leve 1
+        &[aria-expanded="true"] {
+
+        }
+      }
+    }
+
+    //Level 2 and more
+    ul > li {
+      a {
+        line-height: 32px;
+        height: 32px;
+        padding-left: 30px;
+
+        //Sidebar menu active leve 2
+        &[aria-expanded="true"] {
+
         }
       }
     }
   }
 }
 
-//Level 1
-.sidebar .list-group-links {
-  &>ul {
-    >li {
-      a {
-        line-height: 40px;
-        height: 40px;
-        display: block;
-        padding-left: 15px;
-      }
-    }
-  }
+// Verision Dark
+.dark {
+
 }
 
-//Level 2 and more
-.sidebar .list-group-links {
-  &>ul ul {
+// Verision Dark
+.light {
 
-    &>li {
-      a {
-        line-height: 32px;
-        height: 32px;
-        padding-left: 30px;
-      }
-    }
-  }
-}
-
-//Sidebar menu active leve 1
-.sidebar .list-group-links > ul > li > a[aria-expanded="true"] {
-  background-color: #3F729B;
-}
-
-//Sidebar menu active leve 2
-.sidebar .list-group-links > ul ul > li a[aria-expanded="true"] {
-  background-color: #3F729B;
 }

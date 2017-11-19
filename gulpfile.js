@@ -86,7 +86,9 @@ var scss = {
     errLogToConsole: true,
     includePaths: [
       lib + 'bootstrap/scss',
-      lib + 'components-font-awesome/scss'
+      lib + 'components-font-awesome/scss',
+      lib + 'slick-carousel/slick',
+      lib + 'lightgallery/src/sass'
     ]
   }
 };
@@ -94,7 +96,7 @@ var scss = {
 // fonts
 var fonts = {
   in: [
-    source + 'fonts/*.*',
+    source + 'fonts/**/*.*',
   ],
   out: dest + 'fonts/'
 };
@@ -102,10 +104,13 @@ var fonts = {
 // js
 var js = {
   in: [
-    source + 'js/*.*',
+    source + 'js/**/*.*',
     lib + 'jquery/dist/jquery.min.js',
-    lib + 'popper.js/dist/popper.js',
-    lib + 'bootstrap/dist/js/bootstrap.min.js'
+    lib + 'bootstrap/dist/js/bootstrap.min.js',
+    lib + 'slick-carousel/slick/slick.min.js',
+    lib + 'lightgallery/dist/js/lightgallery-all.min.js',
+    lib + 'imagesloaded/imagesloaded.pkgd.min.js',
+    lib + 'isotope/dist/isotope.pkgd.min.js'
   ],
   out: dest + 'js/'
 };
@@ -192,9 +197,9 @@ gulp.task('cleanup', function(cb) {
 // SCSSlint
 gulp.task('scss-lint', function() {
   return gulp.src([
-    source + '/sass/*.scss',
     source + '/sass/**/*.scss',
-    '!'+ source +'/sass/vendors/_*.scss'
+    '!'+ source +'/sass/vendors/_*.scss',
+    '!'+ source +'/sass/extention/**/*.scss'
   ])
   .pipe($.cached('scsslint'))
   .pipe($.scssLint({

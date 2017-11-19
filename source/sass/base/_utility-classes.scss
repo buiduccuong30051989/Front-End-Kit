@@ -47,3 +47,8 @@ $zero-property-map: (
     #{$property}: 0 !important;
   }
 }
+
+/// Sizing
+.mw-120 {
+  min-width: 120px;
+}
