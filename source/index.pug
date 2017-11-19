@@ -1,82 +1,225 @@
-include modules/head/head
-include modules/header/header
-include modules/footer/footer
-include modules/elements/elements
+extends modules/layout/layout.pug
+include modules/script/lib
+append head
+  title="Index - HomePage 01"
+append header
+  //- stick-header-full
+  .header-container.js-sticky-header.stick-header-nav
+    .home01__topbar
+      a(href="#menu").btn-menu-mobile
+        i.fa.fa-bars 
+        | sfasfsdfsfsd
+      .container
+        .home01__topbar-inner
+          ul.list-social02
+            li
+              a(href="#").facebook
+                i.fa.fa-facebook
+            li
+              a(href="#").twitter
+                i.fa.fa-twitter
+            li
+              a(href="#").pinterest
+                i.fa.fa-pinterest
+            li
+              a(href="#").linkedin
+                i.fa.fa-linkedin
+          span  Opening Hours : Monday to Saturday - 8am to 9pm
+    .header01
+      .header01__top
+        .container
+          .header01__top-inner
+            .header01__logo
+              img(src="images/logo-white.png", alt="demo")
+            a(href="#menu").btn-menu-mobile
+              i.fa.fa-bars
+            .header01__info
+              .col-1
+                p 
+                  span Address: 
+                  | 121 King Street
+                p Melbourne Victoria 3000 Australia
+              .col-2
+                p
+                  span Free call: 
+                  a(href="tel:(917)  814 - 3527") (917)  814 - 3527
+      .header01__bottom
+        .container
+          .header01__bottom-inner
+            ul.navi-level-1
+              li
+                a(href="#") HOME
+                  i.fa.fa-caret-down
+                ul.navi-level-2
+                  li
+                    a(href='index.html') Home Version  1
+                  li
+                    a(href='home_02.html') Home Version  2
+                  li
+                    a(href='home_03.html') Home Version  3
+                  li
+                    a(href='home_04.html') Home Version  4
+                  li
+                    a(href='home_05.html') Home Version  5
+                  li
+                    a(href='home_06.html') Home Version  6
+                  li
+                    a(href='home_07.html') Home Version  7
+                  li
+                    a(href='home_08.html') Home Version  8
+              li
+                a(href="#") ABOUT
+                  i.fa.fa-caret-down               
+              li
+                a(href="#") PAGES
+                  i.fa.fa-caret-down 
+                ul.navi-level-2
+                  li
+                    a(href='#') Shop
+                      i.fa.fa-caret-right
+                    ul.navi-level-3
+                      li
+                        a(href='#') Shop 2
+                      li
+                        a(href='#') Shop 3
+                  li
+                    a(href='#') Event
+                      i.fa.fa-caret-right
+                    ul.navi-level-3
+                      li
+                        a(href='#') Event 2
+                      li
+                        a(href='#') Event 3
+                  li
+                    a(href='#') Case Study
+                      i.fa.fa-caret-right
+                    ul.navi-level-3
+                      li
+                        a(href='#') Event 2
+                      li
+                        a(href='#') Event 3
+                  li
+                    a(href='home_04.html') Coming Soon
+                  li
+                    a(href='home_05.html') 404 Error              
+              li
+                a(href="#") SERVICES 
+                  i.fa.fa-caret-down                          
+              li
+                a(href="#") BLOG
+                  i.fa.fa-caret-down
+                ul.navi-level-2
+                  li
+                    a(href='#') Blog Default
+                  li
+                    a(href='#') Blog Grid
+                      i.fa.fa-caret-right
+                    ul.navi-level-3
+                      li
+                        a(href='#') Blog Grid No SideBar
+                      li
+                        a(href="#") Blog Grid with Left Sidebar
+                      li
+                        a(href="#") Blog Grid with Right Sidebar
+                  li
+                    a(href='#') Blog List
+                  li
+                    a(href='#') Single Blog
+              li
+                a(href="#") CONTACTS
+            .header01__control
+              select.language-select
+                option ENG
+                option FRA
+                option VNI
+              .header01__control-inner
+                a(href='#').header01-btn-cart
+                  i.fa.fa-shopping-cart(aria-hidden='true')
+                .header01-search
+                  a.header01-btn-search.btn-search-navi(href='#/')
+                    i.fa.fa-search(aria-hidden='true')
+                  .search-popup
+                    form.form-search-navi
+                      .input-group
+                        input.form-control(placeholder='Enter keyword...', type='text')
+  nav#menu
+    ul
+      li
+        a(href='#') HOME
+        ul
+          li
+            a(href='index.html') Home Version  1
+          li
+            a(href='home_02.html') Home Version  2
+          li
+            a(href='home_03.html') Home Version  3
+          li
+            a(href='home_04.html') Home Version  4
+          li
+            a(href='home_05.html') Home Version  5
+          li
+            a(href='home_06.html') Home Version  6
+          li
+            a(href='home_07.html') Home Version  7
+          li
+            a(href='home_08.html') Home Version  8
+      li
+        a(href="#") ABOUT
+      li
+        a(href="#") PAGES
+        ul
+          li
+            a(href='#') Shop
+            ul
+              li
+                a(href='#') Shop 2
+              li
+                a(href='#') Shop 3
+          li
+            a(href='#') Event
+            ul.navi-level-3
+              li
+                a(href='#') Event 2
+              li
+                a(href='#') Event 3
+          li
+            a(href='#') Case Study
+            ul.navi-level-3
+              li
+                a(href='#') Event 2
+              li
+                a(href='#') Event 3
+          li
+            a(href='home_04.html') Coming Soon
+          li
+            a(href='home_05.html') 404 Error              
+      li
+        a(href="#") SERVICES 
+      li
+        a(href="#") BLOG
+        ul
+          li
+            a(href='#') Blog Default
+          li
+            a(href='#') Blog Grid
+            ul
+              li
+                a(href='#') Blog Grid No SideBar
+              li
+                a(href="#") Blog Grid with Left Sidebar
+              li
+                a(href="#") Blog Grid with Right Sidebar
+          li
+            a(href='#') Blog List
+          li
+            a(href='#') Single Blog
+      li
+        a(href="#") CONTACTS
+append content
+append plugins  
+  +lib
+append script
+  script(defer src="js/main-menu-desktop.min.js")
+  script(defer src="js/mobilemenu.min.js")
+  script(defer src="js/sticky-header.min.js")
 
-doctype html
-html
-  +head(head.home)
-  body
-    +header()
-
-    .container
-      .row
-        .cuong
-          h2#examples Examples
-          p
-            | Bootstrap includes several predefined button styles, each serving its own semantic purpose, with a few extras thrown in for more control.
-          .bd-example(data-example-id='')
-            button.cuong-btn LLALAL
-            button.btn.btn-primary(type='button') Primary
-            button.btn.btn-secondary(type='button') Secondary
-            button.btn.btn-success(type='button') Success
-            button.btn.btn-danger(type='button') Danger
-            button.btn.btn-warning(type='button') Warning
-            button.btn.btn-info(type='button') Info
-            button.btn.btn-light(type='button') Light
-            button.btn.btn-dark(type='button') Dark
-      .row
-        .col-md-4
-          .p-3.mb-3.swatch-primary Primary
-        .col-md-4
-          .p-3.mb-3.swatch-secondary Secondary
-        .col-md-4
-          .p-3.mb-3.swatch-success Success
-        .col-md-4
-          .p-3.mb-3.swatch-danger Danger
-        .col-md-4
-          .p-3.mb-3.swatch-warning Warning
-        .col-md-4
-          .p-3.mb-3.swatch-info Info
-        .col-md-4
-          .p-3.mb-3.swatch-light Light
-        .col-md-4
-          .p-3.mb-3.swatch-dark Dark
-      .row
-        .col-md-4
-          .p-3.mb-3.swatch-blue Blue
-        .col-md-4
-          .p-3.mb-3.swatch-indigo Indigo
-        .col-md-4
-          .p-3.mb-3.swatch-purple Purple
-        .col-md-4
-          .p-3.mb-3.swatch-pink Pink
-        .col-md-4
-          .p-3.mb-3.swatch-red Red
-        .col-md-4
-          .p-3.mb-3.swatch-orange Orange
-        .col-md-4
-          .p-3.mb-3.swatch-yellow Yellow
-        .col-md-4
-          .p-3.mb-3.swatch-green Green
-        .col-md-4
-          .p-3.mb-3.swatch-teal Teal
-        .col-md-4
-          .p-3.mb-3.swatch-cyan Cyan
-      .row.mb-3
-        .col-md-4
-          .p-3.swatch-100 100
-          .p-3.swatch-200 200
-          .p-3.swatch-300 300
-          .p-3.swatch-400 400
-          .p-3.swatch-500 500
-          .p-3.swatch-600 600
-          .p-3.swatch-700 700
-          .p-3.swatch-800 800
-          .p-3.swatch-900 900
-
-
-
-    +footer()
-
-    script(type='text/javascript', src='js/main.js')

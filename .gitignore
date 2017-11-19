@@ -1,4 +1,7 @@
 node_modules/
 dest/
 tmp/
-bower_components/
+.DS_Store
+source/.DS_Store
+source/js/.DS_Store
+source/sass/.DS_Store

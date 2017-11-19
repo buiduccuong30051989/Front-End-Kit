@@ -1,60 +1,44 @@
 'use strict';
 
+// Gulp plugins
 var gulp = require('gulp');
-var plumber = require('gulp-plumber');
-var gutil = require('gulp-util');
 var $ = require('gulp-load-plugins')();
 var runSequence = require('run-sequence');
 var browserSync = require('browser-sync').create();
+var rename = require('gulp-rename');
+var uglify = require('gulp-uglify');
+var pump = require('pump');
+
+// Utilities
 var del = require('del');
 var fs = require('fs');
 var pug = require('pug');
-var autoprefixer = require('autoprefixer');
-var bower = require('gulp-bower');
 
-var header = require('gulp-header');
+// Filter block: Allow add filter
+pug.filters.code = function(block) {
+  return block
+    .replace( /&/g, '&amp;' )
+    .replace( /</g, '&lt;' )
+    .replace( />/g, '&gt;' )
+    .replace( /"/g, '&quot;' );
+}
 
-var pkg = require('./package.json');
-var banner = [
-              '',
-              '',
-              '/************************************************',
-              '',
-              '',
-              ' * <%= pkg.name %> : <%= pkg.description %>',
-              ' * @Version        : v<%= pkg.version %>',
-              ' * @Link           : <%= pkg.homepage %>',
-              ' * @License        : <%= pkg.license %>',
-              ' * @Author         : <%= pkg.author %>',
-              '',
-              '',
-              ' ***********************************************/',
-              '',
-              '',
-              ''].join('\n');
-
-gulp.src(source + 'js/*.js')
-  .pipe(header(banner, { pkg : pkg } ))
-  .pipe(gulp.dest('./dest/'))
-
-gulp.task('bower', function() {
-  return bower().pipe(gulp.dest(dest +'lib/'))
-});
-
-var
-  source = 'source/',
-  dest = 'dest/',
-  lib = 'bower_components/';
-
+var baseDirs = {
+  source: 'source/',
+  dest: 'dest/',
+  sourceSCSS: 'source/sass/**/',
+  sourceSCSSExtention: 'source/sass/extention/',
+  sourceJS: 'source/js/**/',
+  sourceJSExtention: 'source/js/extention/',
+  sourceJSON: 'source/modules/**/data/'
+};
 
 var options = {
-  del: [
-    'dest'
-  ],
+  del: [baseDirs.dest],
   browserSync: {
-    open: false,
     server: {
-      baseDir: dest
+      baseDir: baseDirs.dest,
+      index: 'index.html'
     }
   },
   htmlPrettify: {
@@ -68,246 +52,160 @@ var options = {
   include: {
     hardFail: true,
     includePaths: [
-      __dirname + "/",
-      __dirname + "/bower_components",
-      __dirname + "/source/js"
+      __dirname + '/',
+      __dirname + '/node_modules',
+      __dirname + '/source/js'
     ]
   },
   pug: {
     pug: pug,
     pretty: '\t'
-  }
-};
-
-var scss = {
-  sassOpts: {
-    outputStyle: 'expanded',
-    precison: 5,
+  },
+  scss: {
+    outputStyle: 'compressed', //nested
+    precison: 3,
     errLogToConsole: true,
     includePaths: [
-      lib + 'bootstrap/scss',
-      lib + 'components-font-awesome/scss'
-    ]
-  }
+      './node_modules'
+    ],
+    in: [
+      baseDirs.sourceSCSS + '*.scss'
+    ],
+    out: baseDirs.dest + 'css/'
+  },
+  js: {
+    in: [
+      baseDirs.sourceJS + '*.js'
+    ],
+    out: baseDirs.dest + 'js/'
+  },
+  fonts: {
+    in: [
+      baseDirs.source + 'fonts/**/*.*'
+    ],
+    out: baseDirs.dest + 'fonts/'
+  },
+  images: {
+    in: [
+      baseDirs.source + 'images/*.*'
+    ],
+    out: baseDirs.dest + 'images/'
+  },
+  public: {
+    in: [
+      baseDirs.source + 'public/**/*.*'
+    ],
+    out: baseDirs.dest + 'public/'
+  },
+  scssunmin: {
+    outputStyle: 'nested', //nested
+    precison: 3,
+    errLogToConsole: true,
+    includePaths: [
+      './node_modules'
+    ],
+    in: [
+      baseDirs.sourceSCSS + '*.scss'
+    ],
+    out: baseDirs.dest + 'cssunmin/'
+  },
 };
 
-// fonts
-var fonts = {
-  in: [
-    source + 'fonts/*.*',
-  ],
-  out: dest + 'fonts/'
-};
 
-// js
-var js = {
-  in: [
-    source + 'js/*.*',
-    lib + 'jquery/dist/jquery.min.js',
-    lib + 'popper.js/dist/popper.js',
-    lib + 'bootstrap/dist/js/bootstrap.min.js'
-  ],
-  out: dest + 'js/'
-};
-
-// PostCSS
-var processor = [
-  autoprefixer({ browsers: ['last 2 versions'] })
-];
-
-/**
- * Filter block:
- * Allow add filter
- *
- */
-pug.filters.code = function(block) {
-  return block
-    .replace( /&/g, '&amp;' )
-    .replace( /</g, '&lt;' )
-    .replace( />/g, '&gt;' )
-    .replace( /"/g, '&quot;' );
-}
-
-/**
- * Tasks
- * Allow add filter
- *
- */
+// ======================================================
+// Init browser-sync
+// ======================================================
 gulp.task('browser-sync', function() {
   return browserSync.init(options.browserSync);
 });
 
+
+// ======================================================
+// Watch
+// ======================================================
 gulp.task('watch', function(cb) {
-  $.watch(source + '/sass/**/*.scss', function() {
-    gulp.start('compile-styles');
+  $.watch(options.scss.in, function() {
+    gulp.start('compile-css');
   });
 
-  $.watch(source + '/images/**/*', function() {
-    gulp.start('compile-images');
-    gulp.start('build-images-name');
+  $.watch(baseDirs.source + '/images/**/*', function() {
+    gulp.start('copy-images');
   });
 
   $.watch([
-    source + '/*.html',
-    source + '/**/*.html'
-    ], function() {
+    baseDirs.source + '/*.html',
+    baseDirs.source + '/**/*.html'
+  ], function() {
     return runSequence('compile-html', browserSync.reload);
   });
 
   $.watch([
-    source + '/*.pug',
-    source + '/**/*.pug'
+    baseDirs.source + '/*.pug',
+    baseDirs.source + '/**/*.pug'
   ], function() {
     return runSequence('compile-pug', browserSync.reload);
   });
 
-  $.watch(source + '/**/*.js', function() {
+  $.watch(options.js.in, function() {
     return runSequence('compile-js', browserSync.reload);
   });
 
-  $.watch(source + '/modules/*/data/*.json', function() {
+  $.watch(baseDirs.source + '/modules/*/data/*.json', function() {
     return runSequence('build-html', browserSync.reload);
   });
 });
 
-// copy js
-gulp.task('js', function() {
+// ======================================================
+// Copy
+// ======================================================
+// Copy Fonts
+gulp.task('copy-fonts', function() {
   return gulp
-    .src(js.in)
-    .pipe(gulp.dest(js.out));
+    .src(options.fonts.in)
+    .pipe(gulp.dest(options.fonts.out));
 });
 
-// copy font
-gulp.task('fonts', function() {
+// Copy Image
+gulp.task('copy-images', function() {
   return gulp
-    .src(fonts.in)
-    .pipe(gulp.dest(fonts.out));
+    .src(options.images.in)
+    .pipe(gulp.dest(options.images.out));
 });
 
-// = Delete
+// Copy Public
+gulp.task('copy-public', function() {
+  return gulp
+    .src(options.public.in)
+    .pipe(gulp.dest(options.public.out));
+});
+
+
+// ======================================================
+// Delete
+// ======================================================
 gulp.task('cleanup', function(cb) {
-  return del(options.del, cb);
+  return del(['dest/**/*', '!dest/revolution-slider', '!dest/revolution-slider/**/*'], cb);
 });
 
-// SCSSlint
-gulp.task('scss-lint', function() {
-  return gulp.src([
-    source + '/sass/*.scss',
-    source + '/sass/**/*.scss',
-    '!'+ source +'/sass/vendors/_*.scss'
-  ])
-  .pipe($.cached('scsslint'))
-  .pipe($.scssLint({
-    'config': '.scss-lint.yml'
-  }));
-});
 
-// JShint
-gulp.task('jshint', function() {
-  return gulp.src([
-    '*.js'
-    ], {cwd: 'source/js'})
-    .pipe($.jshint())
-    .pipe($.jshint.reporter('jshint-stylish'));
-});
-
-// = Build Style
-gulp.task('compile-styles',['fonts', 'scss-lint'], function(cb) {
-  return gulp.src([
-    source + '/sass/*.scss',
-    '!'+ source +'/sass/_*.scss'
-  ])
-  .pipe($.sourcemaps.init())
-  .pipe($.sass(scss.sassOpts)
-    .on('error', $.sass.logError))
-  .pipe($.postcss(processor))
-  .pipe($.rucksack())
-  .pipe($.sourcemaps.write('./', {
-    includeContent: false,
-    sourceRoot: source + '/sass'
-  }))
-  .pipe(header(banner, {pkg: pkg}))
-  .pipe(gulp.dest(dest + '/css'))
-  .pipe(browserSync.stream());
-});
-
-// = Build HTML
-gulp.task('compile-html', function(cb) {
-  return gulp.src(['*.html', '!_*.html'], {cwd: 'source'})
-  .pipe($.prettify(options.htmlPrettify))
-  .pipe(gulp.dest(dest));
-});
-
-// = Build Pug
-gulp.task('compile-pug', function(cb) {
-  var jsonData = JSON.parse(fs.readFileSync('./tmp/data.json'));
-  options.pug.locals = jsonData;
-
-  return gulp.src(['*.pug', 'templates/**/*.pug', '!_*.pug'], {cwd: 'source'})
-    .pipe(plumber(function(error){
-        console.log("Error happend!", error.message);
-        this.emit('end');
-    }))
-    .pipe($.changed('dest', {extension: '.html'}))
-    .pipe($.pugInheritance({
-      basedir: "source",
-      skip: ['node_modules']
-    }))
-    .pipe($.pug(options.pug))
-    .on('error', function(error) {
-      console.error('' + error);
-      this.emit('end');
-    })
-    .pipe($.prettify(options.htmlPrettify))
-    .pipe(plumber.stop())
-    .pipe(gulp.dest(dest));
-});
-
-// = Build HTML
-gulp.task('build-html', function(cb) {
-  return runSequence(
-    'combine-data',
-    'compile-pug',
-    'compile-html',
-    cb
-  );
-});
-
-// = Build JS
-gulp.task('compile-js', ['jshint'], function() {
-  return gulp.src(["*.js", "!_*.js"], {cwd: 'source/js'})
-  .pipe($.include(options.include))
-  .pipe(header(banner, {pkg: pkg}))
-  .pipe(gulp.dest(dest + '/js'));
-});
-
-// = Build image
-gulp.task('compile-images', function() {
-  return gulp.src(source + "/images/*.*")
-  .pipe(gulp.dest(dest + '/images'));
-});
-
-// = Build images name in json file
-gulp.task('build-images-name', function() {
-  return gulp.src(source + '/images/**/*')
-    .pipe(require('gulp-filelist')('filelist.json'))
-    .pipe(gulp.dest('tmp'));
-});
-
-// = Build DataJson
+// ======================================================
+// Build HTML
+// ======================================================
+// Combine data
 gulp.task('combine-modules-json', function(cb) {
-  return gulp.src(['**/*.json', '!**/_*.json'], {cwd: 'source/modules/*/data'})
+  return gulp
+    .src(['**/*.json', '!**/_*.json'], { cwd: baseDirs.sourceJSON })
     .pipe($.mergeJson('data-json.json'))
     .pipe(gulp.dest('tmp/data'));
 });
 
 gulp.task('combine-modules-data', function(cb) {
-  return gulp.src('**/*.json', {cwd: 'tmp/data'})
+  return gulp
+    .src('**/*.json', { cwd: 'tmp/data' })
     .pipe($.mergeJson('data.json'))
     .pipe(gulp.dest('tmp'));
 });
 
-// Service tasks
 gulp.task('combine-data', function(cb) {
   return runSequence(
     [
@@ -318,28 +216,128 @@ gulp.task('combine-data', function(cb) {
   );
 });
 
-// ================ Development
+// Compile Pug
+gulp.task('compile-pug', function(cb) {
+  var jsonData = JSON.parse(fs.readFileSync('./tmp/data.json'));
+  options.pug.locals = jsonData;
+
+  return gulp
+    .src(['*.pug', '!_*.pug'], { cwd: baseDirs.source })
+    .pipe($.plumber(function(error){
+      console.log('Task compile-pug has error', error.message);
+      this.emit('end');
+    }))
+    .pipe($.changed('dest', {extension: '.html'}))
+    .pipe($.pugInheritance({
+      basedir: baseDirs.source,
+      skip: ['node_modules']
+    }))
+    .pipe($.pug(options.pug))
+    .on('error', function (error) {
+      console.error('' + error);
+      this.emit('end');
+    })
+    .pipe($.prettify(options.htmlPrettify))
+    .pipe($.plumber.stop())
+    .pipe(gulp.dest(baseDirs.dest));
+});
+
+// Compile HTML
+gulp.task('compile-html', function(cb) {
+  return gulp
+    .src(['*.html', '!_*.html'], { cwd: baseDirs.source })
+    .pipe($.prettify(options.htmlPrettify))
+    .pipe(gulp.dest(baseDirs.dest));
+});
+
+gulp.task('build-html', function(cb) {
+  return runSequence(
+    'combine-data',
+    'compile-pug',
+    'compile-html',
+    cb
+  );
+});
+
+
+// ======================================================
+// Build CSS
+// ======================================================
+
+gulp.task('compile-css', ['copy-fonts'], function(cb) {
+  return gulp
+    .src(options.scss.in)
+    .pipe($.sourcemaps.init())
+    .pipe($.sass(options.scss)
+      .on('error', $.sass.logError))
+    .pipe($.autoprefixer())
+    .pipe($.sourcemaps.write('./', {
+      includeContent: false,
+      sourceRoot: baseDirs.sourceSCSS
+    }))
+    .pipe(rename({
+      suffix: '.min'
+    }))
+    .pipe(gulp.dest(options.scss.out))
+    .pipe(browserSync.stream());
+});
+
+gulp.task('build-css', function(cb) {
+  return gulp
+    .src(options.scssunmin.in)
+    .pipe($.sourcemaps.init())
+    .pipe($.sass(options.scssunmin)
+      .on('error', $.sass.logError))
+    .pipe($.autoprefixer())
+    .pipe($.sourcemaps.write('./', {
+      includeContent: false,
+      sourceRoot: baseDirs.sourceSCSS
+    }))
+    // .pipe(rename({
+    //   suffix: '.min'
+    // }))
+    .pipe(gulp.dest(options.scssunmin.out))
+    .pipe(browserSync.stream());
+});
+
+// ======================================================
+// Build JS
+// ======================================================
+gulp.task('compile-js', function() {
+  pump([
+    gulp.src(["*.js", "!_*.js"], { cwd: baseDirs.sourceJS }),
+    uglify(),
+    rename({ suffix: '.min' }),
+    gulp.dest(options.js.out)
+  ],);
+});
+
+// ======================================================
+// Development
+// ======================================================
 gulp.task('dev', function(cb) {
   return runSequence(
     'build',
     [
       'browser-sync',
-      'build-images-name',
       'watch'
     ],
     cb
-    )
+  );
 });
 
-// ================ Build
+
+// ======================================================
+// Production
+// ======================================================
 gulp.task('build', function(cb) {
   return runSequence(
     'cleanup',
-    'bower',
-    'compile-images',
-    'compile-styles',
+    'copy-images',
+    'copy-public',
+    'compile-css',
     'compile-js',
     'build-html',
     cb
-    );
+  );
 });
