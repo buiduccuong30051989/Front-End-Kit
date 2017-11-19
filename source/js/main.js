@@ -1,30 +1,47 @@
-//=require jquery/dist/jquery.min.js
-//=require extention/popper.min.js
-//=require bootstrap/dist/js/bootstrap.min.js
-
-$(function() {
-  // code here
-  $("#js-sidebar-elements-link a[href^='#']").on('click', function(e) {
-
-   // prevent default anchor click behavior
-   e.preventDefault();
-
-   // store hash
-   var hash = this.hash;
-
-   // animate
-   $('html, body').animate({
-      scrollTop: $(hash).offset().top
-    },1000, function(){
-      // when done, add hash to url
-      // (default click behaviour)
-      window.location.hash = hash;
-    });
+$(document).ready(function(){
+  "use strict";
+  $('.js-slick-project-main-home07').not('.slick-initialized').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: $('.js-btn-next__project'),
+    prevArrow: $('.js-btn-prev__project'),
+    fade: true,
+    asNavFor: '.js-slick-project-thumbs-home07'
+  });
+  $('.js-slick-project-thumbs-home07').not('.slick-initialized').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: '.js-slick-project-main-home07',
+    dots: true,
+    centerMode: false,
+    focusOnSelect: true,
+    dots: false,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }
+    ]
 
   });
 });
 
-
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
+$(document).ready(function(){
+  "use strict";
+  $(".js-slick-testimonial-home02").not('.slick-initialized').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    arrows: false,
+    customPaging : function(slider, i) {
+      var current = $(slider.$slides[i])
+      var thumb = $(current).find('.list-item').data('thumb');
+      return '<a><img src="'+thumb+'"></a>';
+    },
+  });
+});

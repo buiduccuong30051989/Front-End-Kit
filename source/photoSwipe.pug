@@ -1,0 +1,164 @@
+doctype html
+html
+  head
+    meta(http-equiv="Content-Type" content="text/html; charset=UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    link(href="css/extention/bootstrap.min.css" rel="stylesheet")
+    link(href="css/extention/animate.min.css" rel="stylesheet")
+    link(href="css/extention/jquery.mmenu.all.min.css" rel="stylesheet")
+    link(href="css/extention/photoswipe.min.css" rel="stylesheet")
+    link(href="css/main.min.css" rel="stylesheet")
+  body
+    nav#menu
+        ul
+          li
+            a(href='#') HOME
+            ul
+              li
+                a(href='index.html') Home Version  1
+              li
+                a(href='home_02.html') Home Version  2
+              li
+                a(href='home_03.html') Home Version  3
+              li
+                a(href='home_04.html') Home Version  4
+              li
+                a(href='home_05.html') Home Version  5
+              li
+                a(href='home_06.html') Home Version  6
+              li
+                a(href='home_07.html') Home Version  7
+              li
+                a(href='home_08.html') Home Version  8
+          li
+            a(href="#") ABOUT
+          li
+            a(href="#") PAGES
+            ul
+              li
+                a(href='#') Shop
+                ul
+                  li
+                    a(href='#') Shop 2
+                  li
+                    a(href='#') Shop 3
+              li
+                a(href='#') Event
+                ul.navi-level-3
+                  li
+                    a(href='#') Event 2
+                  li
+                    a(href='#') Event 3
+              li
+                a(href='#') Case Study
+                ul.navi-level-3
+                  li
+                    a(href='#') Event 2
+                  li
+                    a(href='#') Event 3
+              li
+                a(href='home_04.html') Coming Soon
+              li
+                a(href='home_05.html') 404 Error              
+          li
+            a(href="#") SERVICES 
+          li
+            a(href="#") BLOG
+            ul
+              li
+                a(href='#') Blog Default
+              li
+                a(href='#') Blog Grid
+                ul
+                  li
+                    a(href='#') Blog Grid No SideBar
+                  li
+                    a(href="#") Blog Grid with Left Sidebar
+                  li
+                    a(href="#") Blog Grid with Right Sidebar
+              li
+                a(href='#') Blog List
+              li
+                a(href='#') Single Blog
+          li
+            a(href="#") CONTACTS
+    
+    h2 First gallery:
+    .my-gallery(itemscope='', itemtype='http://schema.org/ImageGallery')
+      figure(itemprop='associatedMedia', itemscope='', itemtype='http://schema.org/ImageObject')
+        a(href='https://farm3.staticflickr.com/2567/5697107145_a4c2eaa0cd_o.jpg', itemprop='contentUrl', data-size='1024x1024')
+          img(src='https://farm3.staticflickr.com/2567/5697107145_3c27ff3cd1_m.jpg', itemprop='thumbnail', alt='Image description')
+        figcaption(itemprop='caption description') Image caption  1
+      figure(itemprop='associatedMedia', itemscope='', itemtype='http://schema.org/ImageObject')
+        a(href='https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg', itemprop='contentUrl', data-size='964x1024')
+          img(src='https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_m.jpg', itemprop='thumbnail', alt='Image description')
+        figcaption(itemprop='caption description') Image caption 2
+      figure(itemprop='associatedMedia', itemscope='', itemtype='http://schema.org/ImageObject')
+        a(href='https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg', itemprop='contentUrl', data-size='1024x683')
+          img(src='https://farm7.staticflickr.com/6175/6176698785_7dee72237e_m.jpg', itemprop='thumbnail', alt='Image description')
+        figcaption(itemprop='caption description') Image caption 3
+      figure(itemprop='associatedMedia', itemscope='', itemtype='http://schema.org/ImageObject')
+        a(href='https://farm6.staticflickr.com/5023/5578283926_822e5e5791_b.jpg', itemprop='contentUrl', data-size='1024x768')
+          img(src='https://farm6.staticflickr.com/5023/5578283926_822e5e5791_m.jpg', itemprop='thumbnail', alt='Image description')
+        figcaption(itemprop='caption description') Image caption 4
+    h2 Second gallery:
+    .my-gallery(itemscope='', itemtype='http://schema.org/ImageGallery')
+      figure(itemprop='associatedMedia', itemscope='', itemtype='http://schema.org/ImageObject')
+        a(href='https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg', itemprop='contentUrl', data-size='964x1024')
+          img(src='https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_m.jpg', itemprop='thumbnail', alt='Image description')
+        figcaption(itemprop='caption description') Image caption 2.1
+      figure(itemprop='associatedMedia', itemscope='', itemtype='http://schema.org/ImageObject')
+        a(href='https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg', itemprop='contentUrl', data-size='1024x683')
+          img(src='https://farm7.staticflickr.com/6175/6176698785_7dee72237e_m.jpg', itemprop='thumbnail', alt='Image description')
+        figcaption(itemprop='caption description') Image caption 2.2
+      figure(itemprop='associatedMedia', itemscope='', itemtype='http://schema.org/ImageObject')
+        a(href='https://farm6.staticflickr.com/5023/5578283926_822e5e5791_b.jpg', itemprop='contentUrl', data-size='1024x768')
+          img(src='https://farm6.staticflickr.com/5023/5578283926_822e5e5791_m.jpg', itemprop='thumbnail', alt='Image description')
+        figcaption(itemprop='caption description') Image caption 2.3
+
+    
+    // Root element of PhotoSwipe. Must have class pswp.
+    .pswp(tabindex='-1', role='dialog', aria-hidden='true')
+      //
+        Background of PhotoSwipe.
+        It's a separate element as animating opacity is faster than rgba().
+      .pswp__bg
+      // Slides wrapper with overflow:hidden.
+      .pswp__scroll-wrap
+        //
+          Container that holds slides.
+          PhotoSwipe keeps only 3 of them in the DOM to save memory.
+          Don't modify these 3 pswp__item elements, data is added later on.
+        .pswp__container
+          .pswp__item
+          .pswp__item
+          .pswp__item
+        // Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed.
+        .pswp__ui.pswp__ui--hidden
+          .pswp__top-bar
+            // Controls are self-explanatory. Order can be changed.
+            .pswp__counter
+            button.pswp__button.pswp__button--close(title='Close (Esc)')
+            button.pswp__button.pswp__button--share(title='Share')
+            button.pswp__button.pswp__button--fs(title='Toggle fullscreen')
+            button.pswp__button.pswp__button--zoom(title='Zoom in/out')
+            // Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR
+            // element will get class pswp__preloader--active when preloader is running
+            .pswp__preloader
+              .pswp__preloader__icn
+                .pswp__preloader__cut
+                  .pswp__preloader__donut
+          .pswp__share-modal.pswp__share-modal--hidden.pswp__single-tap
+            .pswp__share-tooltip
+          button.pswp__button.pswp__button--arrow--left(title='Previous (arrow left)')
+          button.pswp__button.pswp__button--arrow--right(title='Next (arrow right)')
+          .pswp__caption
+            .pswp__caption__center
+    script(src='js/extention/jquery-3.3.1.min.js')
+    script(src='js/extention/photoswipe.min.js')
+    script(src='js/extention/photoswipe-ui-default.min.js')
+    script(src='js/extention/jquery.mmenu.all.min.js')
+    script(defer src="js/mobilemenu.min.js")
+    script(defer src="js/photo-swipe.min.js")
+  

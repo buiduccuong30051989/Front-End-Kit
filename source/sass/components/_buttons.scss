@@ -1,19 +1,113 @@
 //
 // Components :: Buttons
 // --------------------------------------------------
+.btn-blue {
+  border-radius: 2px;
+  background-color: $mcolor;
+  color: white;
+  border: 1px solid $mcolor;
+  text-align: center;
+  font-weight: 900;
+  font-family: $hfont;
+  padding: 12px 38px;
+  font-size: 12px;
+  transition: $transition-base;
+  display: inline-block;
 
-//
-// Alternate buttons
-//
-
-@each $color, $value in $theme-colors-material {
-  .btn-#{$color} {
-    @include button-variant($value, $value);
+  &:hover,
+  &:focus {
+    border-color: darken($mcolor, 5%);
+    background-color: darken($mcolor, 5%);
+    text-decoration: none;
+    color: $white;
   }
 }
 
-@each $color, $value in $theme-colors-material {
-  .btn-outline-#{$color} {
-    @include button-outline-variant($value, $white);
+.btn-orange {
+  @extend .btn-blue;
+  background-color: $scolor;
+  border-color: $scolor;
+
+  &:hover,
+  &:focus {
+    border-color: darken($scolor, 5%);
+    background-color: darken($scolor, 5%);
+    text-decoration: none;
+    color: $white;
+  }
+}
+
+.btn-white {
+  @extend .btn-blue;
+  border-color: $white;
+  color: #555555;
+  background-color: white;
+
+  &:hover,
+  &:focus {
+    border-color: black;
+    background-color: white;
+    color: black;
+  }
+}
+
+.btn-white--outline {
+  @extend .btn-white;
+  border-color: $grey-base;
+  color: #555555;
+  background-color: white;
+
+  &:hover,
+  &:focus {
+    border-color: black;
+    background-color: white;
+    color: black;
+  }
+}
+
+.btn-scroll-next-section {
+  color: $white;
+  font-size: 20px;
+  font-weight: bold;
+  position: fixed;
+  top: 50vh;
+  left: -10px;
+  z-index: 999;
+  transform: rotate(-90deg);
+  font-size: 14px;
+  letter-spacing: 2px;
+  background-color: transparent;
+  border: 0;
+  line-height: 40px;
+  display: flex;
+
+  .icon {
+    font-size: 30px;
+    padding-right: 15px;
+  }
+
+  &:hover,
+  &:focus {
+    outline: 0;
+    box-shadow: none;
+  }
+
+  @include sm {
+    top: 80vh;
+    left: -25px;
+  }
+}
+
+
+.btn-scroll-top-home08 {
+  @extend .btn-scroll-next-section;
+  color: $scolor;
+  top: auto;
+  bottom: 148px;
+  display: none;
+
+  .icon {
+    padding-right: 0;
+    padding-left: 15px;
   }
 }

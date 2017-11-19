@@ -1,3 +1,21 @@
 //
 // Abstracts :: Typography
 // --------------------------------------------------
+// Signature Font
+// @font-face {
+//   font-family: "signature";
+//   src: url("../fonts/signature/signature.ttf") format("truetype"); /* Safari, Android, iOS */
+// }
+
+// Global Heading & font
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+}
+
+a {
+  color: $mcolor;
+}

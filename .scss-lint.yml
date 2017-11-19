@@ -19,6 +19,21 @@ linters:
     max_depth: 8
     ignore_parent_selectors: false
 
+  SelectorDepth:
+    enabled: true
+    max_depth: 5
+
+  EmptyRule:
+    enabled: false
+
+  ImportPath:
+    enabled: false
+    leading_underscore: false
+    filename_extension: false
+
+  DeclarationOrder:
+    enabled: false
+
   ImportantRule:
     exclude:
       - 'source/sass/base/_utility-classes.scss'
