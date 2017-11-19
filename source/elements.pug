@@ -4,682 +4,688 @@ include modules/elements/elements
 doctype html
 html
   +head(head.home)
-  body
-  .container-fluid.p-0
-    .sidebar
-      .list-group-links
-        ul#js-sidebar-elements-link
-          li
-            a(href='#buttons')
-              span Buttons
-          li
-            a(href='#panels')
-              span Panels
-          li
-            a(href='#cards')
-              span Cards
-          li
-            a(href='#jumbotron')
-              span Jumbotron
-          li
-            a(href='#dropdowns')
-              span Dropdowns
-          li
-            a(href='#forms')
-              span Forms
-          li
-            a(href='#accordion')
-              span Accordion
-          li
-            a(href='#list-group')
-              span List Group
-          li
-            a(href='#pagination')
-              span Pagination
-          li
-            a(href='#progress')
-              span Progress
-          li
-            a(href='#tabs-pills')
-              span Tabs & Pills
-          li
-            a(href='#badges')
-              span Badges
-          li
-            a(href='#breadcrumb')
-              span Breadcrumb
-          li
-            a(href='#alerts')
-              span Alerts
-          li
-            a(href='#tooltips')
-              span Tooltips
-    .content-width-sidebar.left
-      #js-list-example.elements-content-wrapper(data-spy='scroll', data-target='#js-sidebar-elements-link', data-offset='0')
-      .container-fluid
-        h4.my-3#buttons Buttons
-        .card.mb-3.d-block.p-3
-          button.btn.btn-material-secondary(type='button') Secondary
-          button.btn.btn-outline-material-brown(type='button') Secondary
-          button.btn.btn-primary(type='button') Primary
-          button.btn.btn-secondary(type='button') Secondary
-          button.btn.btn-success(type='button') Success
-          button.btn.btn-danger(type='button') Danger
-          button.btn.btn-warning(type='button') Warning
-          button.btn.btn-info(type='button') Info
-          button.btn.btn-light(type='button') Light
-          button.btn.btn-dark(type='button') Dark
-      .container-fluid
-        h4.my-3#panels Panel
-        h5 Panel Simple
-        .card.mb-3
-          .card-header
-            | Featured
-          .card-body
-            h4.my-3.card-title Special title treatment
-            p.card-text With supporting text below as a natural lead-in to additional content.
-            a.btn.btn-primary(href='#') Go somewhere
-        h5 Panel Quote
-        .card.mb-3
-          .card-header
-            | Quote
-          .card-body
-            blockquote.blockquote.mb-0
-              p
-                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
-              footer.blockquote-footer
-                | Someone famous in 
-                cite(title='Source Title') Source Title
-        h5 Panel Feature Center
-        .card.mb-3.text-center
-          .card-header
-            | Featured
-          .card-body
-            h4.my-3.card-title Special title treatment
-            p.card-text With supporting text below as a natural lead-in to additional content.
-            a.btn.btn-primary(href='#') Go somewhere
-          .card-footer.text-muted
-            | 2 days ago
-        h5 Panel With Navigation
-        .card.mb-3.text-center
-          .card-header
-            ul.nav.nav-tabs.card-header-tabs
-              li.nav-item
-                a.nav-link.active(href='#') Active
-              li.nav-item
-                a.nav-link(href='#') Link
-              li.nav-item
-                a.nav-link.disabled(href='#') Disabled
-          .card-body
-            h4.my-3.card-title Special title treatment
-            p.card-text With supporting text below as a natural lead-in to additional content.
-            a.btn.btn-primary(href='#') Go somewhere
-        h5 Panel Image Overlays
-        .card.mb-3.bg-dark.text-white
-          img.card-img(src='http://via.placeholder.com/1920x300/2196F3/FFF', alt='Card image')
-          .card-img-overlay
-            h4.my-3.card-title Card title
-            p.card-text
-              | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-            p.card-text Last updated 3 mins ago
-        h5 Panel Color
-        .row
-          .col-md-3
-            .card.text-white.bg-primary.mb-3
-              .card-header Header
+  body.relative(data-spy="scroll" data-target=".sidebar" data-offset="20")
+    .container-fluid
+      .row
+        .col-sm-2.fixed-top.sidebar.swatch-900
+          ul#js-sidebar-elements-link 
+            li
+              a.nav-link(href='#buttons')
+                span Buttons
+            li
+              a.nav-link(href='#panels')
+                span Panels
+            li
+              a.nav-link(href='#jumbotron')
+                span Jumbotron
+            li
+              a.nav-link(href='#cards')
+                span Cards
+            li
+              a.nav-link(href='#dropdowns')
+                span Dropdowns
+            li
+              a.nav-link(href='#forms')
+                span Forms
+            li
+              a.nav-link(href='#accordion')
+                span Accordion
+            li
+              a.nav-link(href='#list-group')
+                span List Group
+            li
+              a.nav-link(href='#pagination')
+                span Pagination
+            li
+              a.nav-link(href='#progress')
+                span Progress
+            li
+              a.nav-link(href='#tabs-pills')
+                span Tabs & Pills
+            li
+              a.nav-link(href='#badges')
+                span Badges
+            li
+              a.nav-link(href='#breadcrumb')
+                span Breadcrumb
+            li
+              a.nav-link(href='#alerts')
+                span Alerts
+            li
+              a.nav-link(href='#tooltips')
+                span Tooltips
+        .col-sm-10.ml-auto.elements-wrapper
+          .container-fluid
+            h4.my-3.pt-3#buttons Buttons
+            .card.mb-3.d-block
               .card-body
-                h4.my-3.card-title Primary card title
-                p.card-text
-                  | Some quick example text to build on the card title and make up the bulk of the card's content.
-          .col-md-3    
-            .card.text-white.bg-secondary.mb-3
-              .card-header Header
-              .card-body
-                h4.my-3.card-title Secondary card title
-                p.card-text
-                  | Some quick example text to build on the card title and make up the bulk of the card's content.
-          .col-md-3    
-            .card.text-white.bg-success.mb-3
-              .card-header Header
-              .card-body
-                h4.my-3.card-title Success card title
-                p.card-text
-                  | Some quick example text to build on the card title and make up the bulk of the card's content.
-          .col-md-3    
-            .card.text-white.bg-danger.mb-3
-              .card-header Header
-              .card-body
-                h4.my-3.card-title Danger card title
-                p.card-text
-                  | Some quick example text to build on the card title and make up the bulk of the card's content.
-          .col-md-3    
-            .card.text-white.bg-warning.mb-3
-              .card-header Header
-              .card-body
-                h4.my-3.card-title Warning card title
-                p.card-text
-                  | Some quick example text to build on the card title and make up the bulk of the card's content.
-          .col-md-3    
-            .card.text-white.bg-info.mb-3
-              .card-header Header
-              .card-body
-                h4.my-3.card-title Info card title
-                p.card-text
-                  | Some quick example text to build on the card title and make up the bulk of the card's content.
-          .col-md-3    
-            .card.bg-light.mb-3
-              .card-header Header
-              .card-body
-                h4.my-3.card-title Light card title
-                p.card-text
-                  | Some quick example text to build on the card title and make up the bulk of the card's content.
-          .col-md-3    
-            .card.text-white.bg-dark.mb-3
-              .card-header Header
-              .card-body
-                h4.my-3.card-title Dark card title
-                p.card-text
-                  | Some quick example text to build on the card title and make up the bulk of the card's content.
-      .container-fluid
-        h4.my-3#jumbotron Jumbotron
-        .jumbotron.mb-3
-          h1.display-3 Hello, world!
-          p.lead
-            | This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
-          hr.my-4
-          p
-            | It uses utility classes for typography and spacing to space content out within the larger container.
-          p.lead
-            a.btn.btn-primary.btn-lg(href='#', role='button') Learn more
-      .container-fluid
-        h4.my-3#cards Cards
-        h5 Cards With Media
-        .card-deck
-          .card.mb-3
-            img.card-img-top(src='http://via.placeholder.com/350x150/2196F3/FFF', alt='Card image cap')
-            .card-body
-              h4.my-3.card-title Card title
-              p.card-text
-                | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-            .card-footer
-              small.text-muted Last updated 3 mins ago
-          .card.mb-3
-            img.card-img-top(src='http://via.placeholder.com/350x150/2196F3/FFF', alt='Card image cap')
-            .card-body
-              h4.my-3.card-title Card title
-              p.card-text
-                | This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
-            .card-footer
-              small.text-muted Last updated 3 mins ago
-          .card.mb-3
-            img.card-img-top(src='http://via.placeholder.com/350x150/2196F3/FFF', alt='Card image cap')
-            .card-body
-              h4.my-3.card-title Card title
-              p.card-text This card has supporting text below as a natural lead-in to additional content.
-            .card-footer
-              small.text-muted Last updated 3 mins ago
-          .card.mb-3
-            img.card-img-top(src='http://via.placeholder.com/350x150/2196F3/FFF', alt='Card image cap')
-            .card-body
-              h4.my-3.card-title Card title
-              p.card-text
-                | This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
-            .card-footer
-              small.text-muted Last updated 3 mins ago
-        h4.my-3#dropdowns Dropdowns
-        h5 Dropdowns Basic
-          .card.mb-3.d-block.p-3
-            .btn-group
-              button.btn.btn-primary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Primary
-              .dropdown-menu
-                a.dropdown-item(href='#') Action
-                a.dropdown-item(href='#') Another action
-                a.dropdown-item(href='#') Something else here
-                .dropdown-divider
-                a.dropdown-item(href='#') Separated link
-            .btn-group
-              button.btn.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Secondary
-              .dropdown-menu
-                a.dropdown-item(href='#') Action
-                a.dropdown-item(href='#') Another action
-                a.dropdown-item(href='#') Something else here
-                .dropdown-divider
-                a.dropdown-item(href='#') Separated link
-            .btn-group
-              button.btn.btn-success.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Success
-              .dropdown-menu
-                a.dropdown-item(href='#') Action
-                a.dropdown-item(href='#') Another action
-                a.dropdown-item(href='#') Something else here
-                .dropdown-divider
-                a.dropdown-item(href='#') Separated link
-            .btn-group
-              button.btn.btn-info.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Info
-              .dropdown-menu
-                a.dropdown-item(href='#') Action
-                a.dropdown-item(href='#') Another action
-                a.dropdown-item(href='#') Something else here
-                .dropdown-divider
-                a.dropdown-item(href='#') Separated link
-            .btn-group
-              button.btn.btn-warning.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Warning
-              .dropdown-menu
-                a.dropdown-item(href='#') Action
-                a.dropdown-item(href='#') Another action
-                a.dropdown-item(href='#') Something else here
-                .dropdown-divider
-                a.dropdown-item(href='#') Separated link
-            .btn-group
-              button.btn.btn-danger.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Danger
-              .dropdown-menu
-                a.dropdown-item(href='#') Action
-                a.dropdown-item(href='#') Another action
-                a.dropdown-item(href='#') Something else here
-                .dropdown-divider
-                a.dropdown-item(href='#') Separated link
-        h5 Split button dropdowns
-          .card.mb-3.d-block.p-3
-            .btn-group
+                button.btn.btn-material-primary Primary
+                button.btn.btn-material-default Default
+                button.btn.btn-material-secondary Secondary
+                button.btn.btn-material-success Success
+                button.btn.btn-material-info Info
+                button.btn.btn-material-warning Warning
+                button.btn.btn-material-danger Danger
+            .card.mb-3.d-block.p-3
               button.btn.btn-primary(type='button') Primary
-              button.btn.btn-primary.dropdown-toggle.dropdown-toggle-split(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-                span.sr-only Toggle Dropdown
-              .dropdown-menu
-                a.dropdown-item(href='#') Action
-                a.dropdown-item(href='#') Another action
-                a.dropdown-item(href='#') Something else here
-                .dropdown-divider
-                a.dropdown-item(href='#') Separated link
-            .btn-group
               button.btn.btn-secondary(type='button') Secondary
-              button.btn.btn-secondary.dropdown-toggle.dropdown-toggle-split(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-                span.sr-only Toggle Dropdown
-              .dropdown-menu
-                a.dropdown-item(href='#') Action
-                a.dropdown-item(href='#') Another action
-                a.dropdown-item(href='#') Something else here
-                .dropdown-divider
-                a.dropdown-item(href='#') Separated link
-            .btn-group
               button.btn.btn-success(type='button') Success
-              button.btn.btn-success.dropdown-toggle.dropdown-toggle-split(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-                span.sr-only Toggle Dropdown
-              .dropdown-menu
-                a.dropdown-item(href='#') Action
-                a.dropdown-item(href='#') Another action
-                a.dropdown-item(href='#') Something else here
-                .dropdown-divider
-                a.dropdown-item(href='#') Separated link
-            .btn-group
-              button.btn.btn-info(type='button') Info
-              button.btn.btn-info.dropdown-toggle.dropdown-toggle-split(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-                span.sr-only Toggle Dropdown
-              .dropdown-menu
-                a.dropdown-item(href='#') Action
-                a.dropdown-item(href='#') Another action
-                a.dropdown-item(href='#') Something else here
-                .dropdown-divider
-                a.dropdown-item(href='#') Separated link
-            .btn-group
-              button.btn.btn-warning(type='button') Warning
-              button.btn.btn-warning.dropdown-toggle.dropdown-toggle-split(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-                span.sr-only Toggle Dropdown
-              .dropdown-menu
-                a.dropdown-item(href='#') Action
-                a.dropdown-item(href='#') Another action
-                a.dropdown-item(href='#') Something else here
-                .dropdown-divider
-                a.dropdown-item(href='#') Separated link
-            .btn-group
               button.btn.btn-danger(type='button') Danger
-              button.btn.btn-danger.dropdown-toggle.dropdown-toggle-split(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-                span.sr-only Toggle Dropdown
-              .dropdown-menu
-                a.dropdown-item(href='#') Action
-                a.dropdown-item(href='#') Another action
-                a.dropdown-item(href='#') Something else here
-                .dropdown-divider
-                a.dropdown-item(href='#') Separated link
-      .container-fluid
-        h4.my-3#forms Forms
-        h5 Horizontal Form
-        .card.mb-3.d-block.p-3
-          form
-            .form-group.row
-              label.col-sm-2.col-form-label(for='inputEmail3') Email
-              .col-sm-10
-                input#inputEmail3.form-control(type='email', placeholder='Email')
-            .form-group.row
-              label.col-sm-2.col-form-label(for='inputPassword3') Password
-              .col-sm-10
-                input#inputPassword3.form-control(type='password', placeholder='Password')
-            fieldset.form-group
-              .row
-                legend.col-form-legend.col-sm-2 Radios
-                .col-sm-10
-                  .form-check
-                    label.form-check-label
-                      input#gridRadios1.form-check-input(type='radio', name='gridRadios', value='option1', checked='')
-                      |               Option one is this and that—be sure to include why it's great
-                  .form-check
-                    label.form-check-label
-                      input#gridRadios2.form-check-input(type='radio', name='gridRadios', value='option2')
-                      |               Option two can be something else and selecting it will deselect option one
-                  .form-check.disabled
-                    label.form-check-label
-                      input#gridRadios3.form-check-input(type='radio', name='gridRadios', value='option3', disabled='')
-                      |               Option three is disabled
-            .form-group.row
-              .col-sm-2 Checkbox
-              .col-sm-10
-                .form-check
+              button.btn.btn-warning(type='button') Warning
+              button.btn.btn-info(type='button') Info
+              button.btn.btn-light(type='button') Light
+              button.btn.btn-dark(type='button') Dark
+          .container-fluid
+            h4.my-3.pt-3#panels Panel
+            h5 Panel Simple
+            .card.mb-3
+              .card-header
+                | Featured
+              .card-body
+                h4.my-3.pt-3.card-title Special title treatment
+                p.card-text With supporting text below as a natural lead-in to additional content.
+                a.btn.btn-primary(href='#') Go somewhere
+            h5 Panel Quote
+            .card.mb-3
+              .card-header
+                | Quote
+              .card-body
+                blockquote.blockquote.mb-0
+                  p
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                  footer.blockquote-footer
+                    | Someone famous in 
+                    cite(title='Source Title') Source Title
+            h5 Panel Feature Center
+            .card.mb-3.text-center
+              .card-header
+                | Featured
+              .card-body
+                h4.my-3.pt-3.card-title Special title treatment
+                p.card-text With supporting text below as a natural lead-in to additional content.
+                a.btn.btn-primary(href='#') Go somewhere
+              .card-footer.text-muted
+                | 2 days ago
+            h5 Panel With Navigation
+            .card.mb-3.text-center
+              .card-header
+                ul.nav.nav-tabs.card-header-tabs
+                  li.nav-item
+                    a.nav-link.active(href='#') Active
+                  li.nav-item
+                    a.nav-link(href='#') Link
+                  li.nav-item
+                    a.nav-link.disabled(href='#') Disabled
+              .card-body
+                h4.my-3.pt-3.card-title Special title treatment
+                p.card-text With supporting text below as a natural lead-in to additional content.
+                a.btn.btn-primary(href='#') Go somewhere
+            h5 Panel Image Overlays
+            .card.mb-3.bg-dark.text-white
+              img.card-img(src='http://via.placeholder.com/1920x300/2196F3/FFF', alt='Card image')
+              .card-img-overlay
+                h4.my-3.pt-3.card-title Card title
+                p.card-text
+                  | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                p.card-text Last updated 3 mins ago
+            h5 Panel Color
+            .row
+              .col-md-3
+                .card.text-white.bg-primary.mb-3
+                  .card-header Header
+                  .card-body
+                    h4.my-3.pt-3.card-title Primary card title
+                    p.card-text
+                      | Some quick example text to build on the card title and make up the bulk of the card's content.
+              .col-md-3    
+                .card.text-white.bg-secondary.mb-3
+                  .card-header Header
+                  .card-body
+                    h4.my-3.pt-3.card-title Secondary card title
+                    p.card-text
+                      | Some quick example text to build on the card title and make up the bulk of the card's content.
+              .col-md-3    
+                .card.text-white.bg-success.mb-3
+                  .card-header Header
+                  .card-body
+                    h4.my-3.pt-3.card-title Success card title
+                    p.card-text
+                      | Some quick example text to build on the card title and make up the bulk of the card's content.
+              .col-md-3    
+                .card.text-white.bg-danger.mb-3
+                  .card-header Header
+                  .card-body
+                    h4.my-3.pt-3.card-title Danger card title
+                    p.card-text
+                      | Some quick example text to build on the card title and make up the bulk of the card's content.
+              .col-md-3    
+                .card.text-white.bg-warning.mb-3
+                  .card-header Header
+                  .card-body
+                    h4.my-3.pt-3.card-title Warning card title
+                    p.card-text
+                      | Some quick example text to build on the card title and make up the bulk of the card's content.
+              .col-md-3    
+                .card.text-white.bg-info.mb-3
+                  .card-header Header
+                  .card-body
+                    h4.my-3.pt-3.card-title Info card title
+                    p.card-text
+                      | Some quick example text to build on the card title and make up the bulk of the card's content.
+              .col-md-3    
+                .card.bg-light.mb-3
+                  .card-header Header
+                  .card-body
+                    h4.my-3.pt-3.card-title Light card title
+                    p.card-text
+                      | Some quick example text to build on the card title and make up the bulk of the card's content.
+              .col-md-3    
+                .card.text-white.bg-dark.mb-3
+                  .card-header Header
+                  .card-body
+                    h4.my-3.pt-3.card-title Dark card title
+                    p.card-text
+                      | Some quick example text to build on the card title and make up the bulk of the card's content.
+          .container-fluid
+            h4.my-3.pt-3#jumbotron Jumbotron
+            .jumbotron.mb-3
+              h1.display-3 Hello, world!
+              p.lead
+                | This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
+              hr.my-4
+              p
+                | It uses utility classes for typography and spacing to space content out within the larger container.
+              p.lead
+                a.btn.btn-primary.btn-lg(href='#', role='button') Learn more
+          .container-fluid
+            h4.my-3.pt-3#cards Cards
+            h5 Cards With Media
+            .card-deck
+              .card.mb-3
+                img.card-img-top(src='http://via.placeholder.com/350x150/2196F3/FFF', alt='Card image cap')
+                .card-body
+                  h4.my-3.pt-3.card-title Card title
+                  p.card-text
+                    | This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                .card-footer
+                  small.text-muted Last updated 3 mins ago
+              .card.mb-3
+                img.card-img-top(src='http://via.placeholder.com/350x150/2196F3/FFF', alt='Card image cap')
+                .card-body
+                  h4.my-3.pt-3.card-title Card title
+                  p.card-text
+                    | This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+                .card-footer
+                  small.text-muted Last updated 3 mins ago
+              .card.mb-3
+                img.card-img-top(src='http://via.placeholder.com/350x150/2196F3/FFF', alt='Card image cap')
+                .card-body
+                  h4.my-3.pt-3.card-title Card title
+                  p.card-text This card has supporting text below as a natural lead-in to additional content.
+                .card-footer
+                  small.text-muted Last updated 3 mins ago
+              .card.mb-3
+                img.card-img-top(src='http://via.placeholder.com/350x150/2196F3/FFF', alt='Card image cap')
+                .card-body
+                  h4.my-3.pt-3.card-title Card title
+                  p.card-text
+                    | This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+                .card-footer
+                  small.text-muted Last updated 3 mins ago
+            h4.my-3.pt-3#dropdowns Dropdowns
+            h5 Dropdowns Basic
+              .card.mb-3.d-block.p-3
+                .btn-group
+                  button.btn.btn-primary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Primary
+                  .dropdown-menu
+                    a.dropdown-item(href='#') Action
+                    a.dropdown-item(href='#') Another action
+                    a.dropdown-item(href='#') Something else here
+                    .dropdown-divider
+                    a.dropdown-item(href='#') Separated link
+                .btn-group
+                  button.btn.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Secondary
+                  .dropdown-menu
+                    a.dropdown-item(href='#') Action
+                    a.dropdown-item(href='#') Another action
+                    a.dropdown-item(href='#') Something else here
+                    .dropdown-divider
+                    a.dropdown-item(href='#') Separated link
+                .btn-group
+                  button.btn.btn-success.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Success
+                  .dropdown-menu
+                    a.dropdown-item(href='#') Action
+                    a.dropdown-item(href='#') Another action
+                    a.dropdown-item(href='#') Something else here
+                    .dropdown-divider
+                    a.dropdown-item(href='#') Separated link
+                .btn-group
+                  button.btn.btn-info.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Info
+                  .dropdown-menu
+                    a.dropdown-item(href='#') Action
+                    a.dropdown-item(href='#') Another action
+                    a.dropdown-item(href='#') Something else here
+                    .dropdown-divider
+                    a.dropdown-item(href='#') Separated link
+                .btn-group
+                  button.btn.btn-warning.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Warning
+                  .dropdown-menu
+                    a.dropdown-item(href='#') Action
+                    a.dropdown-item(href='#') Another action
+                    a.dropdown-item(href='#') Something else here
+                    .dropdown-divider
+                    a.dropdown-item(href='#') Separated link
+                .btn-group
+                  button.btn.btn-danger.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Danger
+                  .dropdown-menu
+                    a.dropdown-item(href='#') Action
+                    a.dropdown-item(href='#') Another action
+                    a.dropdown-item(href='#') Something else here
+                    .dropdown-divider
+                    a.dropdown-item(href='#') Separated link
+            h5 Split button dropdowns
+              .card.mb-3.d-block.p-3
+                .btn-group
+                  button.btn.btn-primary(type='button') Primary
+                  button.btn.btn-primary.dropdown-toggle.dropdown-toggle-split(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                    span.sr-only Toggle Dropdown
+                  .dropdown-menu
+                    a.dropdown-item(href='#') Action
+                    a.dropdown-item(href='#') Another action
+                    a.dropdown-item(href='#') Something else here
+                    .dropdown-divider
+                    a.dropdown-item(href='#') Separated link
+                .btn-group
+                  button.btn.btn-secondary(type='button') Secondary
+                  button.btn.btn-secondary.dropdown-toggle.dropdown-toggle-split(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                    span.sr-only Toggle Dropdown
+                  .dropdown-menu
+                    a.dropdown-item(href='#') Action
+                    a.dropdown-item(href='#') Another action
+                    a.dropdown-item(href='#') Something else here
+                    .dropdown-divider
+                    a.dropdown-item(href='#') Separated link
+                .btn-group
+                  button.btn.btn-success(type='button') Success
+                  button.btn.btn-success.dropdown-toggle.dropdown-toggle-split(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                    span.sr-only Toggle Dropdown
+                  .dropdown-menu
+                    a.dropdown-item(href='#') Action
+                    a.dropdown-item(href='#') Another action
+                    a.dropdown-item(href='#') Something else here
+                    .dropdown-divider
+                    a.dropdown-item(href='#') Separated link
+                .btn-group
+                  button.btn.btn-info(type='button') Info
+                  button.btn.btn-info.dropdown-toggle.dropdown-toggle-split(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                    span.sr-only Toggle Dropdown
+                  .dropdown-menu
+                    a.dropdown-item(href='#') Action
+                    a.dropdown-item(href='#') Another action
+                    a.dropdown-item(href='#') Something else here
+                    .dropdown-divider
+                    a.dropdown-item(href='#') Separated link
+                .btn-group
+                  button.btn.btn-warning(type='button') Warning
+                  button.btn.btn-warning.dropdown-toggle.dropdown-toggle-split(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                    span.sr-only Toggle Dropdown
+                  .dropdown-menu
+                    a.dropdown-item(href='#') Action
+                    a.dropdown-item(href='#') Another action
+                    a.dropdown-item(href='#') Something else here
+                    .dropdown-divider
+                    a.dropdown-item(href='#') Separated link
+                .btn-group
+                  button.btn.btn-danger(type='button') Danger
+                  button.btn.btn-danger.dropdown-toggle.dropdown-toggle-split(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                    span.sr-only Toggle Dropdown
+                  .dropdown-menu
+                    a.dropdown-item(href='#') Action
+                    a.dropdown-item(href='#') Another action
+                    a.dropdown-item(href='#') Something else here
+                    .dropdown-divider
+                    a.dropdown-item(href='#') Separated link
+          .container-fluid
+            h4.my-3.pt-3#forms Forms
+            h5 Horizontal Form
+            .card.mb-3.d-block.p-3
+              form
+                .form-group.row
+                  label.col-sm-2.col-form-label(for='inputEmail3') Email
+                  .col-sm-10
+                    input#inputEmail3.form-control(type='email', placeholder='Email')
+                .form-group.row
+                  label.col-sm-2.col-form-label(for='inputPassword3') Password
+                  .col-sm-10
+                    input#inputPassword3.form-control(type='password', placeholder='Password')
+                fieldset.form-group
+                  .row
+                    legend.col-form-legend.col-sm-2 Radios
+                    .col-sm-10
+                      .form-check
+                        label.form-check-label
+                          input#gridRadios1.form-check-input(type='radio', name='gridRadios', value='option1', checked='')
+                          |               Option one is this and that—be sure to include why it's great
+                      .form-check
+                        label.form-check-label
+                          input#gridRadios2.form-check-input(type='radio', name='gridRadios', value='option2')
+                          |               Option two can be something else and selecting it will deselect option one
+                      .form-check.disabled
+                        label.form-check-label
+                          input#gridRadios3.form-check-input(type='radio', name='gridRadios', value='option3', disabled='')
+                          |               Option three is disabled
+                .form-group.row
+                  .col-sm-2 Checkbox
+                  .col-sm-10
+                    .form-check
+                      label.form-check-label
+                        input.form-check-input(type='checkbox')
+                        |  Check me out
+                .form-group.row
+                  .col-sm-10
+                    button.btn.btn-primary(type='submit') Sign in
+            h5 Inline Form
+            .card.mb-3.d-block.p-3
+              form.form-inline
+                label.sr-only(for='inlineFormInputName2') Name
+                input#inlineFormInputName2.form-control.mb-2.mr-sm-2.mb-sm-0(type='text', placeholder='Jane Doe')
+                label.sr-only(for='inlineFormInputGroupUsername2') Username
+                .input-group.mb-2.mr-sm-2.mb-sm-0
+                  .input-group-addon @
+                  input#inlineFormInputGroupUsername2.form-control(type='text', placeholder='Username')
+                .form-check.mb-2.mr-sm-2.mb-sm-0
                   label.form-check-label
                     input.form-check-input(type='checkbox')
-                    |  Check me out
-            .form-group.row
-              .col-sm-10
-                button.btn.btn-primary(type='submit') Sign in
-        h5 Inline Form
-        .card.mb-3.d-block.p-3
-          form.form-inline
-            label.sr-only(for='inlineFormInputName2') Name
-            input#inlineFormInputName2.form-control.mb-2.mr-sm-2.mb-sm-0(type='text', placeholder='Jane Doe')
-            label.sr-only(for='inlineFormInputGroupUsername2') Username
-            .input-group.mb-2.mr-sm-2.mb-sm-0
-              .input-group-addon @
-              input#inlineFormInputGroupUsername2.form-control(type='text', placeholder='Username')
-            .form-check.mb-2.mr-sm-2.mb-sm-0
-              label.form-check-label
-                input.form-check-input(type='checkbox')
-                |  Remember me
-            button.btn.btn-primary(type='submit') Submit
-      .container-fluid
-        h5.my-3#accordion Accordion
-        .card.mb-3.d-block.p-3
-          #accordion(role='tablist')
-            .card
-              #headingOne.card-header(role='tab')
-                h5.mb-0
-                  a(data-toggle='collapse', href='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
-                    | Collapsible Group Item #1
-              #collapseOne.collapse.show(role='tabpanel', aria-labelledby='headingOne', data-parent='#accordion')
-                .card-body
-                  | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-            .card
-              #headingTwo.card-header(role='tab')
-                h5.mb-0
-                  a.collapsed(data-toggle='collapse', href='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
-                    | Collapsible Group Item #2
-              #collapseTwo.collapse(role='tabpanel', aria-labelledby='headingTwo', data-parent='#accordion')
-                .card-body
-                  | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-            .card
-              #headingThree.card-header(role='tab')
-                h5.mb-0
-                  a.collapsed(data-toggle='collapse', href='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
-                    | Collapsible Group Item #3
-              #collapseThree.collapse(role='tabpanel', aria-labelledby='headingThree', data-parent='#accordion')
-                .card-body
-                  | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      .container-fluid
-        h4.my-3#list-group List Group
-        h5 List Group Basic
-        .card.mb-3.d-block.p-3
-          .list-group
-            a.list-group-item.active(href='#')
-              | Cras justo odio
-            a.list-group-item.list-group-item-action(href='#') Dapibus ac facilisis in
-            a.list-group-item.list-group-item-action(href='#') Morbi leo risus
-            a.list-group-item.list-group-item-action(href='#') Porta ac consectetur ac
-            a.list-group-item.list-group-item-action.disabled(href='#') Vestibulum at eros
-        h5 Contextual Classes
-        .card.mb-3.d-block.p-3
-          ul.list-group
-            li.list-group-item Dapibus ac facilisis in
-            li.list-group-item.list-group-item-primary This is a primary list group item
-            li.list-group-item.list-group-item-secondary This is a secondary list group item
-            li.list-group-item.list-group-item-success This is a success list group item
-            li.list-group-item.list-group-item-danger This is a danger list group item
-            li.list-group-item.list-group-item-warning This is a warning list group item
-            li.list-group-item.list-group-item-info This is a info list group item
-            li.list-group-item.list-group-item-light This is a light list group item
-            li.list-group-item.list-group-item-dark This is a dark list group item
-        h5 Custom Content
-        .card.mb-3.d-block.p-3
-          .list-group
-            a.list-group-item.list-group-item-action.flex-column.align-items-start.active(href='#')
-              .d-flex.w-100.justify-content-between
-                h5.mb-1 List group item heading
-                small 3 days ago
-              p.mb-1
-                | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
-              small Donec id elit non mi porta.
-            a.list-group-item.list-group-item-action.flex-column.align-items-start(href='#')
-              .d-flex.w-100.justify-content-between
-                h5.mb-1 List group item heading
-                small.text-muted 3 days ago
-              p.mb-1
-                | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
-              small.text-muted Donec id elit non mi porta.
-            a.list-group-item.list-group-item-action.flex-column.align-items-start(href='#')
-              .d-flex.w-100.justify-content-between
-                h5.mb-1 List group item heading
-                small.text-muted 3 days ago
-              p.mb-1
-                | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
-              small.text-muted Donec id elit non mi porta.
-      .container-fluid
-        h4.my-3#pagination Pagination
-        .card.mb-3.d-block.p-3
-          nav(aria-label='...')
-            ul.pagination
-              li.page-item.disabled
-                span.page-link Previous
-              li.page-item
-                a.page-link(href='#') 1
-              li.page-item.active
-                span.page-link
-                  | 2
-                  span.sr-only (current)
-              li.page-item
-                a.page-link(href='#') 3
-              li.page-item
-                a.page-link(href='#') Next
-          nav(aria-label='...')
-            ul.pagination.pagination-sm
-              li.page-item.disabled
-                a.page-link(href='#', tabindex='-1') Previous
-              li.page-item
-                a.page-link(href='#') 1
-              li.page-item
-                a.page-link(href='#') 2
-              li.page-item
-                a.page-link(href='#') 3
-              li.page-item
-                a.page-link(href='#') Next
-      .container-fluid
-        h4.my-3#progress Progress
-        .card.mb-3.d-block.p-3
-          .progress.mb-3
-            .progress-bar.bg-success(role='progressbar', style='width: 25%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
-          .progress.mb-3
-            .progress-bar.bg-info(role='progressbar', style='width: 50%', aria-valuenow='50', aria-valuemin='0', aria-valuemax='100')
-          .progress.mb-3
-            .progress-bar.bg-warning(role='progressbar', style='width: 75%', aria-valuenow='75', aria-valuemin='0', aria-valuemax='100')
-          .progress.mb-3
-            .progress-bar.bg-danger(role='progressbar', style='width: 100%', aria-valuenow='100', aria-valuemin='0', aria-valuemax='100')
-      .container-fluid
-        h4.my-3#tabs-pills Tabs & Pills
-        .card.mb-3.d-block.p-3
-          .card-body
-            nav#myTab.nav.nav-tabs(role='tablist')
-              a#nav-home-tab.nav-item.nav-link.active(data-toggle='tab', href='#nav-home', role='tab', aria-controls='nav-home', aria-expanded='true') Home
-              a#nav-profile-tab.nav-item.nav-link(data-toggle='tab', href='#nav-profile', role='tab', aria-controls='nav-profile') Profile
-              .dropdown
-                a.nav-item.nav-link.dropdown-toggle(data-toggle='dropdown', href='#', role='button', aria-haspopup='true', aria-expanded='false')
-                  | Dropdown
-                .dropdown-menu
-                  a#nav-dropdown1-tab.dropdown-item(href='#nav-dropdown1', role='tab', data-toggle='tab', aria-controls='nav-dropdown1') @fat
-                  a#nav-dropdown2-tab.dropdown-item(href='#nav-dropdown2', role='tab', data-toggle='tab', aria-controls='nav-dropdown2') @mdo
-            #nav-tabContent.tab-content
-              #nav-home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='nav-home-tab') Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              | tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              | quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              | consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-              | cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-              | proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              #nav-profile.tab-pane.fade(role='tabpanel', aria-labelledby='nav-profile-tab')
-                | cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                | proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              #nav-dropdown1.tab-pane.fade(role='tabpanel', aria-labelledby='nav-dropdown1-tab') Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              | tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              | quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              #nav-dropdown2.tab-pane.fade(role='tabpanel', aria-labelledby='nav-dropdown2-tab') Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              | tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              | quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              | consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        .card.mb-3.d-block.p-3
-          .card-body
-            h5 Tabs
-            ul#pills-tab.nav.nav-pills.mb-3(role='tablist')
-              li.nav-item
-                a#pills-home-tab.nav-link.active(data-toggle='pill', href='#pills-home', role='tab', aria-controls='pills-home', aria-expanded='true') Home
-              li.nav-item
-                a#pills-profile-tab.nav-link(data-toggle='pill', href='#pills-profile', role='tab', aria-controls='pills-profile', aria-expanded='true') Profile
-              li.nav-item.dropdown
-                a.nav-link.dropdown-toggle(data-toggle='dropdown', href='#', role='button', aria-haspopup='true', aria-expanded='false') Dropdown
-                .dropdown-menu
-                  a#pills-dropdown1-tab.dropdown-item(href='#pills-dropdown1', role='tab', data-toggle='pill', aria-controls='pills-dropdown1') @fat
-                  a#pills-dropdown2-tab.dropdown-item(href='#pills-dropdown2', role='tab', data-toggle='pill', aria-controls='pills-dropdown2') @mdo
-            #pills-tabContent.tab-content
-              #pills-home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='pills-home-tab') Tab Content Text Demo
-              #pills-profile.tab-pane.fade(role='tabpanel', aria-labelledby='pills-profile-tab') Tab Content Text Demo
-              #pills-dropdown1.tab-pane.fade(role='tabpanel', aria-labelledby='pills-dropdown1-tab') Tab Content Text Demo
-              #pills-dropdown2.tab-pane.fade(role='tabpanel', aria-labelledby='pills-dropdown2-tab') Tab Content Text Demo
-        h5 Pills Vertical
-        .card.mb-3.d-block.p-3
-          .card-body
-            .row
-              .col-3
-                #v-pills-tab.nav.flex-column.nav-pills(role='tablist')
-                  a#v-pills-home-tab.nav-link.active(data-toggle='pill', href='#v-pills-home', role='tab', aria-controls='v-pills-home', aria-expanded='true') Home
-                  a#v-pills-profile-tab.nav-link(data-toggle='pill', href='#v-pills-profile', role='tab', aria-controls='v-pills-profile', aria-expanded='true') Profile
-                  a#v-pills-messages-tab.nav-link(data-toggle='pill', href='#v-pills-messages', role='tab', aria-controls='v-pills-messages', aria-expanded='true') Messages
-                  a#v-pills-settings-tab.nav-link(data-toggle='pill', href='#v-pills-settings', role='tab', aria-controls='v-pills-settings', aria-expanded='true') Settings
-              .col-9
-                #v-pills-tabContent.tab-content
-                  #v-pills-home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='v-pills-home-tab')
-                    p
-                      | Cillum ad ut irure tempor velit nostrud occaecat ullamco aliqua anim Lorem sint. Veniam sint duis incididunt do esse magna mollit excepteur laborum qui. Id id reprehenderit sit est eu aliqua occaecat quis et velit excepteur laborum mollit dolore eiusmod. Ipsum dolor in occaecat commodo et voluptate minim reprehenderit mollit pariatur. Deserunt non laborum enim et cillum eu deserunt excepteur ea incididunt minim occaecat.
-                  #v-pills-profile.tab-pane.fade(role='tabpanel', aria-labelledby='v-pills-profile-tab')
-                    p
-                      | Culpa dolor voluptate do laboris laboris irure reprehenderit id incididunt duis pariatur mollit aute magna pariatur consectetur. Eu veniam duis non ut dolor deserunt commodo et minim in quis laboris ipsum velit id veniam. Quis ut consectetur adipisicing officia excepteur non sit. Ut et elit aliquip labore Lorem enim eu. Ullamco mollit occaecat dolore ipsum id officia mollit qui esse anim eiusmod do sint minim consectetur qui.
-                  #v-pills-messages.tab-pane.fade(role='tabpanel', aria-labelledby='v-pills-messages-tab')
-                    p
-                      | Fugiat id quis dolor culpa eiusmod anim velit excepteur proident dolor aute qui magna. Ad proident laboris ullamco esse anim Lorem Lorem veniam quis Lorem irure occaecat velit nostrud magna nulla. Velit et et proident Lorem do ea tempor officia dolor. Reprehenderit Lorem aliquip labore est magna commodo est ea veniam consectetur.
-                  #v-pills-settings.tab-pane.fade(role='tabpanel', aria-labelledby='v-pills-settings-tab')
-                    p
-                      | Eu dolore ea ullamco dolore Lorem id cupidatat excepteur reprehenderit consectetur elit id dolor proident in cupidatat officia. Voluptate excepteur commodo labore nisi cillum duis aliqua do. Aliqua amet qui mollit consectetur nulla mollit velit aliqua veniam nisi id do Lorem deserunt amet. Culpa ullamco sit adipisicing labore officia magna elit nisi in aute tempor commodo eiusmod.
-      .container-fluid
-        h4.my-3#badges Badges
-        h5 Badges Basic
-        .card.mb-3.d-block.p-3
-          .card-body
-            h1
-              | Example heading 
-              span.badge.badge-secondary New
-            h2
-              | Example heading 
-              span.badge.badge-secondary New
-            h3
-              | Example heading 
-              span.badge.badge-secondary New
-            h4.my-3
-              | Example heading 
-              span.badge.badge-secondary New
-            h5
-              | Example heading 
-              span.badge.badge-secondary New
-            h6
-              | Example heading 
-              span.badge.badge-secondary New
-        .card.mb-3.d-block.p-3
-          .card-body
-            button.btn
-              | Notifications 
-              span.badge.badge-secondary 4
-        h5 Badges Contextual variations
-        .card.mb-3.d-block.p-3
-          .card-body
-            span.badge.badge-primary Primary
-            span.badge.badge-secondary Secondary
-            span.badge.badge-success Success
-            span.badge.badge-danger Danger
-            span.badge.badge-warning Warning
-            span.badge.badge-info Info
-            span.badge.badge-light Light
-            span.badge.badge-dark Dark
-        .card.mb-3.d-block.p-3
-          .card-body
-            span.badge.badge-pill.badge-primary Primary
-            span.badge.badge-pill.badge-secondary Secondary
-            span.badge.badge-pill.badge-success Success
-            span.badge.badge-pill.badge-danger Danger
-            span.badge.badge-pill.badge-warning Warning
-            span.badge.badge-pill.badge-info Info
-            span.badge.badge-pill.badge-light Light
-            span.badge.badge-pill.badge-dark Dark
-        .card.mb-3.d-block.p-3
-          .card-body
-            a.badge.badge-primary(href='#') Primary
-            a.badge.badge-secondary(href='#') Secondary
-            a.badge.badge-success(href='#') Success
-            a.badge.badge-danger(href='#') Danger
-            a.badge.badge-warning(href='#') Warning
-            a.badge.badge-info(href='#') Info
-            a.badge.badge-light(href='#') Light
-            a.badge.badge-dark(href='#') Dark
-      .container-fluid
-        h4.my-3#breadcrumb Breadcrumb
-        .card.mb-3.d-block.p-3
-          .card-body
-            ol.breadcrumb
-              li.breadcrumb-item
-                a(href='#') Home
-              li.breadcrumb-item
-                a(href='#') Library
-              li.breadcrumb-item.active Data
-            nav.breadcrumb
-              a.breadcrumb-item(href='#') Home
-              a.breadcrumb-item(href='#') Library
-              a.breadcrumb-item(href='#') Data
-              span.breadcrumb-item.active Bootstrap
-      .container-fluid
-        h4.my-3#alerts Alerts
-        .card.mb-3.d-block.p-3
-          .card-body
-            .alert.alert-primary(role='alert')
-              | This is a primary alert—check it out!
-            .alert.alert-secondary(role='alert')
-              | This is a secondary alert—check it out!
-            .alert.alert-success(role='alert')
-              | This is a success alert—check it out!
-            .alert.alert-danger(role='alert')
-              | This is a danger alert—check it out!
-            .alert.alert-warning(role='alert')
-              | This is a warning alert—check it out!
-            .alert.alert-info(role='alert')
-              | This is a info alert—check it out!
-            .alert.alert-light(role='alert')
-              | This is a light alert—check it out!
-            .alert.alert-dark(role='alert')
-              | This is a dark alert—check it out!
-      .container-fluid
-        h4.my-3#tooltips Tooltips
-        .card.mb-3.d-block.p-3
-          .card-body
-            button.btn.btn-secondary(type='button', data-toggle='tooltip', data-placement='top', title='Tooltip on top') Tooltip on top
-            button.btn.btn-secondary(type='button', data-toggle='tooltip', data-placement='right', title='Tooltip on right') Tooltip on right
-            button.btn.btn-secondary(type='button', data-toggle='tooltip', data-placement='bottom', title='Tooltip on bottom') Tooltip on bottom
-            button.btn.btn-secondary(type='button', data-toggle='tooltip', data-placement='left', title='Tooltip on left') Tooltip on left
-            button.btn.btn-secondary(type='button', data-toggle='tooltip', data-html='true', title='<em>Tooltip</em> <a href="">with</a href=""> <b>HTML</b>') Tooltip with HTML
+                    |  Remember me
+                button.btn.btn-primary(type='submit') Submit
+          .container-fluid
+            h5.my-3#accordion Accordion
+            .card.mb-3.d-block.p-3
+              #accordion(role='tablist')
+                .card
+                  #headingOne.card-header(role='tab')
+                    h5.mb-0
+                      a(data-toggle='collapse', href='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
+                        | Collapsible Group Item #1
+                  #collapseOne.collapse.show(role='tabpanel', aria-labelledby='headingOne', data-parent='#accordion')
+                    .card-body
+                      | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                .card
+                  #headingTwo.card-header(role='tab')
+                    h5.mb-0
+                      a.collapsed(data-toggle='collapse', href='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+                        | Collapsible Group Item #2
+                  #collapseTwo.collapse(role='tabpanel', aria-labelledby='headingTwo', data-parent='#accordion')
+                    .card-body
+                      | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                .card
+                  #headingThree.card-header(role='tab')
+                    h5.mb-0
+                      a.collapsed(data-toggle='collapse', href='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
+                        | Collapsible Group Item #3
+                  #collapseThree.collapse(role='tabpanel', aria-labelledby='headingThree', data-parent='#accordion')
+                    .card-body
+                      | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          .container-fluid
+            h4.my-3.pt-3#list-group List Group
+            h5 List Group Basic
+            .card.mb-3.d-block.p-3
+              .list-group
+                a.list-group-item.active(href='#')
+                  | Cras justo odio
+                a.list-group-item.list-group-item-action(href='#') Dapibus ac facilisis in
+                a.list-group-item.list-group-item-action(href='#') Morbi leo risus
+                a.list-group-item.list-group-item-action(href='#') Porta ac consectetur ac
+                a.list-group-item.list-group-item-action.disabled(href='#') Vestibulum at eros
+            h5 Contextual Classes
+            .card.mb-3.d-block.p-3
+              ul.list-group
+                li.list-group-item Dapibus ac facilisis in
+                li.list-group-item.list-group-item-primary This is a primary list group item
+                li.list-group-item.list-group-item-secondary This is a secondary list group item
+                li.list-group-item.list-group-item-success This is a success list group item
+                li.list-group-item.list-group-item-danger This is a danger list group item
+                li.list-group-item.list-group-item-warning This is a warning list group item
+                li.list-group-item.list-group-item-info This is a info list group item
+                li.list-group-item.list-group-item-light This is a light list group item
+                li.list-group-item.list-group-item-dark This is a dark list group item
+            h5 Custom Content
+            .card.mb-3.d-block.p-3
+              .list-group
+                a.list-group-item.list-group-item-action.flex-column.align-items-start.active(href='#')
+                  .d-flex.w-100.justify-content-between
+                    h5.mb-1 List group item heading
+                    small 3 days ago
+                  p.mb-1
+                    | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+                  small Donec id elit non mi porta.
+                a.list-group-item.list-group-item-action.flex-column.align-items-start(href='#')
+                  .d-flex.w-100.justify-content-between
+                    h5.mb-1 List group item heading
+                    small.text-muted 3 days ago
+                  p.mb-1
+                    | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+                  small.text-muted Donec id elit non mi porta.
+                a.list-group-item.list-group-item-action.flex-column.align-items-start(href='#')
+                  .d-flex.w-100.justify-content-between
+                    h5.mb-1 List group item heading
+                    small.text-muted 3 days ago
+                  p.mb-1
+                    | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+                  small.text-muted Donec id elit non mi porta.
+          .container-fluid
+            h4.my-3.pt-3#pagination Pagination
+            .card.mb-3.d-block.p-3
+              nav(aria-label='...')
+                ul.pagination
+                  li.page-item.disabled
+                    span.page-link Previous
+                  li.page-item
+                    a.page-link(href='#') 1
+                  li.page-item.active
+                    span.page-link
+                      | 2
+                      span.sr-only (current)
+                  li.page-item
+                    a.page-link(href='#') 3
+                  li.page-item
+                    a.page-link(href='#') Next
+              nav(aria-label='...')
+                ul.pagination.pagination-sm
+                  li.page-item.disabled
+                    a.page-link(href='#', tabindex='-1') Previous
+                  li.page-item
+                    a.page-link(href='#') 1
+                  li.page-item
+                    a.page-link(href='#') 2
+                  li.page-item
+                    a.page-link(href='#') 3
+                  li.page-item
+                    a.page-link(href='#') Next
+          .container-fluid
+            h4.my-3.pt-3#progress Progress
+            .card.mb-3.d-block.p-3
+              .progress.mb-3
+                .progress-bar.bg-success(role='progressbar', style='width: 25%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+              .progress.mb-3
+                .progress-bar.bg-info(role='progressbar', style='width: 50%', aria-valuenow='50', aria-valuemin='0', aria-valuemax='100')
+              .progress.mb-3
+                .progress-bar.bg-warning(role='progressbar', style='width: 75%', aria-valuenow='75', aria-valuemin='0', aria-valuemax='100')
+              .progress.mb-3
+                .progress-bar.bg-danger(role='progressbar', style='width: 100%', aria-valuenow='100', aria-valuemin='0', aria-valuemax='100')
+          .container-fluid
+            h4.my-3.pt-3#tabs-pills Tabs & Pills
+            .card.mb-3.d-block.p-3
+              .card-body
+                nav#myTab.nav.nav-tabs(role='tablist')
+                  a#nav-home-tab.nav-item.nav-link.active(data-toggle='tab', href='#nav-home', role='tab', aria-controls='nav-home', aria-expanded='true') Home
+                  a#nav-profile-tab.nav-item.nav-link(data-toggle='tab', href='#nav-profile', role='tab', aria-controls='nav-profile') Profile
+                  .dropdown
+                    a.nav-item.nav-link.dropdown-toggle(data-toggle='dropdown', href='#', role='button', aria-haspopup='true', aria-expanded='false')
+                      | Dropdown
+                    .dropdown-menu
+                      a#nav-dropdown1-tab.dropdown-item(href='#nav-dropdown1', role='tab', data-toggle='tab', aria-controls='nav-dropdown1') @fat
+                      a#nav-dropdown2-tab.dropdown-item(href='#nav-dropdown2', role='tab', data-toggle='tab', aria-controls='nav-dropdown2') @mdo
+                #nav-tabContent.tab-content
+                  #nav-home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='nav-home-tab') Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  | tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  | quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  | consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  | cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  | proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  #nav-profile.tab-pane.fade(role='tabpanel', aria-labelledby='nav-profile-tab')
+                    | cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    | proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  #nav-dropdown1.tab-pane.fade(role='tabpanel', aria-labelledby='nav-dropdown1-tab') Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  | tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  | quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  #nav-dropdown2.tab-pane.fade(role='tabpanel', aria-labelledby='nav-dropdown2-tab') Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  | tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  | quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  | consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            .card.mb-3.d-block.p-3
+              .card-body
+                h5 Tabs
+                ul#pills-tab.nav.nav-pills.mb-3(role='tablist')
+                  li.nav-item
+                    a#pills-home-tab.nav-link.active(data-toggle='pill', href='#pills-home', role='tab', aria-controls='pills-home', aria-expanded='true') Home
+                  li.nav-item
+                    a#pills-profile-tab.nav-link(data-toggle='pill', href='#pills-profile', role='tab', aria-controls='pills-profile', aria-expanded='true') Profile
+                  li.nav-item.dropdown
+                    a.nav-link.dropdown-toggle(data-toggle='dropdown', href='#', role='button', aria-haspopup='true', aria-expanded='false') Dropdown
+                    .dropdown-menu
+                      a#pills-dropdown1-tab.dropdown-item(href='#pills-dropdown1', role='tab', data-toggle='pill', aria-controls='pills-dropdown1') @fat
+                      a#pills-dropdown2-tab.dropdown-item(href='#pills-dropdown2', role='tab', data-toggle='pill', aria-controls='pills-dropdown2') @mdo
+                #pills-tabContent.tab-content
+                  #pills-home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='pills-home-tab') Tab Content Text Demo
+                  #pills-profile.tab-pane.fade(role='tabpanel', aria-labelledby='pills-profile-tab') Tab Content Text Demo
+                  #pills-dropdown1.tab-pane.fade(role='tabpanel', aria-labelledby='pills-dropdown1-tab') Tab Content Text Demo
+                  #pills-dropdown2.tab-pane.fade(role='tabpanel', aria-labelledby='pills-dropdown2-tab') Tab Content Text Demo
+            h5 Pills Vertical
+            .card.mb-3.d-block.p-3
+              .card-body
+                .row
+                  .col-3
+                    #v-pills-tab.nav.flex-column.nav-pills(role='tablist')
+                      a#v-pills-home-tab.nav-link.active(data-toggle='pill', href='#v-pills-home', role='tab', aria-controls='v-pills-home', aria-expanded='true') Home
+                      a#v-pills-profile-tab.nav-link(data-toggle='pill', href='#v-pills-profile', role='tab', aria-controls='v-pills-profile', aria-expanded='true') Profile
+                      a#v-pills-messages-tab.nav-link(data-toggle='pill', href='#v-pills-messages', role='tab', aria-controls='v-pills-messages', aria-expanded='true') Messages
+                      a#v-pills-settings-tab.nav-link(data-toggle='pill', href='#v-pills-settings', role='tab', aria-controls='v-pills-settings', aria-expanded='true') Settings
+                  .col-9
+                    #v-pills-tabContent.tab-content
+                      #v-pills-home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='v-pills-home-tab')
+                        p
+                          | Cillum ad ut irure tempor velit nostrud occaecat ullamco aliqua anim Lorem sint. Veniam sint duis incididunt do esse magna mollit excepteur laborum qui. Id id reprehenderit sit est eu aliqua occaecat quis et velit excepteur laborum mollit dolore eiusmod. Ipsum dolor in occaecat commodo et voluptate minim reprehenderit mollit pariatur. Deserunt non laborum enim et cillum eu deserunt excepteur ea incididunt minim occaecat.
+                      #v-pills-profile.tab-pane.fade(role='tabpanel', aria-labelledby='v-pills-profile-tab')
+                        p
+                          | Culpa dolor voluptate do laboris laboris irure reprehenderit id incididunt duis pariatur mollit aute magna pariatur consectetur. Eu veniam duis non ut dolor deserunt commodo et minim in quis laboris ipsum velit id veniam. Quis ut consectetur adipisicing officia excepteur non sit. Ut et elit aliquip labore Lorem enim eu. Ullamco mollit occaecat dolore ipsum id officia mollit qui esse anim eiusmod do sint minim consectetur qui.
+                      #v-pills-messages.tab-pane.fade(role='tabpanel', aria-labelledby='v-pills-messages-tab')
+                        p
+                          | Fugiat id quis dolor culpa eiusmod anim velit excepteur proident dolor aute qui magna. Ad proident laboris ullamco esse anim Lorem Lorem veniam quis Lorem irure occaecat velit nostrud magna nulla. Velit et et proident Lorem do ea tempor officia dolor. Reprehenderit Lorem aliquip labore est magna commodo est ea veniam consectetur.
+                      #v-pills-settings.tab-pane.fade(role='tabpanel', aria-labelledby='v-pills-settings-tab')
+                        p
+                          | Eu dolore ea ullamco dolore Lorem id cupidatat excepteur reprehenderit consectetur elit id dolor proident in cupidatat officia. Voluptate excepteur commodo labore nisi cillum duis aliqua do. Aliqua amet qui mollit consectetur nulla mollit velit aliqua veniam nisi id do Lorem deserunt amet. Culpa ullamco sit adipisicing labore officia magna elit nisi in aute tempor commodo eiusmod.
+          .container-fluid
+            h4.my-3.pt-3#badges Badges
+            h5 Badges Basic
+            .card.mb-3.d-block.p-3
+              .card-body
+                h1
+                  | Example heading 
+                  span.badge.badge-secondary New
+                h2
+                  | Example heading 
+                  span.badge.badge-secondary New
+                h3
+                  | Example heading 
+                  span.badge.badge-secondary New
+                h4.my-3.pt-3
+                  | Example heading 
+                  span.badge.badge-secondary New
+                h5
+                  | Example heading 
+                  span.badge.badge-secondary New
+                h6
+                  | Example heading 
+                  span.badge.badge-secondary New
+            .card.mb-3.d-block.p-3
+              .card-body
+                button.btn
+                  | Notifications 
+                  span.badge.badge-secondary 4
+            h5 Badges Contextual variations
+            .card.mb-3.d-block.p-3
+              .card-body
+                span.badge.badge-primary Primary
+                span.badge.badge-secondary Secondary
+                span.badge.badge-success Success
+                span.badge.badge-danger Danger
+                span.badge.badge-warning Warning
+                span.badge.badge-info Info
+                span.badge.badge-light Light
+                span.badge.badge-dark Dark
+            .card.mb-3.d-block.p-3
+              .card-body
+                span.badge.badge-pill.badge-primary Primary
+                span.badge.badge-pill.badge-secondary Secondary
+                span.badge.badge-pill.badge-success Success
+                span.badge.badge-pill.badge-danger Danger
+                span.badge.badge-pill.badge-warning Warning
+                span.badge.badge-pill.badge-info Info
+                span.badge.badge-pill.badge-light Light
+                span.badge.badge-pill.badge-dark Dark
+            .card.mb-3.d-block.p-3
+              .card-body
+                a.badge.badge-primary(href='#') Primary
+                a.badge.badge-secondary(href='#') Secondary
+                a.badge.badge-success(href='#') Success
+                a.badge.badge-danger(href='#') Danger
+                a.badge.badge-warning(href='#') Warning
+                a.badge.badge-info(href='#') Info
+                a.badge.badge-light(href='#') Light
+                a.badge.badge-dark(href='#') Dark
+          .container-fluid
+            h4.my-3.pt-3#breadcrumb Breadcrumb
+            .card.mb-3.d-block.p-3
+              .card-body
+                ol.breadcrumb
+                  li.breadcrumb-item
+                    a(href='#') Home
+                  li.breadcrumb-item
+                    a(href='#') Library
+                  li.breadcrumb-item.active Data
+                nav.breadcrumb
+                  a.breadcrumb-item(href='#') Home
+                  a.breadcrumb-item(href='#') Library
+                  a.breadcrumb-item(href='#') Data
+                  span.breadcrumb-item.active Bootstrap
+          .container-fluid
+            h4.my-3.pt-3#alerts Alerts
+            .card.mb-3.d-block.p-3
+              .card-body
+                .alert.alert-primary(role='alert')
+                  | This is a primary alert—check it out!
+                .alert.alert-secondary(role='alert')
+                  | This is a secondary alert—check it out!
+                .alert.alert-success(role='alert')
+                  | This is a success alert—check it out!
+                .alert.alert-danger(role='alert')
+                  | This is a danger alert—check it out!
+                .alert.alert-warning(role='alert')
+                  | This is a warning alert—check it out!
+                .alert.alert-info(role='alert')
+                  | This is a info alert—check it out!
+                .alert.alert-light(role='alert')
+                  | This is a light alert—check it out!
+                .alert.alert-dark(role='alert')
+                  | This is a dark alert—check it out!
+          .container-fluid
+            h4.my-3.pt-3#tooltips Tooltips
+            .card.mb-3.d-block.p-3
+              .card-body
+                button.btn.btn-secondary(type='button', data-toggle='tooltip', data-placement='top', title='Tooltip on top') Tooltip on top
+                button.btn.btn-secondary(type='button', data-toggle='tooltip', data-placement='right', title='Tooltip on right') Tooltip on right
+                button.btn.btn-secondary(type='button', data-toggle='tooltip', data-placement='bottom', title='Tooltip on bottom') Tooltip on bottom
+                button.btn.btn-secondary(type='button', data-toggle='tooltip', data-placement='left', title='Tooltip on left') Tooltip on left
+                button.btn.btn-secondary(type='button', data-toggle='tooltip', data-html='true', title='<em>Tooltip</em> <a href="">with</a href=""> <b>HTML</b>') Tooltip with HTML
   script(type='text/javascript', src='js/main.js')
