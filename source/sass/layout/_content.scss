@@ -1,3 +1,180 @@
 //
 // Layout :: Content
 // --------------------------------------------------
+//Demo
+	body {
+		    background: #eeeeee;
+		    position: relative;
+		    min-height: 100vh;
+	}
+
+	.appbar {
+		height: 40px;
+		display: flex;
+		align-items: center;
+		padding: 0 10px;
+
+		.lnr {
+			font-size: 22px;
+		}
+
+		.right-control {
+			display: flex;
+			align-items: center;
+
+			.title {
+				padding-right: 15px;
+			}
+		}
+	}
+
+	.banner {
+		height: 180px;
+		background: url('http://designwoop.com/uploads/2012/11/9-580x326.jpg');
+		background-size: cover;
+	}
+
+	.avatar {
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    margin: -65px auto 0;
+    overflow: hidden;
+    border: 5px solid #fff;
+
+    img {
+    	width: 100%;
+    }
+	}
+
+	.info {
+		text-align: center;
+
+		.name {
+			font-size: 22px;
+			font-weight: bold;
+			text-transform: uppercase;
+			margin-top: 25px;
+			margin-bottom:0;
+		}
+
+		.job {
+			font-size: 13px;
+			line-height: 1;
+			font-style: italic;
+		}
+
+		
+
+		p {
+			margin-bottom: 5px;
+		}
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+
+		li {
+			padding: 12px 16px;
+	    display: flex;
+	    position: relative;
+	    align-items: center;
+	    justify-content: flex-start;
+	    text-decoration: none;
+		}
+
+		.icon {
+			color: #fafafa;
+    	background-color: rgb(185, 185, 185);
+	    width: 40px;
+	    height: 40px;
+	    display: flex;
+	    position: relative;
+	    overflow: hidden;
+	    font-size: 1.25rem;
+	    flex-shrink: 0;
+	    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+	    align-items: center;
+	    user-select: none;
+	    border-radius: 50%;
+	    justify-content: center;
+		}
+
+		.detail {
+			flex: 1 1 auto;
+	    padding: 0 16px;
+	    min-width: 0;
+
+	    h3 {
+	    	color: rgba(0, 0, 0, 0.87);
+		    font-size: 1rem;
+		    font-weight: 400;
+		    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+		    line-height: 1.5em;
+	    }
+
+	    p {
+	    	font-size: 0.875rem;
+		    font-weight: 400;
+		    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+		    line-height: 1.46429em;
+        color: rgba(0, 0, 0, 0.54);
+	    }
+		}
+	}
+
+	.info-2 {
+		text-align: center;
+		width: 70%;
+		margin: 0 auto;
+		margin-top: 30px;
+		p {
+			margin-bottom: 5px;
+			font-size: 14px;
+			display: block;
+			position: relative;
+			border-bottom: 1px solid #ccc;
+			padding: 7px;
+
+			.lnr {
+				font-size: 18px;
+				position: absolute;
+				left: 0;
+			}
+		}
+	}
+
+	.group-btn {
+		display: flex;
+		justify-content: space-between;
+		width: 74%;
+		margin: 30px auto;
+		margin-top: 50px;
+
+		.btn-phone {
+			border-radius: 25px;
+			border: 0;
+			font-size: 13px;
+			min-width: 120px;
+			display: flex;
+			align-items: center;
+
+			.lnr {
+				margin-right: 10px;
+				font-size: 16px;
+			}
+		}
+	}
+
+	footer.appbar {
+		position: absolute;
+		display: flex;
+		justify-content: space-between;
+		bottom: 0;
+		width: 100%;
+
+		.lnr {
+			font-size: 24px;
+		}
+	}
