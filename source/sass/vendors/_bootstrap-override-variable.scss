@@ -60,6 +60,12 @@ $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black:  #000 !default;
 
+//Finhay
+$cmain:     #41b649;
+$corange:   #f7f8f8;
+$cgrey:     rgba(155, 155, 155, 0.4);
+$cred:      #d0021b;
+
 $grays: (
   100: $gray-100,
   200: $gray-200,
@@ -96,7 +102,11 @@ $colors: (
   cyan: $cyan,
   white: $white,
   gray: $gray-600,
-  gray-dark: $gray-800
+  gray-dark: $gray-800,
+  cmain:     #41b649,
+  corange:   #f5a623,
+  cgrey:     rgba(155, 155, 155, 0.4),
+  cred:      #d0021b
 ) !default;
 
 $theme-colors: (
@@ -835,6 +845,7 @@ $kbd-bg:                      $gray-900 !default;
 
 $pre-color:                   $gray-900 !default;
 $pre-scrollable-max-height:   340px !default;
+
 
 // Font Awesome Path
 $fa-font-path:        "../../fonts";

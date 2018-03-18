@@ -1,9 +1,9 @@
 {
-  "name": "Project",
+  "name": "FINHAY",
   "version": "1.0.0",
-  "description": "Project Frontend Development",
-  "homepage": "Themeforest",
-  "author": "DNA Team",
+  "description": "Finhay Frontend Development",
+  "homepage": "Finhay",
+  "author": "adam bui",
   "license": "ISC",
   "main": "gulpfile.js",
   "scripts": {

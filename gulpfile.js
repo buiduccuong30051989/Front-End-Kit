@@ -86,9 +86,7 @@ var scss = {
     errLogToConsole: true,
     includePaths: [
       lib + 'bootstrap/scss',
-      lib + 'components-font-awesome/scss',
-      lib + 'slick-carousel/slick',
-      lib + 'lightgallery/src/sass'
+      lib + 'components-font-awesome/scss'
     ]
   }
 };
@@ -106,11 +104,7 @@ var js = {
   in: [
     source + 'js/**/*.*',
     lib + 'jquery/dist/jquery.min.js',
-    lib + 'bootstrap/dist/js/bootstrap.min.js',
-    lib + 'slick-carousel/slick/slick.min.js',
-    lib + 'lightgallery/dist/js/lightgallery-all.min.js',
-    lib + 'imagesloaded/imagesloaded.pkgd.min.js',
-    lib + 'isotope/dist/isotope.pkgd.min.js'
+    lib + 'bootstrap/dist/js/bootstrap.min.js'
   ],
   out: dest + 'js/'
 };

@@ -1,9 +1,6 @@
 //=require jquery/dist/jquery.min.js
 //=require extention/popper.min.js
 //=require bootstrap/dist/js/bootstrap.min.js
-//=require extention/slick.js
-//=require lightgallery/dist/js/lightgallery-all.min.js
-//=require extention/menuzord.js
 
 $(function() {
   // code here
@@ -35,11 +32,11 @@ $(function() {
 });
 
 $(function () {
-  $('[data-toggle="tooltip"]').tooltip()
+  $('[data-toggle="tooltip"]').tooltip();
 });
 
 //Global var
-var MUSICQUE = {};
+var FINHAY = {};
 
 (function ($) {
 
@@ -66,105 +63,13 @@ var MUSICQUE = {};
   //----------------------------------------------------/
   // CAROUSEL SLIDER
   //----------------------------------------------------/
-  MUSICQUE.carouselMusicque = function () {
+  FINHAY.carouselMusicque = function () {
 
-    var $carousel = $(".js-carousel");
-    var $postCarousel = $(".js-post-mini-slider");
-    if ($postCarousel.exists()) {
-      $postCarousel.each(function () {
-        var element = $(this),
-          $sliderCarouselDots = element.attr('data-carousel-dots') || false,
-          $sliderCarouselNav = element.attr('data-carousel-arrow') || true,
-          $sliderCarouselLoop = element.attr('data-carousel-loop') || false,
-          $sliderCarouselAutoPlay = element.attr('data-carousel-autoplay') || false;
-
-          element.slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            nav: $sliderCarouselNav,
-            prevArrow: '<a class="slick-prev"><i class="icon ion-ios-arrow-left"></i></a>',
-            nextArrow: '<a class="slick-next"><i class="icon ion-ios-arrow-right"></i></a>',
-            autoplay: $sliderCarouselAutoPlay,
-            dots: $sliderCarouselDots
-          });
-
-      });
-    }
-
-    if ($carousel.exists()) {
-      $carousel.each(function () {
-        var element = $(this),
-          $sliderCarouselDots = element.attr('data-carousel-dots') === "true" ? true : false,
-          $sliderCarouselCenterPadding = element.attr('data-carousel-center-padding') || '50px',
-          $sliderCarouselArrow = element.attr('data-carousel-arrow') === "true" ? true : false,
-          $sliderCarouselLoop = element.attr('data-carousel-loop') === "true" ? true : false,
-          $sliderCarouselPerPage = element.attr('data-carousel-perpage') || 1,
-          $sliderCarouselAutoPlay = element.attr('data-carousel-autoplay') === "true" ? true : false,
-          $sliderCarouselDrag = element.attr('data-carousel-drag') === "true" ? true : false,
-          $sliderCarouselSwipe = element.attr('data-carousel-swipe') === "true" ? true : false,
-          $sliderCarouselSwipeTo = element.attr('data-carousel-swipe-to') === "true" ? true : false,
-          $sliderCarouselFade = element.attr('data-carousel-fade') === "true" ? true : false,
-          $sliderCarouselVariableWidth = element.attr('data-carousel-variable-width') === "true" ? true : false,
-          $sliderCarouselCenter = element.attr('data-carousel-center') === "true" ? true : false,
-          $sliderCarouselLg = element.attr('data-carousel-lg') || 4,
-          $sliderCarouselMd = element.attr('data-carousel-md') || 3,
-          $sliderCarouselSm = element.attr('data-carousel-sm') || 2,
-          $sliderCarouselXs = element.attr('data-carousel-xs') || 1,
-          $sliderCarouselThumb = element.attr('data-carousel-thumb') || '',
-          $sliderCarouselThumbFocus = element.attr('data-carousel-thumb-focus') === "true" ? true : false;
-
-        element.slick({
-          slidesToShow: Number($sliderCarouselLg),
-          slidesToScroll: Number($sliderCarouselPerPage),
-          arrows: $sliderCarouselArrow,
-          dots: $sliderCarouselDots,
-          swipe: $sliderCarouselSwipe,
-          swipeToSlide: $sliderCarouselSwipeTo,
-          fade: $sliderCarouselFade,
-          variableWidth: $sliderCarouselVariableWidth,
-          centerMode: $sliderCarouselCenter,
-          prevArrow: '<a class="slick-prev"><i class="icon ion-ios-arrow-left"></i></a>',
-          nextArrow: '<a class="slick-next"><i class="icon ion-ios-arrow-right"></i></a>',
-          autoplay: $sliderCarouselAutoPlay,
-          infinite: $sliderCarouselLoop,
-          draggable: $sliderCarouselDrag,
-          asNavFor: $sliderCarouselThumb,
-          centerPadding: Number($sliderCarouselCenterPadding),
-          focusOnSelect: $sliderCarouselThumbFocus,
-          responsive: [
-            {
-              breakpoint: 1200,
-              settings: {
-                slidesToShow: Number($sliderCarouselLg)
-              }
-            },
-            {
-              breakpoint: 992,
-              settings: {
-                slidesToShow: Number($sliderCarouselMd)
-              }
-            },
-            {
-              breakpoint: 768,
-              settings: {
-                slidesToShow: Number($sliderCarouselSm)
-              }
-            },
-            {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: Number($sliderCarouselXs)
-              }
-            }
-          ]
-        });
-      });
-    }
   };
 
   //Window load functions
   $window.on("load", function(){
-    MUSICQUE.carouselMusicque();
+    FINHAY.carouselMusicque();
   });
 
   //Document ready functions

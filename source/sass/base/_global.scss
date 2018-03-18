@@ -1,3 +1,19 @@
 //
 // Base :: Global
 // --------------------------------------------------
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+}
+
+.fixed-w {
+  min-width: 970px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 970px;
+  margin: 0 auto;
+}

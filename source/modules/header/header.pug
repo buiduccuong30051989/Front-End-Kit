@@ -1,2 +1,36 @@
-mixin header()
+mixin header
   header.header
+    .wrapper.fixed-w.d-flex.justify-content-between.align-items-center
+        .left-header
+          .logo
+            img.img-fluid(src="images/logo.jpg" alt="logo")
+          .menu
+            ul
+              li.active
+                a(href="#") Tài sản
+              li
+                a(href="#") Đầu tư & Rút
+              li
+                a(href="#") Portfolio
+              li
+                a(href="#") Kiến thức
+              li
+                a(href="#") Hỗ trợ
+        .right-header
+          .invest-info.text-center
+            span Giá trị tài sản
+            p.wallet 
+              strong 12.056.934
+              span.currency đ
+          .divider
+          .acc
+            .dropdown.show
+              a.dropdown-toggle(href='#',
+               data-toggle='dropdown', 
+               aria-haspopup='true', 
+               aria-expanded='false')
+                img.avatar(src="images/avatar.png", alt="avatar")
+              .dropdown-menu
+                a.dropdown-item(href='#') Action
+                a.dropdown-item(href='#') Another action
+                a.dropdown-item(href='#') Something else here
