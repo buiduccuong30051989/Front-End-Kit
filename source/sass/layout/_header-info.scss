@@ -4,6 +4,7 @@
 .header-info {
   height: 145px;
   color: $white;
+  background-color: $cmain;
 
   &.has-bg {
     height: 300px;
@@ -37,5 +38,45 @@
 
   .has-chart {
     height: 300px;
+  }
+
+  &.no-invest {
+    height: 300px;
+    padding: 20px 0;
+
+    .total-invest {
+      p.text-top {
+        font-size: 18px;
+        font-weight: 100;
+        letter-spacing: 0.5px;
+        margin-bottom: 0;
+      }
+
+      .money {
+        font-size: 28px;
+        font-weight: 500;
+      }
+
+      .currency {
+        font-size: 18px;
+        font-weight: 100;
+      }
+    }
+
+    .promotion {
+      p {
+        letter-spacing: 0.4px;
+        font-size: 18px;
+        font-weight: 300;
+      }
+    }
+
+    footer {
+      p {
+        opacity: 0.8;
+        letter-spacing: 0.3px;
+        font-size: 10px;
+      }
+    }
   }
 }

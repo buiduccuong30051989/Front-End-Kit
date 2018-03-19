@@ -5,6 +5,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 13px;
+  color: #58595b;
 }
 
 .fixed-w {
@@ -16,4 +17,8 @@ body {
   width: 100%;
   max-width: 970px;
   margin: 0 auto;
+}
+
+.main-content {
+  padding: 20px 0;
 }

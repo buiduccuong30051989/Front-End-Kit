@@ -1,3 +1,99 @@
 //
 // Components :: Forms
 // --------------------------------------------------
+.form-control-finhay {
+  border-radius: 4px;
+  background-color: $white;
+  border: solid 1px rgba(155, 155, 155, 0.8);
+  height: 60px;
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 24px;
+
+  @include placeholder {
+    color: #9b9b9b;
+    font-weight: 300;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $cmain;
+    box-shadow: none;
+    outline: 0;
+  }
+}
+
+.quick-invest {
+  .form-control-finhay {
+    margin-bottom: 22px;
+  }
+
+  .quick-choose {
+    margin-bottom: 34px;
+
+    button {
+      background-color: transparent;
+      border: 0;
+      color: $cmain;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+  }
+}
+
+.card-finhay .form-login {
+  .title {
+    margin-bottom: 28px;
+
+    h4 {
+      letter-spacing: 0.8px;
+      font-size: 32px;
+      font-weight: 400;
+      color: $cmain;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      color: #7a7a7a;
+      letter-spacing: 0.5px;
+      margin: 0;
+      line-height: 1.38;
+    }
+  }
+
+  .form-group {
+    label {
+      font-size: 13px;
+      color: #58595b;
+    }
+
+    button {
+      margin-bottom: 18px;
+
+      .arrow {
+        width: 24px;
+      }
+
+      &[disabled] {
+        background-color: rgba(155, 155, 155, 0.4);
+        opacity: 1;
+        cursor: not-allowed;
+      }
+    }
+
+    .form-control-finhay {
+      height: 50px;
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+  }
+
+  footer {
+    a {
+      text-decoration: underline;
+      color: #9b9b9b;
+    }
+  }
+}

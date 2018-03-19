@@ -1,0 +1,79 @@
+//
+// Components :: Cards
+// --------------------------------------------------
+
+.card-finhay {
+  background-color: $white;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
+  border-radius: 4px;
+  padding: 40px;
+  position: relative;
+  margin-bottom: 30px;
+
+  .title-has-icon {
+    margin-bottom: 19px;
+
+    .icon-card {
+      width: 22px;
+    }
+
+    h4 {
+      font-size: 14px;
+      font-weight: normal;
+      margin-bottom: 0;
+    }
+  }
+
+  p.lg {
+    color: #7a7a7a;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+  }
+
+  &.sm {
+    padding: 22px 20px;
+  }
+
+  .title {
+    margin-bottom: 13px;
+
+    h4 {
+      font-size: 16px;
+      font-weight: 500;
+      margin: 0;
+    }
+  }
+
+  .title-color {
+    margin-bottom: 22px;
+
+    h4 {
+      font-size: 24px;
+      color: $cmain;
+      margin-bottom: 0;
+    }
+  }
+
+  .progress-wrapper {
+    margin-bottom: 10px;
+  }
+
+  .control {
+    border: 0;
+    background-color: transparent;
+    box-shadow: none;
+    outline: 0;
+    padding: 0;
+    cursor: pointer;
+
+    img {
+      width: 12.8px;
+      margin-right: 3px;
+    }
+
+    span {
+      font-size: 12px;
+      color: #9b9b9b;
+    }
+  }
+}
