@@ -102,9 +102,7 @@ var fonts = {
 // js
 var js = {
   in: [
-    source + 'js/**/*.*',
-    lib + 'jquery/dist/jquery.min.js',
-    lib + 'bootstrap/dist/js/bootstrap.min.js'
+    source + 'js/**/*.*'
   ],
   out: dest + 'js/'
 };
@@ -274,7 +272,7 @@ gulp.task('build-html', function(cb) {
 
 // = Build JS
 gulp.task('compile-js', ['jshint'], function() {
-  return gulp.src(["*.js", "!_*.js"], {cwd: 'source/js'})
+  return gulp.src(["*.js", "!_*.js"], {cwd: 'source/js/**'})
   .pipe($.include(options.include))
   .pipe(header(banner, {pkg: pkg}))
   .pipe(gulp.dest(dest + '/js'));

@@ -42,3 +42,44 @@
     color: #9b9b9b;
   }
 }
+
+.breadcrumb {
+  background-color: transparent;
+  padding-left: 0;
+  height: 70px;
+  margin: 0;
+  padding: 25px 0;
+}
+
+.breadcrumb-item,
+.breadcrumb-item.active {
+  letter-spacing: 0.4px;
+  font-size: 13px;
+  color: #9b9b9b;
+}
+
+.breadcrumb-item:hover {
+  color: $cmain;
+}
+
+.breadcrumb-item.active:hover {
+  color: #9b9b9b;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  display: inline-block;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  color: #9b9b9b;
+  content: ">";
+}
+
+
+
+
+
+
+
+
+
+

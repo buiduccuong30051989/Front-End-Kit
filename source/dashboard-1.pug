@@ -21,8 +21,16 @@ html
           footer
             p Chưa có giá trị để hiển thị biểu đồ
             .chart-wrapper
-              select
-                option 1
+              .chart-wrapper-inner
+                
+              .form-group.mb-0
+                select.form-control
+                  option 30 ngày gần đây
+                  option 1 tháng
+                  option 3 tháng
+                  option 6 tháng
+                  option 12 tháng 
+                  option Tất cả
     .main-content
       .wrapper.d-flex.justify-content-between
         .left
@@ -74,4 +82,5 @@ html
                   | / +1,41%
 
     +footer
+  +script
   script(type='text/javascript', src='js/main.js')

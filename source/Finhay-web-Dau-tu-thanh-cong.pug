@@ -1,0 +1,47 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/elements/elements
+
+doctype html
+html
+  +head(head.home)
+  body
+    +header
+    .header-info
+    .main-content
+      .wrapper
+        .inner-main.top.d-flex.justify-content-center
+          .card-finhay.mxw-570.card-draw-2
+            h3.cmain.text-center.mb-3 Chỉ một bước nữa để hoàn thành!
+            p.desc.text-center.mb-5 Bạn hãy chuyển khoản theo thông tin dưới đây
+            .group-bank-btn.d-flex.justify-content-around.mb-5
+              button.btn-bank.active tech
+              button.btn-bank vietcomb
+            .detail-list-wrapper.bg-grey.mb-5
+              dl.row.detail-list
+                dt.col-sm-3 Số tiền
+                dd.col-sm-9.text-left.cmain.bold.fs20 2.000.000đ
+                dt.col-sm-3 Nội dung
+                dd.col-sm-9.text-left 
+                  .row.w-100
+                    .col-sm-9.bold Do Minh Tri-FHAY03017
+                    .col-sm-2 
+                      span.copy COPY
+                dt.col-sm-3 Số tài khoản
+                dd.col-sm-9.text-left
+                  .row.w-100
+                    .col-sm-9.bold 19031109316699
+                    .col-sm-2 
+                      span.copy COPY
+                dt.col-sm-3 Chủ tài khoản
+                dd.col-sm-9.text-left Finhay Company Limited
+                dt.col-sm-3 Ngân hàng
+                dd.col-sm-9.text-left Techcombank chi nhánh Hoàn Kiếm
+            div.text-center.mb-4
+              a(href="#").mw-240.btn.green.btn-lg-finhay Tiếp tục đầu tư thêm
+            footer.mt-2
+              a.more(href="#").d-block.text-center Trang chủ
+    +footer
+  +script
+  script(type='text/javascript', src='js/main.js')

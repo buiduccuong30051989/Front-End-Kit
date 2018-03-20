@@ -1,0 +1,40 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/elements/elements
+
+doctype html
+html
+  +head(head.home)
+  body
+    +header
+    .header-info
+    .main-content
+      .wrapper
+        .inner-main.top.d-flex.justify-content-center
+          .card-finhay.mxw-570.card-draw-2
+            h3.cmain.text-center.mb-3 Kiểm tra thông tin rút tiền
+            .detail-list-wrapper.bg-grey.mb-4
+              dl.row.detail-list
+                dt.col-sm-4 Số tiền
+                dd.col-sm-8.text-left 2.000.000đ
+                dt.col-sm-4 Phí rút
+                dd.col-sm-8.text-left 29.800.đ
+                dt.col-sm-4 Thực nhận
+                dd.col-sm-8.text-left.bold 1.970.200đ
+            .detail-list-wrapper.bg-grey.mb-5
+              dl.row.detail-list
+                dt.col-sm-4 Tài khoản nhận
+                dd.col-sm-8.text-left.bold 000528230005
+                dt.col-sm-4 Chủ tài khoản
+                dd.col-sm-8.text-left Do Minh Tri
+                dt.col-sm-4 Ngân hàng
+                dd.col-sm-8.text-left Techcombank chi nhánh Hoàn Kiếm
+            div.text-center.mb-4
+              a(href="#").mw-194.btn.orange.btn-lg-finhay TIẾP THEO
+                img.arrow(src="images/icon-arrow.png", alt="icon")
+            footer.mt-2
+              a.more(href="#").d-block.text-center Huỷ
+    +footer
+  +script
+  script(type='text/javascript', src='js/main.js')

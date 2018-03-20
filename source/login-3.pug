@@ -1,0 +1,43 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/elements/elements
+
+doctype html
+html
+  +head(head.home)
+  body
+    +headerLogin
+    .header-info
+    .main-content
+      .wrapper.d-flex.justify-content-between
+        .left
+          .card-finhay.mxw-478.top
+            form.form-login.validate
+              .title
+                h4 Đăng nhập vào Finhay
+                p Xin chào 
+                  a(href="#") nguoidungthatsu@gmail.com,
+                p Đây là lần đầu bạn đăng nhập, hãy tạo mật khẩu mới                  
+              .form-group
+                label Mật khẩu mới
+                .input-wrapper
+                  input#password.form-control-finhay(type="password", 
+                    name="password", 
+                    placeholder="Nhập mật khẩu mới")
+                  img.error(src="images/icon-error.png", alt="icon")
+                  img.done(src="images/icon-done.png", alt="icon") 
+              .form-group
+                label Xác nhận mật khẩu
+                .input-wrapper
+                  input#confirm_password.form-control-finhay(type="password", 
+                    name="confirm_password", 
+                    placeholder="Nhập lại mật khẩu")
+                  img.error(src="images/icon-error.png", alt="icon")
+                  img.done(src="images/icon-done.png", alt="icon") 
+              button#submit(type="submit", disabled).btn.orange.btn-lg-finhay.d-flex.w-100.justify-content-center.align-items-baseline
+                img.lock(src="images/icon-lock.png", alt="icon")
+                span ĐĂNG NHẬP
+    +footer
+  +script
+  script(type='text/javascript', src='js/main.js')

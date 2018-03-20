@@ -1,0 +1,132 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/elements/elements
+
+doctype html
+html
+  +head(head.home)
+  body.bg-grey
+    +header
+    .header-info.has-bg
+      .wrapper
+        .inner.d-flex.justify-content-center.flex-column.text-center.pt-5
+          h3 Smart portfolio
+          p Cấu trúc phân bổ tiền đến các quỹ được Finhay đề xuất dựa trên khẩu vị rủi ro của bạn
+    .main-content
+      .wrapper
+        .inner-main.d-flex.justify-content-between.mxw-750.promotion-wrapper.mx-auto
+          .box-promotion
+            img(src="images/motivation.png", alt="promotion")
+            p Kiên định theo đuổi mục tiêu dài hạn giúp bạn thành công
+          .box-promotion
+            img(src="images/balance.png", alt="promotion")
+            p Tránh thay đổi portfolio tiên tục vì điều này ảnh hưởng đến lợi nhuận dài hạn
+          .box-promotion
+            img(src="images/profits.png", alt="promotion")
+            p Dao động ngắn hạn không quan trọng bằng xu hướng tăng trưởng dài hạn
+    .wrapper.mxw-1000.wrapper-portfolio-detail.mb-5
+      .portfolio-doughnut-chart-wrapper
+        #canvas-holder.canvas-has-bg(style="background-image:url('images/rua.png')")
+          canvas#chart-area
+        .chart-detail
+          h3.done.mb-0 RÙA HOÀN KIẾM
+            p.status.mb-0
+              span.icon
+              | ĐANG HOẠT ĐỘNG
+          p.sum.mb-4 Tính cách: Bảo thủ
+          p.desc Cấu trúc bảo thủ dành cho các bạn trẻ có xu hướng không thích rủi ro, muốn bảo toàn tài sản của mình, những bù lại lợi nhuận sẽ thấp.
+          .range-slider-wrapper.mt-5
+            .slider-range
+              .text.textarea_one An toàn
+              .text.textarea_two Mạo hiểm
+      .text-center.mb-5
+        button.btn-expand.collapsed(data-toggle='collapse', data-target='#collapseExample', aria-expanded='false')
+          span.hide Chi tiết phân bổ tiền
+          span.show Thu gọn
+      #collapseExample.collapse
+        h3.mb-4 Phân bổ tiền đến các quỹ tài chính
+        .table-finhay.history-draw.mb-5
+          table#data-table-portfolio.table.table-striped.table-border
+            thead
+              tr
+                th Quỹ
+                th 
+                  .notify 
+                    | Phân bổ (%)
+                    img.icon(src="images/icon-notify.png", alt="icon" data-toggle='tooltip', data-placement='top', title='Số lượng chứng chỉ quỹ')
+                th Số lượng
+                th Số tiền (đ)
+                th Trạng thái
+            tbody
+              tr
+                td 
+                  a.links(href="#") VFB
+                td Rút tiền
+                td 123
+                td  Hoàn thành
+                td
+                  .status.done
+                    span
+                    | Mua chứng chỉ quỹ thành công
+              tr
+                td 
+                  a.links(href="#") TCBF
+                td Rút tiền
+                td 123
+                td 
+                  span.corange 1.210.000.000
+                td
+                  .status.in-progress
+                    span
+                    | Đang cập nhật
+                    a.links-underline(href="#") Tìm hiểu thêm
+              tr
+                td 
+                  a.links(href="#") VF1
+                td Rút tiền
+                td 123
+                td  Hoàn thành
+                td
+                  .status.done
+                    span
+                    | Mua chứng chỉ quỹ thành công
+              tr
+                td 
+                  a.links(href="#") BCF
+                td Rút tiền
+                td 123
+                td  Hoàn thành
+                td
+                  .status.done
+                    span
+                    | Mua chứng chỉ quỹ thành công
+              tr
+                td 
+                  a.links(href="#") SCA
+                td Rút tiền
+                td 123
+                td  Hoàn thành
+                td
+                  .status.done
+                    span
+                    | Mua chứng chỉ quỹ thành công
+        .chart-portfolio-holder.chart-line
+          .mb-5
+            h3.mb-0.d-inline-block Kết qủa hoạt động của Rùa Hoàn Kiếm 
+            select.ml-4.select-chart-portfolio.align-top.d-inline-block
+              option Năm 2018
+              option Năm 2017
+          div.chart-porfolio-wrapper.mb-5
+            canvas#canvasChartPortfolio
+          footer
+            .mxw-500.mx-auto
+              p.text-center.mb-3 Biểu đồ minh hoạ kết quả hoạt động của cấu trúc Rùa Hoàn Kiếm và lãi suất tiết kiệm ngân hàng bắt đầu từ tháng 1 năm 2018, đầu tư bắt đầu với 10.000.000đ
+              p.text-center.mb-5
+                i Số liệu được cập nhật hàng tháng.
+              p.text-center
+                a(href="#").btn.btn-red-outline.lg Đổi cấu trúc đầu tư
+    +footer
+  +script
+  script(type='text/javascript', src='js/main.js')
+    

@@ -34,3 +34,13 @@ mixin header
                 a.dropdown-item(href='#') Action
                 a.dropdown-item(href='#') Another action
                 a.dropdown-item(href='#') Something else here
+mixin headerLogin
+  header.header.login
+    .wrapper.d-flex.justify-content-between.align-items-center
+        img.img-fluid.logo-2(src="images/logo-2.png" alt="logo")
+        .group-btn-app.h-100.d-flex.align-items-center
+          p.mb-0 Tải ứng dụng cho di động
+          a(href="#").btn-app
+            img(src="images/appstore-btn.png", alt="btn")
+          a(href="#").btn-app
+            img(src="images/playstore-btn.png", alt="btn")

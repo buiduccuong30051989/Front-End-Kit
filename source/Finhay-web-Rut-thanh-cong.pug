@@ -1,0 +1,26 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/elements/elements
+
+doctype html
+html
+  +head(head.home)
+  body
+    +header
+    .header-info
+    .main-content
+      .wrapper
+        .inner-main.top.d-flex.justify-content-center
+          .card-finhay.mxw-570.card-draw
+            h3.cmain.text-center.mb-3 Đặt lệnh rút tiền thành công!
+            p.desc.text-center.mb-5 Tiền đang được chuyển tới tài khoản của bạn.
+              br
+              | Có thể mất tới 10 ngày để giao dịch hoàn tất.
+            div.text-center.mb-3
+              a(href="#").btn.btn-main-outline.mw-278.lg Tìm hiểu kiến thức đầu tư
+            footer.mt-2
+              a.more(href="#").d-block.text-center Trang chủ
+    +footer
+  +script
+  script(type='text/javascript', src='js/main.js')

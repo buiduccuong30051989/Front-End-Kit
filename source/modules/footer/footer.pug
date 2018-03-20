@@ -1,4 +1,21 @@
 mixin footer()
-  footer.footer
-    h2 Footer
-
+  footer.footer-fixed
+    .wrapper
+      ul
+        li 
+          a(href="#") Hỗ trợ
+        li
+          a(href="#") Bảo mật
+        li
+          a(href="#") Điều khoản
+    
+mixin script
+  script(type='text/javascript', src='js/extention/jquery.min.js')
+  script(type='text/javascript', src='js/extention/jquery-ui.min.js')
+  script(type='text/javascript', src='js/extention/popper.min.js')
+  script(type='text/javascript', src='js/extention/jquery.validate.min.js')
+  script(type='text/javascript', src='js/extention/bootstrap.min.js')
+  script(type='text/javascript', src='js/extention/chart.min.js')
+  script(type='text/javascript', src='js/extention/typeahead.bundle.min.js')
+  script(type='text/javascript', src='js/extention/jquery.dataTables.min.js')
+  script(type='text/javascript', src='js/extention/dataTables.bootstrap4.min.js')

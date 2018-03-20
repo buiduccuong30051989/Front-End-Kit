@@ -2,9 +2,9 @@
 @import '_mixins';
 @import 'vendors/bootstrap-override-variable';
 @import 'bootstrap';
-@import 'font-awesome';
 
 //extention
+@import 'extention/dataTables.bootstrap4';
 
 @import 'abstracts/variables';
 @import 'abstracts/mixins';

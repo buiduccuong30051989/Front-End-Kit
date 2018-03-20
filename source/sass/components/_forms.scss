@@ -63,30 +63,98 @@
     }
   }
 
-  .form-group {
-    label {
-      font-size: 13px;
-      color: #58595b;
+  .btn {
+    margin-bottom: 18px;
+
+    .lock {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
     }
 
-    button {
-      margin-bottom: 18px;
+    &[disabled] {
+      background-color: rgba(155, 155, 155, 0.4);
+      opacity: 1;
+      cursor: not-allowed;
 
-      .arrow {
-        width: 24px;
-      }
-
-      &[disabled] {
+      &:hover,
+      &:focus {
         background-color: rgba(155, 155, 155, 0.4);
         opacity: 1;
         cursor: not-allowed;
       }
     }
+  }
+
+  .form-group {
+    margin-bottom: 30px;
+
+    label {
+      font-size: 13px;
+      color: #58595b;
+    }
 
     .form-control-finhay {
       height: 50px;
       font-size: 16px;
-      margin-bottom: 30px;
+      margin-bottom: 5px;
+    }
+
+    .help-block {
+      color: #d0021b;
+      font-size: 10px;
+      padding: 0 10px;
+    }
+
+    .input-wrapper {
+      position: relative;
+
+      img.error,
+      img.done,
+      img.holder {
+        display: none;
+        position: absolute;
+        top: 13px;
+        right: 18px;
+        width: 24px;
+      }
+
+      img.holder {
+        display: block;
+
+        &.eye {
+          top: 18px;
+        }
+      }
+
+      &.has-error {
+        img.error {
+          display: block;
+        }
+
+        img.holder {
+          display: none;
+        }
+
+        .form-control-finhay {
+          border-color: #d0021b;
+          padding-right: 42px;
+        }
+      }
+
+      &.has-success {
+        img.done {
+          display: block;
+        }
+
+        img.holder {
+          display: none;
+        }
+
+        .form-control-finhay {
+          padding-right: 42px;
+        }
+      }
     }
   }
 
@@ -94,6 +162,176 @@
     a {
       text-decoration: underline;
       color: #9b9b9b;
+
+      &.links {
+        color: #4a90e2;
+        text-decoration: none;
+      }
     }
   }
 }
+
+.custom-controls-stacked .custom-control.custom-radio.radio-finhay {
+  margin-bottom: 20px;
+}
+
+.custom-control.custom-radio.radio-finhay {
+  padding-left: 0;
+
+  .custom-control-indicator {
+    top: 0;
+    width: 24px;
+    height: 24px;
+    background-color: $white;
+    border: 1px solid #b6b6b6;
+    position: relative;
+    top: auto;
+    margin-right: 20px;
+
+    .checked {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      top: 3px;
+      left: 3px;
+      background-color: $cmain;
+      display: none;
+    }
+  }
+
+  .custom-control-description.like-input {
+    min-width: 330px;
+    height: 50px;
+    border-radius: 4px;
+    border: solid 1px rgba(155, 155, 155, 0.8);
+    padding: 13px 18px;
+    font-size: 16px;
+    color: $cgrey;  
+  }
+
+  .custom-control-input:checked ~ .custom-control-indicator {
+
+    .checked {
+      display: block;
+    }
+  }
+
+  .custom-control-input:checked ~ .custom-control-description.like-input {
+    border-color: $cmain;
+    color: #58595b;
+  }
+
+  .custom-control-input:focus ~ .custom-control-indicator {
+    box-shadow: none;
+  }
+}
+
+.form-draw-google {
+  input {
+    color: $white;
+    font-size: 32px;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid rgba(255,255,255,.5);
+    height: 50px;
+    font-weight: 300;
+
+    &:hover,
+    &:focus {
+      box-shadow: none;
+      outline: 0;
+    }
+  }
+
+  @include placeholder {
+    color: rgba(247, 248, 248, 0.34);
+    font-size: 32px;
+    font-weight: 300;
+  }
+
+  input.typeahead.t-hint {
+    opacity: .5!important;
+  }
+}
+
+.header-info-form-draw {
+  padding: 63px 0 73px 0;
+
+  .btn-group-draw {
+    margin-bottom: 46px;
+  }
+
+  .form-draw-google > input {
+    margin-bottom: 52px;
+  }
+
+  .tt-hint {
+    opacity: .5!important;
+  }
+
+  .btn-draw[disabled] {
+    color: $white;
+    opacity: .5;
+    border: 0;
+    background-color: transparent;
+  }
+
+  .tt-menu {
+    width: 350px;
+    background-color: $white;
+    color: #9b9b9b;
+    font-size: 24px;
+    text-align: left;
+
+    .tt-suggestion {
+      display: flex;
+      align-items: center;
+      height: 50px;
+      padding: 0 24px;
+      font-weight: 300;
+      cursor: pointer;
+
+      &:hover {
+        color: #58595b;
+      }
+    }
+  }
+}
+
+.select-chart-portfolio {
+  border: 1px solid $cmain;
+  min-width: 109px;
+  line-height: 30px;
+  border-radius: 4px;
+  background-color: $white;
+  color: $cmain;
+  height: 32px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -36,13 +36,69 @@
     }
   }
 
-  .has-chart {
-    height: 300px;
+  &.has-chart {
+    min-height: 300px;
+    height: auto;
+
+    .total-invest {
+      padding-top: 25px;
+
+      p.text-top {
+        font-size: 18px;
+        font-weight: 100;
+        letter-spacing: 0.5px;
+        margin-bottom: 0;
+      }
+
+      p.total-money {
+        margin-bottom: 0;
+      }
+
+      .money {
+        font-size: 28px;
+        font-weight: 500;
+      }
+
+      .currency {
+        font-size: 18px;
+        font-weight: 100;
+      }
+
+      p.status {
+        margin-bottom: 0;
+
+        .first {
+          font-size: 14px;
+          font-weight: 400;
+        }
+
+        .second {
+          font-size: 14px;
+          font-weight: 300;
+          opacity: .7
+        }
+      }
+    }
+
+    .chart-wrapper {
+      .chart-wrapper-inner {
+        width: calc(100% - 140px);
+        display: inline-block;
+        vertical-align: bottom;
+        height: 200px;
+      }
+
+      .form-group {
+        width: 114px;
+        display: inline-block;
+        vertical-align: bottom;
+      }
+    }
   }
 
   &.no-invest {
     height: 300px;
-    padding: 20px 0;
+    padding: 20px 0 0;
 
     .total-invest {
       p.text-top {
@@ -76,6 +132,10 @@
         opacity: 0.8;
         letter-spacing: 0.3px;
         font-size: 10px;
+      }
+
+      .form-group {
+        float: right;
       }
     }
   }

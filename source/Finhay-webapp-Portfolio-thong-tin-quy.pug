@@ -1,0 +1,21 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/elements/elements
+
+doctype html
+html
+  +head(head.home)
+  body.bg-grey
+    +header
+    .wrapper
+      nav.breadcrumb
+        a.breadcrumb-item(href='#') Phân bổ
+        span.breadcrumb-item.active Thông tin quỹ BCF
+    .wrapper.bg-white
+      .box-detail-fun.no-information
+        img(src="images/icon-tree.png", alt="icon")
+        p Đang xây dựng. Vui lòng quay lại sau.
+  +script
+  script(type='text/javascript', src='js/main.js')
+    

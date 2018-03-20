@@ -8,21 +8,28 @@ html
   +head(head.home)
   body
     +header
-    .header-info.no-invest
+    .header-info.has-chart
       .wrapper.h-100
         .inner.h-100.d-flex.flex-column.justify-content-between.text-center
           .total-invest
             p.text-top Giá trị tài sản
-            p 
-              span.money 0
+            p.total-money
+              span.money 12.056.934 
               span.currency đ 
-          .promotion
-            p Đầu tư ngay hôm nay để tối ưu tiềm năng tài chính của bạn!
-          footer
-            p Chưa có giá trị để hiển thị biểu đồ
-            .chart-wrapper
-              select
-                option 1
+            p.status
+              span.first -36.144 đ
+              span.second (-1,16%)
+          .chart-wrapper
+            .chart-wrapper-inner
+              canvas#canvas
+            .form-group.mb-0
+              select.form-control
+                option 30 ngày gần đây
+                option 1 tháng
+                option 3 tháng
+                option 6 tháng
+                option 12 tháng 
+                option Tất cả
     .main-content
       .wrapper.d-flex.justify-content-between
         .left
@@ -82,4 +89,5 @@ html
                   | / +1,41%
 
     +footer
+  +script
   script(type='text/javascript', src='js/main.js')

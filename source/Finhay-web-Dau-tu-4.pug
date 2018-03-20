@@ -1,0 +1,40 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/elements/elements
+
+doctype html
+html
+  +head(head.home)
+  body
+    +header
+    .header-info
+    .main-content
+      .wrapper
+        .inner-main.top.d-flex.justify-content-center
+          .card-finhay.mxw-570.card-draw-2
+            h3.cmain.text-center.mb-3 Chọn hình thức thanh toán
+            p.desc.text-center.mb-5 Mọi giao dịch trên Finhay đều được bảo mật
+            .custom-controls-stacked
+              label.custom-control.custom-radio.radio-finhay.align-items-center
+                input#radioStacked1.custom-control-input(name='radio-stacked', type='radio')
+                span.custom-control-indicator
+                  span.checked
+                span.custom-control-description.like-input
+                  | Chuyển khoản ngân hàng
+              label.custom-control.custom-radio.radio-finhay.align-items-center
+                input#radioStacked2.custom-control-input(name='radio-stacked', type='radio')
+                span.custom-control-indicator
+                  span.checked
+                span.custom-control-description.like-input.mr-2
+                  | Thanh toán qua thẻ VISA/MASTER
+                span.more (Sắp xuất hiện)
+            div.text-center.mb-4.mt-5
+              a(href="#").mw-194.btn.orange.btn-lg-finhay TIẾP THEO
+                img.arrow(src="images/icon-arrow.png", alt="icon")
+            footer.mt-2
+              a.more(href="#").d-block.text-center Huỷ
+    +footer
+  +script
+  script(type='text/javascript', src='js/main.js')
+    

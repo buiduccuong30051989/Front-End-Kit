@@ -1,3 +1,137 @@
 //
 // Components :: Tables
 // --------------------------------------------------
+.table-finhay {
+  table.dataTable {
+    border-collapse: collapse!important;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
+  }
+
+  &.history-draw {
+    font-size: 14px;
+    color: #58595b;
+
+    .status {
+      color: #7a7a7a;
+
+      &.done {
+        span {
+          display: inline-block;
+          background-color: $cmain;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          margin-right: 8px;
+        }
+      }
+
+      &.in-progress {
+        span {
+          display: inline-block;
+          background-color: $corange;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          margin-right: 8px;
+        }
+
+        a.links-underline {
+          color: #4a90e2;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .detail-view {
+      .icon {
+        width: 14px;
+        margin-right: 8px;
+      }
+    }
+
+    .notify {
+      .icon {
+        width: 11px;
+        margin-left: 8px;
+        margin-bottom: 2px;
+      }
+    }
+
+    .table th {
+      border-top: 0;
+      background-color: rgba(155, 155, 155, 0.15);
+      color: rgba(51, 51, 51, 0.5);
+    }
+
+    .table th,
+    .table td {
+      padding-top: 25px;
+      padding-bottom: 25px;
+      padding-left: 40px;
+    }
+
+    .table tr:hover {
+      td {
+        color: $cmain;
+      }
+    }
+
+    .table-striped tbody tr:nth-of-type(odd) {
+      background-color: $white;
+    }
+
+    .table-striped tbody tr:nth-of-type(even) {
+      background-color: rgba(155, 155, 155, 0.15);
+    }
+
+    .top {
+      transform: none;
+      display: flex;
+
+      .dataTables_info {
+        margin-right: 15px;
+        min-width: 143px;
+      }
+    }
+
+    .bottom {
+      display: flex;
+
+      .dataTables_info {
+        margin-right: 15px;
+      }
+    }
+
+    .pagination {
+      .disabled {
+        color: #ccc;
+
+        .page-link {
+          color: #ccc;
+        }
+      }
+
+      .page-link {
+        font-size: 10px;
+        color: #333;
+      }
+    }
+
+    table.dataTable thead {
+      .sorting,
+      .sorting_asc,
+      .sorting_desc,
+      .sorting_asc_disabled,
+      .sorting_desc_disabled {
+        &:before,
+        &:after {
+          bottom: 25px;
+        }
+      }
+    }
+  }
+}
+
+.table-border {
+  border: 1px solid #ccc;
+}

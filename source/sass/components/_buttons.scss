@@ -2,6 +2,12 @@
 // Components :: Buttons
 // --------------------------------------------------
 .btn {
+  cursor: pointer;
+
+  &[disabled] {
+    cursor: not-allowed;
+  }
+
   &.btn-sm-finhay {
     &.green {
       color: $white;
@@ -32,5 +38,145 @@
         background-color: darken($cmain, 10%);
       }
     }
+
+    &.orange {
+      color: $white;
+      font-size: 18px;
+      border-radius: 4px;
+      padding: 13px 15px;
+      background-color: $corange;
+      font-weight: 400;
+
+      .arrow {
+        width: 24px;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: darken($corange, 10%);
+      }
+    }
   }
 }
+
+.btn {
+  &.btn-main-outline {
+    color: $cmain;
+    font-weight: 400;
+    border-radius: 4px;
+    border: 1px solid $cmain;
+    background-color: $white;
+
+    &:hover,
+    &:focus {
+      color: $white;
+      background-color: $cmain;
+    }
+  }
+
+  &.btn-red-outline {
+    color: #d0021b;
+    font-weight: 400;
+    border-radius: 4px;
+    border: 1px solid #d0021b;
+    background-color: $white;
+
+    &:hover,
+    &:focus {
+      color: $white;
+      background-color: #d0021b;
+    }
+  }
+
+  &.lg {
+    padding: 13px 15px;
+    font-size: 18px;
+  }
+}
+
+.btn-group-draw {
+  .btn {
+    width: 121px;
+    height: 48px;
+    border: 1px solid $white;
+    border-radius: 25px;
+    background-color: rgba(255,255,255,.1);
+    color: $white;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 14px;
+    cursor: pointer;
+    opacity: .5;
+    margin: 0 50px;
+
+    &.active {
+      opacity: 1;
+      box-shadow: none;
+    }
+  }
+}
+
+.btn-expand {
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  font-size: 18px;
+  display: inline-block;
+  color: $cmain;
+
+  &:hover,
+  &:focus {
+    box-shadow: none;
+    outline: 0;
+  }
+
+  &:after {
+    content: '';
+    width: 0;
+    height: 0;
+    display: inline-block;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    margin-left: 5px;
+    border-bottom: 12px solid $cmain;
+    border-top: 0;
+  }
+
+  &.collapsed {
+    color: $cgrey;
+
+    &:after {
+      border-top: 12px solid $cgrey;
+      border-bottom: 0;
+    }
+
+    .show {
+      display: none;
+    }
+
+    .hide {
+      display: inline;
+    }
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .show {
+    display: inline;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

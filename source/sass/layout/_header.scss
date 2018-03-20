@@ -2,6 +2,8 @@
 // Layout :: Header
 // --------------------------------------------------
 .header {
+  background-color: $white;
+  
   .wrapper {
     height: 70px;
   }
@@ -137,6 +139,29 @@
       background-color: rgba(155, 155, 155, 0.7);
       vertical-align: middle;
       margin: 0 26px;
+    }
+  }
+
+  &.login {
+    height: 70px;
+
+    .wrapper {
+      width: 1140px;
+      max-width: 1140px;
+    }
+
+    img.logo-2 {
+      width: 166px;
+    }
+
+    .group-btn-app {
+      .btn-app {
+        margin-left: 30px;
+
+        img {
+          height: 34px;
+        }
+      }
     }
   }
 }
