@@ -37,8 +37,13 @@
 .portfolio-doughnut-chart-wrapper {
   display: flex;
 
-  .canvas-has-bg {
+  .image-chart-wrapper {
     margin-right: 60px;
+    width: 360px;
+
+    img {
+      width: 100%;
+    }
   }
 
   .chart-detail {
@@ -47,7 +52,6 @@
     h3 {
       font-size: 24px;
       letter-spacing: 0.7px;
-      font-weight: 400;
 
       &.done {
         .status {
@@ -150,6 +154,47 @@
       border-radius: 4px;
     }
   }
+
+  .range-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 60px;
+
+    img {
+      width: 40px;
+      opacity: 0.8;
+      margin: 0 22.5px;
+    }
+
+    .avatar-range-item {
+      position: relative;
+
+      &:after {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: $cmain;
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+      }
+    }
+
+    .avatar-range-item.active {
+      img {
+        width: 64px;
+        opacity: 1;
+      }
+
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
 }
 
 .chart-portfolio-holder.chart-line {
@@ -183,5 +228,120 @@
     }
   }
 }
+
+.age-wrapper {
+  h3 {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    color: #58595b;
+  }
+
+  button {
+    width: 390px;
+    height: 50px;
+    border-radius: 4px;
+    background-image: linear-gradient(to bottom, #ffffff, #f3f3f3 97%);
+    background-image: linear-gradient(to bottom, var(--white), #f3f3f3 97%);
+    border: solid 1px rgba(155, 155, 155, 0.8);
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    transition: $transition-base;
+    color: #58595b;
+    margin-bottom: 16px;
+
+    &:focus {
+      box-shadow: 0 1px 4px 0 rgba(0, 154, 70, 0.26);
+      background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+      background-image: linear-gradient(to bottom, var(--white), #e6e6e6);
+      border: solid 1px #009a46;
+      outline: 0;
+      font-weight: bold;
+    }
+  }
+}
+
+.modal {
+  .modal-qa {
+    width: 770px;
+    border-radius: 4px;
+    padding: 25px;
+
+    .modal-header {
+      border-bottom: 0;
+      flex-direction: column;
+      margin-bottom: 15px;
+
+      img {
+        width: 48px;
+        margin-bottom: 13px;
+      }
+
+      h5 {
+        font-size: 24px;
+        color: #58595b;
+        letter-spacing: 0.6px;
+      }
+    }
+
+    .modal-body {
+      h3 {
+        font-size: 24px;
+        letter-spacing: 0.7px;
+        color: #58595b;
+      }
+
+      p {
+        font-size: 13px;
+        color: #9b9b9b;
+        letter-spacing: 0.4px;
+      }
+
+      .canvas-has-bg {
+        margin-bottom: 30px;
+      }
+    }
+
+    .modal-footer {
+      border-top: 0;
+      button {
+        width: 165px;
+      }
+    }
+  }
+}
+
+.avatar-profile {
+  text-align: center;
+
+  img {
+    width: 116px;
+    margin: 0 auto 20px auto;
+  }
+
+  h4 {
+    font-size: 24px;
+    font-weight: 400;
+    color: #58595b;
+    margin-bottom: 40px;
+  }
+}
+
+.title-profile {
+  font-size: 16px;
+  color: #58595b;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+
+
 
 

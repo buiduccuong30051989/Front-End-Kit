@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+  </head>
+  <body>
+    <header class="header login">
+      <div class="wrapper d-flex justify-content-between align-items-center">
+        <img class="img-fluid logo-2" src="images/logo-2.png" alt="logo" />
+        <div class="group-btn-app h-100 d-flex align-items-center">
+          <p class="mb-0">Tải ứng dụng cho di động</p>
+          <a class="btn-app" href="#">
+            <img src="images/appstore-btn.png" alt="btn" />
+          </a>
+          <a class="btn-app" href="#">
+            <img src="images/playstore-btn.png" alt="btn" />
+          </a>
+        </div>
+      </div>
+    </header>
+    <div class="header-info has-bg-qa">
+      <div class="wrapper mxw-750">
+        <div class="inner d-flex flex-direction-column align-items-end">
+          <h3>Đánh giá mức độ nhận rủi ro của bạn</h3>
+        </div>
+      </div>
+    </div>
+    <div class="main-content">
+      <div class="wrapper mxw-750">
+        <div class="progress-step-qa pt-2 mb-4">
+          <div class="step active"></div>
+          <div class="step"></div>
+          <div class="step"></div>
+          <div class="step"></div>
+          <div class="step"></div>
+        </div>
+        <div class="age-wrapper">
+          <h3 class="mb-4">Độ tuổi của bạn?</h3>
+          <button>18 - 25 tuổi</button>
+          <button>26 - 40 tuổi</button>
+          <button>41 - 55 tuổi</button>
+          <button>Lớn hơn 55 tuổi </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal" tabindex="-1" role="dialog" id="exampleModal">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content modal-qa">
+          <div class="modal-header">
+            <img src="images/icon-done.png" alt="icon">
+            <h5 class="modal-title">Đây là cấu trúc quỹ phù hợp với bạn</h5>
+          </div>
+          <div class="modal-body">
+            <div class="canvas-has-bg text-center mx-auto" id="canvas-holder" style="background-image:url('images/trau.png');">
+              <canvas id="chart-area-trau"></canvas>
+            </div>
+            <div class="text-center mb-3">
+              <h3>TRÂU NƯỚC</h3>
+              <p>Tính cách: Rất mạo hiểm</p>
+            </div>
+          </div>
+          <div class="modal-footer text-center">
+            <button class="btn btn-lg-finhay green mx-auto" type="button" data-dismiss="modal">Hoàn thành</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="js/extention/jquery.min.js"></script>
+  <script type="text/javascript" src="js/extention/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="js/extention/popper.min.js"></script>
+  <script type="text/javascript" src="js/extention/jquery.validate.min.js"></script>
+  <script type="text/javascript" src="js/extention/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/extention/chart.min.js"></script>
+  <script type="text/javascript" src="js/extention/typeahead.bundle.min.js"></script>
+  <script type="text/javascript" src="js/extention/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="js/extention/dataTables.bootstrap4.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</html>

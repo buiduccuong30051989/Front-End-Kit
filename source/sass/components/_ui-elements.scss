@@ -74,7 +74,35 @@
   content: ">";
 }
 
+.progress-step-qa {
+  .step {
+    width: 14px;
+    height: 14px;
+    border: 1px solid #ccc;
+    background-color: $white;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 50px;
+    display: inline-block;
 
+    &.active {
+      background-color: $cmain;
+      border-color: $cmain;
+    }
+
+    &:not(:last-of-type):after {
+      content: "";
+      width: 54px;
+      height: 2px;
+      background-color: #ccc;
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      margin-top: -1px;
+      left: 100%;      
+    }
+  }
+}
 
 
 

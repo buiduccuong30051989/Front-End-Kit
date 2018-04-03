@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+  </head>
+  <body class="bg-grey">
+    <header class="header">
+      <div class="wrapper fixed-w d-flex justify-content-between align-items-center">
+        <div class="left-header">
+          <div class="logo">
+            <img class="img-fluid" src="images/logo.jpg" alt="logo" />
+          </div>
+          <div class="menu">
+            <ul>
+              <li class="active">
+                <a href="#">Tài sản</a>
+              </li>
+              <li>
+                <a href="#">Đầu tư & Rút</a>
+              </li>
+              <li>
+                <a href="#">Portfolio</a>
+              </li>
+              <li>
+                <a href="#">Kiến thức</a>
+              </li>
+              <li>
+                <a href="#">Hỗ trợ</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="right-header">
+          <div class="invest-info text-center">
+            <span>Giá trị tài sản</span>
+            <p class="wallet">
+              <strong>12.056.934</strong>
+              <span class="currency">đ</span>
+            </p>
+          </div>
+          <div class="divider"></div>
+          <div class="acc">
+            <div class="dropdown show">
+              <a class="dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img class="avatar" src="images/avatar.png" alt="avatar" />
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="header-info has-bg">
+      <div class="wrapper">
+        <div class="inner d-flex justify-content-center flex-column text-center pt-5">
+          <h3>Smart portfolio</h3>
+          <p>Cấu trúc phân bổ tiền đến các quỹ được Finhay đề xuất dựa trên khẩu vị rủi ro của bạn</p>
+        </div>
+      </div>
+    </div>
+    <div class="main-content">
+      <div class="wrapper">
+        <div class="inner-main d-flex justify-content-between mxw-750 promotion-wrapper mx-auto">
+          <div class="box-promotion">
+            <img src="images/motivation.png" alt="promotion">
+            <p>Kiên định theo đuổi mục tiêu dài hạn giúp bạn thành công</p>
+          </div>
+          <div class="box-promotion">
+            <img src="images/balance.png" alt="promotion">
+            <p>Tránh thay đổi portfolio tiên tục vì điều này ảnh hưởng đến lợi nhuận dài hạn</p>
+          </div>
+          <div class="box-promotion">
+            <img src="images/profits.png" alt="promotion">
+            <p>Dao động ngắn hạn không quan trọng bằng xu hướng tăng trưởng dài hạn</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper mxw-1000 wrapper-portfolio-detail mb-5">
+      <div class="portfolio-doughnut-chart-wrapper">
+        <div class="canvas-has-bg" id="canvas-holder" style="background-image:url('images/rua.png');">
+          <canvas id="chart-area"></canvas>
+        </div>
+        <div class="chart-detail">
+          <h3 class="done mb-0">RÙA HOÀN KIẾM
+            <p class="status mb-0">
+              <span class="icon"></span>ĐANG HOẠT ĐỘNG</p>
+          </h3>
+          <p class="sum mb-4">Tính cách: Bảo thủ</p>
+          <p class="desc">Cấu trúc bảo thủ dành cho các bạn trẻ có xu hướng không thích rủi ro, muốn bảo toàn tài sản của mình, những bù lại lợi nhuận sẽ thấp.</p>
+          <div class="range-slider-wrapper mt-5">
+            <div class="slider-range mb-5">
+              <div class="text textarea_one">An toàn</div>
+              <div class="text textarea_two">Mạo hiểm</div>
+            </div>
+          </div>
+          <div class="range-avatar mb-5">
+            <div class="avatar-range-item active">
+              <img src="images/rua-2.png" alt="avatar">
+            </div>
+            <div class="avatar-range-item">
+              <img src="images/co.png" alt="avatar">
+            </div>
+            <div class="avatar-range-item">
+              <img src="images/voi.png" alt="avatar">
+            </div>
+            <div class="avatar-range-item">
+              <img src="images/sao-la.png" alt="avatar">
+            </div>
+            <div class="avatar-range-item">
+              <img src="images/trau-2.png" alt="avatar">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mb-2">
+        <button class="btn-expand collapsed" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false">
+          <span class="hide">Chi tiết phân bổ tiền</span>
+          <span class="show">Thu gọn</span>
+        </button>
+      </div>
+      <div class="collapse" id="collapseExample">
+        <h3 class="mb-4">Phân bổ tiền đến các quỹ tài chính</h3>
+        <div class="table-finhay history-draw mb-5">
+          <table class="table table-striped table-border" id="data-table-portfolio">
+            <thead>
+              <tr>
+                <th>Quỹ</th>
+                <th>
+                  <div class="notify">
+                    Phân bổ (%)
+                    <img class="icon" src="images/icon-notify.png" alt="icon" data-toggle="tooltip" data-placement="top" title="Số lượng chứng chỉ quỹ">
+                  </div>
+                </th>
+                <th>Số lượng</th>
+                <th>Số tiền (đ)</th>
+                <th>Trạng thái</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <a class="links" href="#">VFB</a>
+                </td>
+                <td>Rút tiền</td>
+                <td>123</td>
+                <td> Hoàn thành</td>
+                <td>
+                  <div class="status done">
+                    <span></span>Mua chứng chỉ quỹ thành công</div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a class="links" href="#">TCBF</a>
+                </td>
+                <td>Rút tiền</td>
+                <td>123</td>
+                <td>
+                  <span class="corange">1.210.000.000</span>
+                </td>
+                <td>
+                  <div class="status in-progress">
+                    <span></span>Đang cập nhật
+                    <a class="links-underline" href="#">Tìm hiểu thêm</a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a class="links" href="#">VF1</a>
+                </td>
+                <td>Rút tiền</td>
+                <td>123</td>
+                <td> Hoàn thành</td>
+                <td>
+                  <div class="status done">
+                    <span></span>Mua chứng chỉ quỹ thành công</div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a class="links" href="#">BCF</a>
+                </td>
+                <td>Rút tiền</td>
+                <td>123</td>
+                <td> Hoàn thành</td>
+                <td>
+                  <div class="status done">
+                    <span></span>Mua chứng chỉ quỹ thành công</div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a class="links" href="#">SCA</a>
+                </td>
+                <td>Rút tiền</td>
+                <td>123</td>
+                <td> Hoàn thành</td>
+                <td>
+                  <div class="status done">
+                    <span></span>Mua chứng chỉ quỹ thành công</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="chart-portfolio-holder chart-line">
+          <div class="mb-5">
+            <h3 class="mb-0 d-inline-block">Kết qủa hoạt động của Rùa Hoàn Kiếm </h3>
+            <select class="ml-4 select-chart-portfolio align-top d-inline-block">
+              <option>Năm 2018</option>
+              <option>Năm 2017</option>
+            </select>
+          </div>
+          <div class="chart-porfolio-wrapper mb-5">
+            <canvas id="canvasChartPortfolio"></canvas>
+          </div>
+          <footer>
+            <div class="mxw-500 mx-auto">
+              <p class="text-center mb-3">Biểu đồ minh hoạ kết quả hoạt động của cấu trúc Rùa Hoàn Kiếm và lãi suất tiết kiệm ngân hàng bắt đầu từ tháng 1 năm 2018, đầu tư bắt đầu với 10.000.000đ</p>
+              <p class="text-center mb-5">
+                <i>Số liệu được cập nhật hàng tháng.</i>
+              </p>
+              <p class="text-center">
+                <a class="btn btn-red-outline lg" href="#">Đổi cấu trúc đầu tư</a>
+              </p>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="js/extention/jquery.min.js"></script>
+  <script type="text/javascript" src="js/extention/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="js/extention/popper.min.js"></script>
+  <script type="text/javascript" src="js/extention/jquery.validate.min.js"></script>
+  <script type="text/javascript" src="js/extention/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/extention/chart.min.js"></script>
+  <script type="text/javascript" src="js/extention/typeahead.bundle.min.js"></script>
+  <script type="text/javascript" src="js/extention/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="js/extention/dataTables.bootstrap4.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</html>

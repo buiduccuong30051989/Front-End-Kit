@@ -53,6 +53,10 @@ $zero-property-map: (
   transform: translate(70px, -100px);
 }
 
+.top-center {
+  transform: translateY(-100px);
+}
+
 /// Sizing
   .mw-120 {
     min-width: 120px;
@@ -110,6 +114,10 @@ $zero-property-map: (
 
   .h-auto {
     height: auto!important;
+  }
+
+  .mb-34px {
+    margin-bottom: 34px;
   }
 
 // Text-color

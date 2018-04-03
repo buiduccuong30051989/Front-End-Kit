@@ -11,6 +11,22 @@
     font-size: 14px;
     color: #58595b;
 
+    th.hidden-arrow {
+      padding-right: 5px;
+      &:before,
+      &:after {
+        opacity: 0;
+      }
+
+      svg {
+        width: 18px;
+        height: 15px;
+        display: inline-block;
+        vertical-align: -2px;
+        color: #333;
+      }
+    }
+
     .status {
       color: #7a7a7a;
 

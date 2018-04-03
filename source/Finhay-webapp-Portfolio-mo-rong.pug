@@ -12,7 +12,7 @@ html
       .wrapper
         .inner.d-flex.justify-content-center.flex-column.text-center.pt-5
           h3 Smart portfolio
-          p Cấu trúc phân bổ tiền đến các quỹ được Finhay đề xuất dựa trên khẩu vị rủi ro của bạn
+          p.small Cấu trúc phân bổ tiền đến các quỹ được Finhay đề xuất dựa trên khẩu vị rủi ro của bạn
     .main-content
       .wrapper
         .inner-main.d-flex.justify-content-between.mxw-750.promotion-wrapper.mx-auto
@@ -27,8 +27,8 @@ html
             p Dao động ngắn hạn không quan trọng bằng xu hướng tăng trưởng dài hạn
     .wrapper.mxw-1000.wrapper-portfolio-detail.mb-5
       .portfolio-doughnut-chart-wrapper
-        #canvas-holder.canvas-has-bg(style="background-image:url('images/rua.png')")
-          canvas#chart-area
+        .image-chart-wrapper
+          img(src="images/rua-pie-chart.png", alt='chart')
         .chart-detail
           h3.done.mb-0 RÙA HOÀN KIẾM
             p.status.mb-0
@@ -37,10 +37,21 @@ html
           p.sum.mb-4 Tính cách: Bảo thủ
           p.desc Cấu trúc bảo thủ dành cho các bạn trẻ có xu hướng không thích rủi ro, muốn bảo toàn tài sản của mình, những bù lại lợi nhuận sẽ thấp.
           .range-slider-wrapper.mt-5
-            .slider-range
+            .slider-range.mb-5
               .text.textarea_one An toàn
               .text.textarea_two Mạo hiểm
-      .text-center.mb-5
+          .range-avatar.mb-5
+             .avatar-range-item.active
+              img(src="images/rua-2.png", alt="avatar")
+             .avatar-range-item 
+              img(src="images/co.png", alt="avatar")
+             .avatar-range-item 
+              img(src="images/voi.png", alt="avatar")
+             .avatar-range-item 
+              img(src="images/sao-la.png", alt="avatar")
+             .avatar-range-item 
+              img(src="images/trau-2.png", alt="avatar")
+      .text-center.mb-2
         button.btn-expand.collapsed(data-toggle='collapse', data-target='#collapseExample', aria-expanded='false')
           span.hide Chi tiết phân bổ tiền
           span.show Thu gọn
@@ -126,7 +137,6 @@ html
                 i Số liệu được cập nhật hàng tháng.
               p.text-center
                 a(href="#").btn.btn-red-outline.lg Đổi cấu trúc đầu tư
-    +footer
   +script
   script(type='text/javascript', src='js/main.js')
     

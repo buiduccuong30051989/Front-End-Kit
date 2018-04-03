@@ -298,6 +298,51 @@ var FINHAY = {};
     };
   }
 
+  FINHAY.chartAreaTrau = function () {
+    if(document.getElementById('chart-area-trau')) {
+      var config = {
+        type: 'doughnut',
+        data: {
+          datasets: [{
+            data: [
+              70,
+              20,
+              15,
+              12
+            ],
+            backgroundColor: [
+              'rgba(246, 102, 52,1)',"rgba(246, 102, 52,.8)","rgba(246, 102, 52,.5)", "rgba(246, 102, 52,.2)"
+            ],
+            label: 'Dataset 1'
+          }],
+          labels: [
+            'SCA',
+            'BCF',
+            'VF1',
+            'VBF'
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          legend: {
+            display: false
+          },
+          title: {
+            display: false,
+          },
+          animation: {
+            animateScale: true,
+            animateRotate: true
+          }
+        }
+      };
+
+      var ctx = document.getElementById('chart-area-trau').getContext('2d');
+      window.myDoughnut = new Chart(ctx, config);
+    };
+  }
+
 //----------------------------------------------------/
 // DATATABLES
 //----------------------------------------------------/
@@ -393,7 +438,7 @@ var FINHAY = {};
   
   //Window load functions
   $window.on("load", function(){
-    
+    $('#exampleModal').modal('show');
   });
 
   //Document ready functions
@@ -404,7 +449,8 @@ var FINHAY = {};
     FINHAY.dataTablesDrawHistory(),
     FINHAY.rangeSlider(),
     FINHAY.chartArea(),
-    FINHAY.chartPortfolio()
+    FINHAY.chartPortfolio(),
+    FINHAY.chartAreaTrau()
   );
 
   //Document resize functions
