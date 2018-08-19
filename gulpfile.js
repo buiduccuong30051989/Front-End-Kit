@@ -18,6 +18,16 @@ var gulp        = require('gulp'),
     deploy      = require('gulp-gh-pages'),
     notify      = require('gulp-notify');
 
+var htmlbeautify = require('gulp-html-beautify');
+ 
+gulp.task('htmlbeautify', function() {
+  var options = {
+    indentSize: 2
+  };
+  gulp.src('./dist/*.html')
+    .pipe(htmlbeautify(options))
+    .pipe(gulp.dest('./public/'))
+});
 
 gulp.task('scss', function() {
     var onError = function(err) {
