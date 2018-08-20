@@ -146,8 +146,9 @@
     height: 70px;
 
     .wrapper {
-      width: 1140px;
-      max-width: 1140px;
+      width: 100%;
+      max-width: 1170px;
+      padding: 0 15px;
     }
 
     img.logo-2 {
@@ -165,6 +166,39 @@
 
         img {
           height: 34px;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .hidden-md-down {
+      display: none;
+    }
+
+    &.login {
+      height: auto;
+      padding-bottom: 10px;
+
+      .wrapper {
+        display: block!important;;
+        height: auto;
+        text-align: center;
+      }
+
+      img.logo-2 {
+        width: 120px;
+        margin: 10px auto;
+      }
+
+      .group-btn-app {
+        display: flex;
+        justify-content: center;
+        .btn-app {
+          margin-left: 20px;
+          &:nth-child(2) {
+            marign-left: 0;
+          }
         }
       }
     }

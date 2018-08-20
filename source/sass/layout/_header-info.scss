@@ -165,6 +165,24 @@
         padding-bottom: 15px;
       }
     }
+
+    @include media-breakpoint-down(md) {
+      .wrapper {
+        &.mxw-750 {
+          width: 100%;
+          padding: 0 15px;
+        }
+      }
+
+      .inner {
+        h3 {
+          text-align: center;
+          white-space: normal;
+          font-size: 24px;
+          width: 100%;
+        }
+      }
+    }
   }
 
   &.profile {

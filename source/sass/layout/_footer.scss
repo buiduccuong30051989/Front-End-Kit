@@ -32,4 +32,11 @@
       }
     }
   }
+
+  @include media-breakpoint-down(md) {
+    ul {
+      padding: 0;
+      text-align: center;
+    }
+  }
 }

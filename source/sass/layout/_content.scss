@@ -309,6 +309,18 @@
       }
     }
   }
+
+  @include media-breakpoint-down(md) {
+    .modal-qa {
+      width: 100%;
+    }
+
+    .modal-header {
+      h5 {
+        text-align: center;
+      }
+    }
+  }
 }
 
 .avatar-profile {
